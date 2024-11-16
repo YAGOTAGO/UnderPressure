@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtso81cirwh5e"]
+
+[ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="1_84byp"]
+[ext_resource type="Script" path="res://scenes/test_scenes/camera_3d.gd" id="2_3lb8y"]
+
+[node name="3dCameraTest" type="Node3D"]
+
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
+mesh = ExtResource("1_84byp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767714, 4.16184)
+script = ExtResource("2_3lb8y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

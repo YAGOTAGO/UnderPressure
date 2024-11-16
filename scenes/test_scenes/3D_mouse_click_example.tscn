@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjkkm0kgs3tkm"]
 
-[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="1_mn5h6"]
+[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="1_lk3kj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_imu7g"]
 
 [node name="3dMouseCollider" type="Node2D"]
 
 [node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("1_mn5h6")
+script = ExtResource("1_lk3kj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 0)
