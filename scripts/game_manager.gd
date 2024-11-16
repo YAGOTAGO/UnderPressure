@@ -19,7 +19,7 @@ func _activate_components()->void:
 		return
 	
 	# Randomly select a component from the non-broken list.
-	var random_index = randi() % non_broken_components.size()
+	var random_index:int = randi() % non_broken_components.size()
 	var selected_component = non_broken_components[random_index]
 	
 	# Set the selected component to broken.

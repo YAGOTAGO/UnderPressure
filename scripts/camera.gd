@@ -4,12 +4,12 @@ extends Camera3D
 var rotation_sensitivity: float = 0.001  # Sensitivity of mouse movement
 var pitch_limit: float = 60.0           # Maximum pitch angle
 var yaw_limit: float = 30.0             # Maximum yaw angle
-var mouse_threshold: float = 100
+var mouse_threshold: float = 5
 
 # Track the current rotation
 var current_pitch: float = 0.0
 var current_yaw: float = 0.0
-var smooth_factor: float = 0.1
+var smooth_factor: float = 0.8
 var initial_position: Vector3 = Vector3()
 
 func _ready() -> void:
@@ -38,5 +38,4 @@ func _process(_delta: float) -> void:
 	rotation_degrees.x = lerp_angle(rotation_degrees.x, current_pitch, smooth_factor)
 	rotation_degrees.y = lerp_angle(rotation_degrees.y, current_yaw, smooth_factor)
 	
-	# (Optional) Apply a constraint on the camera position in the world (if needed)
-	global_transform.origin = initial_position  # For fixed position
+	

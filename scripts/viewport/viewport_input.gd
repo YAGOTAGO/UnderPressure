@@ -27,7 +27,7 @@ func _mouse_input_event(_camera: Camera3D, event: InputEvent, event_position: Ve
 	var quad_mesh_size = mesh.size
 	
 	# Event position in Area3D in world coordinate space.
-	var event_pos3D = event_position
+	var event_pos3D:Vector3 = event_position
 
 	# Current time in seconds since engine start.
 	var now: float = Time.get_ticks_msec() / 1000.0

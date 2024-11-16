@@ -4,17 +4,12 @@ extends Node3D
 @export var switchArray:Array[Node3D]
 
 
-
-
-
 func activate() -> void:
-	for switch in switchArray:
+	for switch:Node3D in switchArray:
 		if(randi_range(0,1) == 0):
 			switch.break_switch()
 		else:
 			switch.set_correct()
-			
-			
 
 
 # Called when the node enters the scene tree for the first time.
