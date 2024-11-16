@@ -9,12 +9,13 @@ const MAX_ROTATION: int = 45
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
 
 var target_value: int = 50 # will be number between 0 and 100
+var is_broken: bool = false
 
 #will trigger an anomaly
 func activate() -> void:
 	target_value = randi_range(slider.min_value, slider.max_value)
 	update_tv_noise()
-	
+
 func _ready() -> void:
 	update_rotation(slider.value)
 	slider.value_changed.connect(_on_h_slider_value_changed)
