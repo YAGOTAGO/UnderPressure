@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=3 format=3 uid="uid://b8uf2fb4h2i2n"]
-=======
 [gd_scene load_steps=8 format=3 uid="uid://cdn3cfnnhonki"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/emergency_button.gd" id="1_sivh3"]
 [ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="1_tqlbd"]
@@ -79,9 +75,5 @@ shape = SubResource("CylinderShape3D_idxxa")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.946413, 0.32296, 0, -0.32296, 0.946413, 0.720102, 1.97724, 3.29738)
 
-[node name="Timer" type="Timer" parent="."]
-unique_name_in_owner = true
-
 [connection signal="mouse_entered" from="Node3D/ButtonCase" to="." method="_on_button_case_mouse_entered"]
 [connection signal="mouse_exited" from="Node3D/ButtonCase" to="." method="_on_button_case_mouse_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
