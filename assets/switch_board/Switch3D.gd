@@ -21,6 +21,9 @@ func activate() -> void:
 		light.set_surface_override_material(0, mat)
 	else:
 		switch.rotate_x(1.5)
+		var mat = light.get_surface_override_material(0)
+		mat.emission = Color(0.0, 0.0, 0.0)
+		light.set_surface_override_material(0, mat)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
