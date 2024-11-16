@@ -68,7 +68,7 @@ transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.
 transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.04072, 7.21966, 0.688002)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
-transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -5.77363, 0.339705, 2.7816)
+transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
 
 [node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
 transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)

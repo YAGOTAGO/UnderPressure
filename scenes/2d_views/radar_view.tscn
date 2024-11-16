@@ -91,9 +91,11 @@ script = SubResource("GDScript_ij6vs")
 [node name="BG" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_ank6x")
+position = Vector2(539, 533)
+rotation = 1.5708
 scale = Vector2(8.39844, 8.39844)
 texture = ExtResource("3_6aud8")
-offset = Vector2(64, 64)
+offset = Vector2(-0.178581, 0.535835)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animation_player")]
 unique_name_in_owner = true
