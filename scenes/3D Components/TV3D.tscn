@@ -52,16 +52,10 @@ render_target_update_mode = 4
 
 [node name="SubViewport Slider" type="SubViewport" parent="."]
 physics_object_picking = true
-size = Vector2i(310, 50)
+size = Vector2i(300, 20)
 
-[node name="Control" type="Control" parent="SubViewport Slider"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="HSlider" type="HSlider" parent="SubViewport Slider/Control"]
+[node name="HSlider" type="HSlider" parent="SubViewport Slider"]
 custom_minimum_size = Vector2(300, 50)
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 16.0
+offset_top = -15.0
+offset_right = 300.0
+offset_bottom = 35.0
