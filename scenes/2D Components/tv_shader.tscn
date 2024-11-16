@@ -4,7 +4,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w7jj4"]
 shader = ExtResource("1_cnc8s")
-shader_parameter/overlay = false
+shader_parameter/overlay = true
 shader_parameter/scanlines_opacity = 0.4
 shader_parameter/scanlines_width = 0.25
 shader_parameter/grille_opacity = 0.3
@@ -30,5 +30,6 @@ shader_parameter/vignette_opacity = 0.5
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_w7jj4")
+offset_top = -5.0
 offset_right = 512.0
-offset_bottom = 512.0
+offset_bottom = 507.0

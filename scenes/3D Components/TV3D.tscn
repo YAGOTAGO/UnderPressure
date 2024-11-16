@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://mng8q3q44jxx"]
 
-[ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="1_bm3bj"]
+[ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://objects/tv2.obj" id="1_qpyk8"]
 [ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_w3tso"]
-[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/2D Components/Switch_scene.tscn" id="3_r0cl4"]
+[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
 
@@ -12,10 +12,10 @@
 
 [node name="Tv" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
-mesh = ExtResource("1_bm3bj")
+mesh = ExtResource("1_qpyk8")
 
 [node name="ViewPortQuad" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
-transform = Transform3D(2.10341, 0, 0, 0, 1.48092, 0.0239363, 0, -0.0239363, 1.48092, 0.460633, 1.88655, 2.79347)
+transform = Transform3D(2.10341, 0, 0, 0, 1.48092, 0.0239363, 0, -0.0239363, 1.48092, 0.460633, 1.88655, 2.55434)
 material_override = SubResource("ORMMaterial3D_65ebg")
 mesh = SubResource("QuadMesh_buwwn")
 script = ExtResource("2_w3tso")
@@ -23,10 +23,10 @@ viewport = NodePath("../SubViewport")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 physics_object_picking = true
-size = Vector2i(145, 180)
+size = Vector2i(500, 500)
 render_target_update_mode = 4
 
-[node name="SwitchScene" parent="SubViewport" instance=ExtResource("3_r0cl4")]
+[node name="TvShader" parent="SubViewport" instance=ExtResource("3_w5btw")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 6)
