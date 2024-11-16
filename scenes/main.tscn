@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="ArrayMesh" uid="uid://bo838mjm4o54m" path="res://objects/radio.obj" id="3_3caqr"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
-[ext_resource type="ArrayMesh" uid="uid://dqo384rriwq2w" path="res://objects/table.obj" id="5_5fieh"]
+[ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
 
 [node name="Main" type="Node3D"]
 
@@ -28,4 +28,4 @@ mesh = ExtResource("4_ewsh0")
 
 [node name="Table" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0180212, 0.577285, -5.87083)
-mesh = ExtResource("5_5fieh")
+mesh = ExtResource("5_bm264")
