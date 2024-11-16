@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2crn3ar43mfh"]
+[gd_scene load_steps=2 format=3 uid="uid://ckmyekbmnfpl0"]
 
 [ext_resource type="PackedScene" uid="uid://cywftev8o3q5n" path="res://scenes/2D Components/Covered_button.tscn" id="1_w6btr"]
 
