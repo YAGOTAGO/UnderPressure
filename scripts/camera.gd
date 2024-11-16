@@ -3,7 +3,7 @@ extends Camera3D
 # Variables for rotation
 var rotation_sensitivity: float = 0.001  # Sensitivity of mouse movement
 var pitch_limit: float = 60.0           # Maximum pitch angle
-var yaw_limit: float = 30.0             # Maximum yaw angle
+var yaw_limit: float = 50.0             # Maximum yaw angle
 var mouse_threshold: float = 5
 
 # Track the current rotation

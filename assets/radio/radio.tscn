@@ -1,18 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnoj2me3x0o86"]
+[gd_scene load_steps=6 format=3 uid="uid://dnoj2me3x0o86"]
 
 [ext_resource type="Script" path="res://assets/radio/radio.gd" id="1_jott1"]
+[ext_resource type="PackedScene" uid="uid://dppcq3gl7x07a" path="res://assets/radio/radio.fbx" id="2_dva6e"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="2_xttfd"]
+[ext_resource type="PackedScene" uid="uid://6awe28j31bqy" path="res://assets/radio/radioknob.fbx" id="3_rtskj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_d1018"]
+height = 0.347227
+radius = 0.2476
 
 [node name="Radio" type="Node3D"]
 script = ExtResource("1_jott1")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3134, 0.69879, 1.31862)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.271161, 0, 0)
+
+[node name="radio" parent="Node3D" instance=ExtResource("2_dva6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63572, -2.42936, -2.04294)
+
+[node name="leftKnob" parent="Node3D" instance=ExtResource("3_rtskj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63568, -2.42188, -1.99753)
+
+[node name="left_hitbox" type="Area3D" parent="Node3D/leftKnob"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36452, 2.42188, 1.99753)
 script = ExtResource("2_xttfd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/leftKnob/left_hitbox"]
+transform = Transform3D(1, 0, 0, 0, -0.00895338, 0.99996, 0, -0.99996, -0.00895338, 0.753639, 0.359707, 1.22815)
+shape = SubResource("CylinderShape3D_d1018")
 
-[connection signal="clicked" from="Area3D" to="." method="_on_area_3d_clicked"]
+[node name="rightKnob" parent="Node3D" instance=ExtResource("3_rtskj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65046, -2.42864, -1.99854)
+
+[node name="right_hitbox" type="Area3D" parent="Node3D/rightKnob"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36452, 2.42188, 1.99753)
+script = ExtResource("2_xttfd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/rightKnob/right_hitbox"]
+transform = Transform3D(1, 0, 0, 0, -0.00895338, 0.99996, 0, -0.99996, -0.00895338, 0.753639, 0.359707, 1.22815)
+shape = SubResource("CylinderShape3D_d1018")
+
+[connection signal="clicked" from="Node3D/leftKnob/left_hitbox" to="." method="_on_area_3d_clicked"]
+[connection signal="clicked" from="Node3D/rightKnob/right_hitbox" to="." method="_on_area_3d_clicked"]
