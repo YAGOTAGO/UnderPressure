@@ -28,6 +28,9 @@ func break_switch() -> void:
 func set_correct() -> void:
 	is_correct = is_up
 
+func get_correct() -> bool:
+	return is_correct == is_up
+
 func _ready() -> void:
 	var mat = light.get_surface_override_material(0)
 	light.set_surface_override_material(0, mat.duplicate())
