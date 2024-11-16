@@ -55,24 +55,24 @@ transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, 
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 9.72885)
+transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 8.54705)
 script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
 
 [node name="TV" parent="." instance=ExtResource("2_pv8vt")]
-transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.562336, 0.149986)
+transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(-4.37114e-08, 0.113203, 0.993572, 0, 0.993572, -0.113203, -0.999999, -4.94827e-09, -4.34304e-08, -7.66989, 1.68826, 5.88715)
+transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.06555, 7.21966, 0.688002)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -5.77363, 0.339705, 2.7816)
 
 [node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0221002, 0.415648, 1.41689)
+transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)
 
 [node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -4.26105, 5, 2.42444)
+transform = Transform3D(0.341101, 0, 0.940026, 0, 1, 0, -0.940026, 0, 0.341101, -7.61308, 1.34276, 6.82788)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
