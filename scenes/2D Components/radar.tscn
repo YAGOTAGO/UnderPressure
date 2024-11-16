@@ -67,6 +67,7 @@ script = ExtResource("1_s83m1")
 [node name="BG" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_ank6x")
+scale = Vector2(8.39844, 8.39844)
 texture = ExtResource("1_akmpj")
 offset = Vector2(64, 64)
 

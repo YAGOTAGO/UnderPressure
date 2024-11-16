@@ -22,6 +22,7 @@ script = ExtResource("2_gnqyk")
 viewport = NodePath("../SubViewport")
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(137, 132)
+transparent_bg = true
+size = Vector2i(1077, 1082)
 
 [node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]
