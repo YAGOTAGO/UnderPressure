@@ -30,8 +30,9 @@ func update_tv_noise() -> void:
 	var proximity: float = distance / slider.max_value
 	
 	tv_shader_material.set_shader_parameter("static_noise_intensity", lerp(0.06, 1.0, proximity))
-	print(tv_shader_material.get_shader_parameter("static_noise_intensity"))
 	
+	if abs(slider.value - target_value) < 5:
+		is_broken = false
 	
 func _on_h_slider_value_changed(value: float) -> void:
 	update_rotation(value)
