@@ -37,7 +37,8 @@ folder_colors={
 "res://background_objects/": "purple",
 "res://scenes/": "teal",
 "res://scripts/": "blue",
-"res://shaders/": "red"
+"res://shaders/": "red",
+"res://sprites/": "yellow"
 }
 
 [input]

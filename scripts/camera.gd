@@ -4,6 +4,7 @@ extends Camera3D
 var rotation_sensitivity: float = 0.001  # Sensitivity of mouse movement
 var pitch_limit: float = 60.0           # Maximum pitch angle
 var yaw_limit: float = 30.0             # Maximum yaw angle
+var mouse_threshold: float = 100
 
 # Track the current rotation
 var current_pitch: float = 0.0
@@ -16,7 +17,13 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var mouse_delta: Vector2 = Input.get_last_mouse_velocity()  # Get mouse movement since the last frame
-
+	
+	print(mouse_delta.length())
+	
+	# Ignore small movements to reduce jitter
+	if mouse_delta.length() < mouse_threshold:
+		return
+	
 	# Rotate the camera based on the mouse movement
 	current_yaw -= mouse_delta.x * rotation_sensitivity
 	current_pitch -= mouse_delta.y * rotation_sensitivity
