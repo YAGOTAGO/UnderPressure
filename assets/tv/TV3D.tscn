@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=14 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="Script" path="res://assets/tv/tv.gd" id="1_d5fup"]
 [ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://assets/tv/tv.obj" id="1_qpyk8"]
 [ext_resource type="Script" path="res://scripts/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport_basic.gd" id="2_xrqc6"]
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
+[ext_resource type="ArrayMesh" uid="uid://pi6vjd1nsefc" path="res://assets/tv/tvslidingbase.obj" id="6_fi7mm"]
+[ext_resource type="ArrayMesh" uid="uid://eurd5hnln3d" path="res://assets/tv/antenna.obj" id="7_hqbs7"]
+[ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/tv/antennabase.obj" id="7_hty1k"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
 
@@ -39,28 +42,46 @@ render_target_update_mode = 4
 [node name="TvShader" parent="ViewPort Screen/SubViewport Screen" instance=ExtResource("3_w5btw")]
 unique_name_in_owner = true
 
-[node name="ViewPort Slider" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
-transform = Transform3D(2.8, 0, 0, 0, 0.375181, 0, 0, 0, 1, 0.594013, 1.06405, 2.78617)
+[node name="TV Slider Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.587194, -1)
+mesh = ExtResource("6_fi7mm")
+
+[node name="ViewPort Slider" type="MeshInstance3D" parent="TV Slider Mesh" node_paths=PackedStringArray("viewport", "node_area")]
+transform = Transform3D(3.03551, 0, 0, 0, 0.375181, 0, 0, 0, 1, 4.73199, 0.0548773, 3.89533)
 material_override = SubResource("ORMMaterial3D_gxd3j")
 mesh = SubResource("QuadMesh_xcafy")
+skeleton = NodePath("../..")
 script = ExtResource("2_w3tso")
 viewport = NodePath("SubViewport Slider")
 node_area = NodePath("Area3D")
 
-[node name="Area3D" type="Area3D" parent="ViewPort Slider"]
+[node name="Area3D" type="Area3D" parent="TV Slider Mesh/ViewPort Slider"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ViewPort Slider/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TV Slider Mesh/ViewPort Slider/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00879312)
 shape = SubResource("BoxShape3D_cgp7v")
 
-[node name="SubViewport Slider" type="SubViewport" parent="ViewPort Slider"]
+[node name="SubViewport Slider" type="SubViewport" parent="TV Slider Mesh/ViewPort Slider"]
 physics_object_picking = true
 size = Vector2i(300, 20)
 
-[node name="HSlider" type="HSlider" parent="ViewPort Slider/SubViewport Slider"]
+[node name="HSlider" type="HSlider" parent="TV Slider Mesh/ViewPort Slider/SubViewport Slider"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 50)
 offset_top = -15.0
 offset_right = 300.0
 offset_bottom = 35.0
 max_value = 200.0
+
+[node name="Antennabase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31698, 0.499737, -1.25676)
+mesh = ExtResource("7_hty1k")
+
+[node name="Antenna Parent" type="Node3D" parent="Antennabase"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10497, 2.47126, 3.72622)
+
+[node name="Antenna" type="MeshInstance3D" parent="Antennabase/Antenna Parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15304, -2.57232, -3.68308)
+mesh = ExtResource("7_hqbs7")
+skeleton = NodePath("../../..")

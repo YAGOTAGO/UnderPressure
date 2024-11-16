@@ -7,6 +7,7 @@ const MAX_ROTATION: int = 45
 #@onready var antenna: Sprite2D = %Antenna
 @onready var slider: HSlider = %HSlider
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
+@onready var antenna : Node3D = %"Antenna Parent"
 
 var target_value: int = 50 # will be number between 0 and 100
 var is_broken: bool = false
@@ -22,9 +23,10 @@ func _ready() -> void:
 	
 #function that rotates antenna
 func update_rotation(value: float)-> void:
-	var rotation: int  = MIN_ROTATION + (value / 100.0) * (MAX_ROTATION - MIN_ROTATION)
-	#antenna.rotation_degrees = rotation
-
+	var rotation: int  = MIN_ROTATION + (value / slider.max_value) * (MAX_ROTATION - MIN_ROTATION)
+	print(rotation)
+	antenna.rotation_degrees.z = value
+	
 func update_tv_noise() -> void:
 	var distance: float = abs(slider.value - target_value)
 	var proximity: float = distance / slider.max_value

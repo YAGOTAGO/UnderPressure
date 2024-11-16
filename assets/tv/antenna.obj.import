@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eurd5hnln3d"
+path="res://.godot/imported/antenna.obj-2ba42bf0e2ec948462e69445c7ff98ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/antenna.obj-2ba42bf0e2ec948462e69445c7ff98ac.mesh"]
+
+source_file="res://assets/tv/antenna.obj"
+dest_files=["res://.godot/imported/antenna.obj-2ba42bf0e2ec948462e69445c7ff98ac.mesh", "res://.godot/imported/antenna.obj-2ba42bf0e2ec948462e69445c7ff98ac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
