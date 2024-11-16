@@ -9,6 +9,10 @@ var mouse_inside: bool = false
 
 var is_up: bool = true
 
+func _ready() -> void:
+	var mat = light.get_surface_override_material(0)
+	light.set_surface_override_material(0, mat.duplicate())
+
 
 func activate() -> void:
 	switch_toggled.emit()
@@ -17,7 +21,7 @@ func activate() -> void:
 	if(is_up):
 		switch.rotate_x(-1.5)
 		var mat = light.get_surface_override_material(0)
-		mat.emission = Color(0.0, 0.0, 0.0)
+		mat.emission = Color(0.84, 0.0, 0.0)
 		light.set_surface_override_material(0, mat)
 	else:
 		switch.rotate_x(1.5)

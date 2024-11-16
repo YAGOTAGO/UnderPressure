@@ -10,12 +10,12 @@ height = 0.811551
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j522v"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxdoh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yi5m1"]
 albedo_color = Color(1.6, 1.2, 1.2, 1)
 metallic = 1.0
 metallic_specular = 1.0
 emission_enabled = true
-emission = Color(0.839314, 0, 0.14337, 1)
+emission = Color(0.839, 0, 0, 1)
 
 [node name="Switch3D" type="Node3D"]
 script = ExtResource("2_inkt2")
@@ -44,7 +44,7 @@ shape = SubResource("CapsuleShape3D_kg4xh")
 unique_name_in_owner = true
 transform = Transform3D(-0.000282656, -0.18037, 0, 0.142063, -0.000358873, 0, 0, 0, 0.170582, 0, 0.458461, 0.0155168)
 mesh = SubResource("CapsuleMesh_j522v")
-surface_material_override/0 = SubResource("StandardMaterial3D_oxdoh")
+surface_material_override/0 = SubResource("StandardMaterial3D_yi5m1")
 
 [connection signal="mouse_entered" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_exited"]
