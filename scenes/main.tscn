@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=13 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://assets/radar/radar3D.tscn" id="7_svoui"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="8_j4k27"]
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
+[ext_resource type="PackedScene" uid="uid://34brr0liwy6h" path="res://assets/pressure_meter/PressureMeter.tscn" id="10_c6tiw"]
 
 [sub_resource type="Environment" id="Environment_h7fa3"]
 glow_enabled = true
@@ -63,5 +64,8 @@ transform = Transform3D(-0.930468, -0.0660841, -0.360364, 0.237282, -0.858137, -
 
 [node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0221002, 0.896692, -4.11376)
+
+[node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -6, 5, -4)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
