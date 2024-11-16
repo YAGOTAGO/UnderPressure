@@ -14,7 +14,7 @@ var initial_position: Vector3 = Vector3()
 func _ready() -> void:
 	initial_position = global_transform.origin
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_delta: Vector2 = Input.get_last_mouse_velocity()  # Get mouse movement since the last frame
 
 	# Rotate the camera based on the mouse movement

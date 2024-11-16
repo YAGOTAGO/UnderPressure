@@ -87,9 +87,9 @@ func _mouse_input_event(_camera: Camera3D, event: InputEvent, event_position: Ve
 	viewport.push_input(event)
 
 
-func _mouse_entered_area():
+func _mouse_entered_area() -> void:
 	is_mouse_inside = true
 
 
-func _mouse_exited_area():
+func _mouse_exited_area() -> void:
 	is_mouse_inside = false

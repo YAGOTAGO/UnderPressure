@@ -23,9 +23,8 @@ func _ready() -> void:
 	
 #function that rotates antenna
 func update_rotation(value: float)-> void:
-	var rotation: int  = MIN_ROTATION + (value / slider.max_value) * (MAX_ROTATION - MIN_ROTATION)
-	antenna.rotation_degrees.z = rotation
-	
+	var rotation_degree: int  = MIN_ROTATION + (value / slider.max_value) * (MAX_ROTATION - MIN_ROTATION)
+	antenna.rotation_degrees.z = rotation_degree
 	
 func update_tv_noise() -> void:
 	var distance: float = abs(slider.value - target_value)
