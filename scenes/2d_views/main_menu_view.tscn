@@ -1,16 +1,72 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx2nao4clspqn"]
+[gd_scene load_steps=9 format=3 uid="uid://bx2nao4clspqn"]
 
+[ext_resource type="Texture2D" uid="uid://0040ymqy00n" path="res://sprites/buttons/exit_button.png" id="1_7wx4y"]
 [ext_resource type="Texture2D" uid="uid://cgi6qbvw4pagv" path="res://sprites/menu_logo.png" id="1_w4e3i"]
+[ext_resource type="Texture2D" uid="uid://bw52453gerbbt" path="res://sprites/buttons/start_button.png" id="2_1rbqk"]
+[ext_resource type="Texture2D" uid="uid://gndeavwff3ha" path="res://sprites/buttons/start_hovered.png" id="2_dir81"]
+[ext_resource type="Texture2D" uid="uid://cgtvmu5rkk1ow" path="res://sprites/buttons/start_clicked.png" id="3_b6725"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3hry"]
+texture = ExtResource("2_dir81")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_clhei"]
+texture = ExtResource("3_b6725")
+
+[sub_resource type="GDScript" id="GDScript_xxva5"]
+resource_name = "exit_button"
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pressed.connect(_on_button_clicked)
+
+
+func _on_button_clicked():
+	get_tree().quit()
+"
 
 [node name="MainMenu" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="submarine sprite" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_w4e3i")
+
+[node name="start" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 712.0
+offset_top = 736.0
+offset_right = 1172.0
+offset_bottom = 908.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/icon = ExtResource("2_1rbqk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l3hry")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_clhei")
+
+[node name="exit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 912.0
+offset_right = 1172.0
+offset_bottom = 1084.0
+icon = ExtResource("1_7wx4y")
+script = SubResource("GDScript_xxva5")
