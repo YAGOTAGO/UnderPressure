@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=10 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="1_473u7"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://background_objects/wall_ring.obj" id="4_ewsh0"]
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://background_objects/newtable.obj" id="5_bm264"]
@@ -10,6 +11,12 @@
 [ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://background_objects/steeringwheel.obj" id="9_0jv3u"]
 
 [node name="Main" type="Node3D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_xhrch")
+
+[node name="Timer" type="Timer" parent="GameManager"]
+wait_time = 5.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
@@ -44,3 +51,5 @@ mesh = ExtResource("9_0jv3u")
 
 [node name="EmergencyButton2" parent="." instance=ExtResource("8_j4k27")]
 transform = Transform3D(-0.930468, -0.0660841, -0.360364, 0.237282, -0.858137, -0.4553, -0.279153, -0.50915, 0.81415, 4.20095, 8.52166, -4.42425)
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
