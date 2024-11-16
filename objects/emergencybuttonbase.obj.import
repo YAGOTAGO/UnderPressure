@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bimr16p6fhs7g"
+path="res://.godot/imported/emergencybuttonbase.obj-5986de4aaf2a091f00374637801b2ce7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/emergencybuttonbase.obj-5986de4aaf2a091f00374637801b2ce7.mesh"]
+
+source_file="res://objects/emergencybuttonbase.obj"
+dest_files=["res://.godot/imported/emergencybuttonbase.obj-5986de4aaf2a091f00374637801b2ce7.mesh", "res://.godot/imported/emergencybuttonbase.obj-5986de4aaf2a091f00374637801b2ce7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
