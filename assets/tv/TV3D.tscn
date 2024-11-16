@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://assets/tv/tv.obj" id="1_qpyk8"]
 [ext_resource type="Script" path="res://scripts/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport_basic.gd" id="2_xrqc6"]
-[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
+[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D_Views/tv_shader.tscn" id="3_w5btw"]
 [ext_resource type="ArrayMesh" uid="uid://pi6vjd1nsefc" path="res://assets/tv/tvslidingbase.obj" id="6_fi7mm"]
 [ext_resource type="ArrayMesh" uid="uid://eurd5hnln3d" path="res://assets/tv/antenna.obj" id="7_hqbs7"]
 [ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/tv/antennabase.obj" id="7_hty1k"]
