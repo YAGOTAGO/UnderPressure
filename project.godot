@@ -32,12 +32,12 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://Sounds/": "orange",
 "res://assets/": "pink",
 "res://background_objects/": "purple",
 "res://scenes/": "teal",
 "res://scripts/": "blue",
 "res://shaders/": "red",
+"res://sounds/": "orange",
 "res://sprites/": "yellow"
 }
 

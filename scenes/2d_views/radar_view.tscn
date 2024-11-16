@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_xy721"]
 [ext_resource type="Shader" path="res://shaders/radar.gdshader" id="2_kalq3"]
 [ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="3_6aud8"]
-[ext_resource type="AudioStream" uid="uid://nx52va3gyu3j" path="res://Sounds/sonar.wav" id="4_b21wm"]
+[ext_resource type="AudioStream" uid="uid://nx52va3gyu3j" path="res://sounds/sonar.wav" id="4_b21wm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ank6x"]
 shader = ExtResource("2_kalq3")
