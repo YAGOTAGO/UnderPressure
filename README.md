@@ -4,10 +4,11 @@
 # Credits
 
 ## Team:
-**Caroline Li**: 3D artist </br>
-**Rae Zhang**: 2D artist </br>
-**Michael Reidy**: Programmer </br>
-**Tiago Davies**: Programmer </br>
+3D artist: **Caroline Li** </br>
+2D artist: **Rae Zhang** </br>
+Programmers: </br>
+**Michael Reidy**: </br>
+**Tiago Davies**
 
 ## Shaders:
 https://godotshaders.com/
