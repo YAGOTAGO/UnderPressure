@@ -2,8 +2,8 @@ extends Node
 
 signal surface_reached
 
-const MAX_AMOUNT = 10
-const MIN_AMOUNT = 1
+const MAX_AMOUNT = 10 #max amount can climb
+const MIN_AMOUNT = 1 #min amount can climb
 const START_DEPTH = 1000
 
 @onready var progress_shader_material: ShaderMaterial = %ProgressBar.material as ShaderMaterial
