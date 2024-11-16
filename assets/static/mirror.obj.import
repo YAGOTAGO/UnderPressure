@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://sv6llk3uy24s"
+path="res://.godot/imported/mirror.obj-70579c64d9f89d7f09502f02f9006ae9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mirror.obj-70579c64d9f89d7f09502f02f9006ae9.mesh"]
+
+source_file="res://assets/static/mirror.obj"
+dest_files=["res://.godot/imported/mirror.obj-70579c64d9f89d7f09502f02f9006ae9.mesh", "res://.godot/imported/mirror.obj-70579c64d9f89d7f09502f02f9006ae9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

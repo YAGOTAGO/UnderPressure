@@ -14,7 +14,7 @@
 shader = ExtResource("1_qur6l")
 shader_parameter/sky_color = Color(0.0148744, 0, 0.315385, 1)
 shader_parameter/star_base_color = Color(1.54018e-06, 0.276968, 0.382507, 1)
-shader_parameter/star_hue_offset = 0.284
+shader_parameter/star_hue_offset = 0.0
 shader_parameter/star_intensity = 0.08
 shader_parameter/star_twinkle_speed = 0.968
 shader_parameter/star_twinkle_intensity = 0.406
