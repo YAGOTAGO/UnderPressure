@@ -1,5 +1,7 @@
 extends Node
 
+signal surface_reached
+
 const MAX_AMOUNT = 10
 const MIN_AMOUNT = 1
 const START_DEPTH = 10000
@@ -9,13 +11,17 @@ const START_DEPTH = 10000
 
 var depth_num: int = START_DEPTH
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_update_display()
 	
 func _on_timer_timeout() -> void:
 	var amount: int = randi_range(MIN_AMOUNT, MAX_AMOUNT)
 	depth_num -= amount
+	
+	if depth_num <=0:
+		depth_num = 0
+		surface_reached.emit()
+		
 	_update_display()
 	
 func _update_display():
