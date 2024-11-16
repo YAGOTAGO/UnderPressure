@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://d2crn3ar43mfh"]
+[gd_scene load_steps=2 format=3 uid="uid://d2crn3ar43mfh"]
+
+[ext_resource type="PackedScene" uid="uid://cywftev8o3q5n" path="res://scenes/Covered_button.tscn" id="1_w6btr"]
 
 [node name="TestScene1" type="Node2D"]
+
+[node name="CoveredButton" parent="." instance=ExtResource("1_w6btr")]
