@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://b41kfcvyxm41"]
+[gd_scene load_steps=9 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="ArrayMesh" uid="uid://65ecgbvgigv6" path="res://objects/radar.obj" id="1_wykoq"]
 [ext_resource type="Script" path="res://scripts/3D Scripts/viewport_basic.gd" id="2_gnqyk"]
 [ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2D Components/radar.tscn" id="2_i3uii"]
+[ext_resource type="Script" path="res://scripts/3D Scripts/3D_mouse_detection.gd" id="4_8y24s"]
+[ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="4_vnub0"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_x6cf8"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_qdtky"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2161e"]
+size = Vector3(0.557602, 0.0734863, 0.577576)
 
 [node name="Radar" type="Node3D"]
 
@@ -26,3 +31,24 @@ transparent_bg = true
 size = Vector2i(1077, 1082)
 
 [node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]
+
+[node name="Button Container" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.36929, 0, -2.72682)
+
+[node name="Emergencybuttonbase" type="MeshInstance3D" parent="Button Container"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 5.01543, -0.402972, 5.62825)
+mesh = ExtResource("4_vnub0")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Button Container"]
+monitoring = false
+monitorable = false
+script = ExtResource("4_8y24s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Button Container/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66194, 0.0645822, 3.75221)
+shape = SubResource("BoxShape3D_2161e")
+
+[connection signal="clicked" from="Button Container/Area3D" to="SubViewport/Radar" method="_on_area_3d_clicked"]
+[connection signal="mouse_entered" from="Button Container/Area3D" to="Button Container" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button Container/Area3D" to="Button Container" method="_on_mouse_exited"]
