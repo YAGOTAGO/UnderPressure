@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dlypsuxn3noka"]
 
-[ext_resource type="Script" path="res://scripts/camera_3d.gd" id="1_473u7"]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://background_objects/wall_ring.obj" id="4_ewsh0"]

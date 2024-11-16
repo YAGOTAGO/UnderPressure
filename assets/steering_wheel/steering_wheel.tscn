@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://bg6k5tur6o65i" path="res://assets/steering_wheel/steeringwheelbase.obj" id="1_loufu"]
 [ext_resource type="ArrayMesh" uid="uid://bov8oyrkytld8" path="res://assets/steering_wheel/steeringwheelwheel.obj" id="2_7ehun"]
-[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="3_13bni"]
+[ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="3_13bni"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sljcs"]
 size = Vector3(1.48877, 2.56171, 1)

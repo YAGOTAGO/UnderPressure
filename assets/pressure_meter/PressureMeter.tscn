@@ -4,6 +4,21 @@
 [ext_resource type="Script" path="res://assets/pressure_meter/pressure_meter.gd" id="1_p3fj0"]
 [ext_resource type="ArrayMesh" uid="uid://drsaiet7pqofl" path="res://background_objects/meter_needle.obj" id="2_gdmlw"]
 
+[sub_resource type="Animation" id="Animation_6fjdk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeterNeedle:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.523599)]
+}
+
 [sub_resource type="Animation" id="Animation_nmkwn"]
 resource_name = "needel_low"
 length = 0.6
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 0.153893, 3.03143),
 "update": 0,
 "values": [Vector3(0, 0, 0.523599), Vector3(0, 0, 0.450295), Vector3(0, 0, 0.523599)]
-}
-
-[sub_resource type="Animation" id="Animation_6fjdk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeterNeedle:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0.523599)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dcrsf"]
