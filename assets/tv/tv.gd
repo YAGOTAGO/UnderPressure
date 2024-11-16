@@ -4,14 +4,10 @@ extends Node3D
 const MIN_ROTATION: int = -45
 const MAX_ROTATION: int = 45
 
-#@onready var antenna: Sprite2D = %Antenna
 @onready var slider: HSlider = %HSlider
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
 @onready var antenna : Node3D = %"Antenna Parent"
 @onready var staticSound : AudioStreamPlayer3D = %StaticSound
-
-
-
 
 var target_value: int = 50 # will be number between 0 and 100
 var is_broken: bool = false
@@ -45,7 +41,7 @@ func update_tv_noise() -> void:
 	
 	if abs(slider.value - target_value) < 5:
 		is_broken = false
-	
+
 func _on_h_slider_value_changed(value: float) -> void:
 	update_rotation(value)
 	update_tv_noise()
