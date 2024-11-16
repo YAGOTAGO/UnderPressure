@@ -4,8 +4,8 @@
 # Credits
 
 ## Team:
-3D artist: **Caroline Li** </br></br>
-2D artist: **Rae Zhang** </br></br>
+3D artist: </br>**Caroline Li** </br></br>
+2D artist: </br>**Rae Zhang** </br></br>
 Programmers: </br>
 **Michael Reidy**: </br>
 **Tiago Davies**
