@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://34brr0liwy6h"]
 
-[ext_resource type="ArrayMesh" uid="uid://dc4cky82efbg5" path="res://background_objects/meter.obj" id="1_k2e3w"]
+[ext_resource type="ArrayMesh" uid="uid://dc4cky82efbg5" path="res://assets/pressure_meter/meter.obj" id="1_k2e3w"]
 [ext_resource type="Script" path="res://assets/pressure_meter/pressure_meter.gd" id="1_p3fj0"]
-[ext_resource type="ArrayMesh" uid="uid://drsaiet7pqofl" path="res://background_objects/meter_needle.obj" id="2_gdmlw"]
+[ext_resource type="ArrayMesh" uid="uid://drsaiet7pqofl" path="res://assets/pressure_meter/meter_needle.obj" id="2_gdmlw"]
 
 [sub_resource type="Animation" id="Animation_6fjdk"]
 length = 0.001
