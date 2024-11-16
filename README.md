@@ -3,17 +3,17 @@
 
 # Credits
 
-<u>Team:</u>
+## Team:
 Caroline Li: 3D artist </br>
 Rae Zhang: 2D artist </br>
 Michael Reidy: Programmer </br>
 Tiago Davies: Programmer </br>
 
-<u>Shaders:</u>
+## Shaders:
 https://godotshaders.com/
 
-<u>Sounds:</u>
+## Sounds:
 https://freesound.org/
 
-<u>Engine:</u>
+## Engine:
 Made with Godot
