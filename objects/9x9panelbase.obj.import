@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://du40bi8ck26is"
+path="res://.godot/imported/9x9panelbase.obj-8b5756481c671f6c11578d16272fbf8f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/9x9panelbase.obj-8b5756481c671f6c11578d16272fbf8f.mesh"]
+
+source_file="res://objects/9x9panelbase.obj"
+dest_files=["res://.godot/imported/9x9panelbase.obj-8b5756481c671f6c11578d16272fbf8f.mesh", "res://.godot/imported/9x9panelbase.obj-8b5756481c671f6c11578d16272fbf8f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
