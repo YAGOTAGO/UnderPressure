@@ -5,8 +5,8 @@
 [ext_resource type="ArrayMesh" uid="uid://bo838mjm4o54m" path="res://objects/radio.obj" id="3_3caqr"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
-[ext_resource type="PackedScene" uid="uid://fqlo362lxj51" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
-[ext_resource type="PackedScene" uid="uid://c1d0lrm70vvma" path="res://scenes/3D Components/radar3D.tscn" id="7_svoui"]
+[ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
+[ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://scenes/3D Components/radar3D.tscn" id="7_svoui"]
 
 [node name="Main" type="Node3D"]
 

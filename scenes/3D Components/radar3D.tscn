@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1d0lrm70vvma"]
+[gd_scene load_steps=6 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="ArrayMesh" uid="uid://65ecgbvgigv6" path="res://objects/radar.obj" id="1_wykoq"]
 [ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_cr1cp"]
