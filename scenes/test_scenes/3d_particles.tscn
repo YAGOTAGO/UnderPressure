@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfhi068dmsvbq"]
+[gd_scene load_steps=3 format=3 uid="uid://bfhi068dmsvbq"]
+
+[ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://objects/waterdrop.obj" id="1_hisan"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5v13p"]
 
 [node name="3dParticles" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211257, 1.18544, -0.40119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9023, -2.50756, -4.40119)
+amount = 2
+lifetime = 1.5
 process_material = SubResource("ParticleProcessMaterial_5v13p")
+draw_pass_1 = ExtResource("1_hisan")
