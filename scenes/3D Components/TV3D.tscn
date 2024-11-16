@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=8 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://objects/tv.obj" id="1_qpyk8"]
 [ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_w3tso"]
@@ -8,22 +8,49 @@
 
 [sub_resource type="QuadMesh" id="QuadMesh_buwwn"]
 
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_gxd3j"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_xcafy"]
+
 [node name="Tv3d" type="Node3D"]
 
 [node name="Tv" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
 mesh = ExtResource("1_qpyk8")
 
-[node name="ViewPortQuad" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
+[node name="ViewPort Screen" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
 transform = Transform3D(2.10341, 0, 0, 0, 1.48092, 0.0239363, 0, -0.0239363, 1.48092, 0.460633, 1.88655, 2.55434)
 material_override = SubResource("ORMMaterial3D_65ebg")
 mesh = SubResource("QuadMesh_buwwn")
 script = ExtResource("2_w3tso")
-viewport = NodePath("../SubViewport")
+viewport = NodePath("../SubViewport Screen")
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="ViewPort Slider" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
+transform = Transform3D(2.8, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.594013, 0.802465, 2.87013)
+material_override = SubResource("ORMMaterial3D_gxd3j")
+mesh = SubResource("QuadMesh_xcafy")
+script = ExtResource("2_w3tso")
+viewport = NodePath("../SubViewport Slider")
+
+[node name="SubViewport Screen" type="SubViewport" parent="."]
 physics_object_picking = true
 size = Vector2i(500, 500)
 render_target_update_mode = 4
 
-[node name="TvShader" parent="SubViewport" instance=ExtResource("3_w5btw")]
+[node name="TvShader" parent="SubViewport Screen" instance=ExtResource("3_w5btw")]
+
+[node name="SubViewport Slider" type="SubViewport" parent="."]
+physics_object_picking = true
+size = Vector2i(310, 50)
+
+[node name="Control" type="Control" parent="SubViewport Slider"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HSlider" type="HSlider" parent="SubViewport Slider/Control"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
