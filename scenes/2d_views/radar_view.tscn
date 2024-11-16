@@ -106,6 +106,6 @@ animation_name = "radar_cycle"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_b21wm")
-volume_db = -2.0
+volume_db = -10.0
 max_db = 1.5
 pitch_scale = 0.5
