@@ -8,6 +8,10 @@ const MAX_ROTATION: int = 45
 @onready var slider: HSlider = %HSlider
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
 @onready var antenna : Node3D = %"Antenna Parent"
+@onready var staticSound : AudioStreamPlayer3D = %StaticSound
+
+
+
 
 var target_value: int = 50 # will be number between 0 and 100
 var is_broken: bool = false
@@ -20,6 +24,7 @@ func activate() -> void:
 func _ready() -> void:
 	update_rotation(slider.value)
 	slider.value_changed.connect(_on_h_slider_value_changed)
+
 	
 #function that rotates antenna
 func update_rotation(value: float)-> void:
@@ -31,6 +36,12 @@ func update_tv_noise() -> void:
 	var proximity: float = distance / slider.max_value
 	
 	tv_shader_material.set_shader_parameter("static_noise_intensity", lerp(0.06, 1.0, proximity))
+	
+#	Audio settings for the static
+	var volume:float = proximity * 10
+	if proximity < 0.06:
+		volume = -10.0
+	staticSound.volume_db = volume
 	
 	if abs(slider.value - target_value) < 5:
 		is_broken = false

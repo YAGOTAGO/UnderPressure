@@ -36,7 +36,7 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 5.05646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 3.056, 5.05646)
 script = ExtResource("1_473u7")
 
 [node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
