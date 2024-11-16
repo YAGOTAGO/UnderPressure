@@ -39,6 +39,7 @@ texture = ExtResource("1_e0pv6")
 offset = Vector2(0, -63)
 
 [node name="TV Shader" type="ColorRect" parent="."]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_ij5oq")
 offset_left = 139.0
 offset_top = 141.0
@@ -51,7 +52,6 @@ offset_left = 134.0
 offset_top = 251.0
 offset_right = 309.0
 offset_bottom = 296.0
+value = 50.0
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(474, 165)
-texture = ExtResource("1_e0pv6")
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
