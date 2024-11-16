@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://c22n6icpny0xs"]
+
+[ext_resource type="Script" path="res://scripts/3D Scripts/switch_board_3d.gd" id="1_fqq0t"]
+[ext_resource type="ArrayMesh" uid="uid://cr5sm1234ys14" path="res://objects/switch_base.obj" id="1_kuhkl"]
+[ext_resource type="PackedScene" uid="uid://b4e2em28cqkd4" path="res://scenes/3D Components/Switch3D.tscn" id="2_ra467"]
+
+[node name="SwitchBoard3d" type="Node3D"]
+script = ExtResource("1_fqq0t")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.685585, 0.571785, 3.65056)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25739, 1.77372)
+
+[node name="SwitchBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97098, 0.0947313, -1.18852)
+mesh = ExtResource("1_kuhkl")
+
+[node name="Switch3D0" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.507482, 1.18565, 0.080029)
+
+[node name="Switch3D1" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07723, 1.17993, 0.0736185)
+
+[node name="Switch3D2" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63257, 1.17205, 0.0867766)
+
+[node name="Switch3D3" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.504175, 0.401685, 0.0776025)
+
+[node name="Switch3D4" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08082, 0.386656, 0.0832354)
+
+[node name="Switch3D5" parent="." instance=ExtResource("2_ra467")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63784, 0.386186, 0.0837494)

@@ -9,9 +9,6 @@ radius = 0.2
 [node name="Switch3D" type="Node3D"]
 script = ExtResource("2_inkt2")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.894092, -0.106828, 0.434957, 0, 0.971138, 0.238517, -0.447884, -0.213256, 0.868287, 1.27979, 0.649332, 2.4704)
-
 [node name="SwitchContainer" type="Node3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.994198, 0.107566, 0, -0.107566, 0.994198, 0, 0, 0)
