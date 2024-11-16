@@ -34,11 +34,7 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-<<<<<<< Updated upstream
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 3.056, 5.05646)
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 10.3585)
->>>>>>> Stashed changes
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 9.72885)
 script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
