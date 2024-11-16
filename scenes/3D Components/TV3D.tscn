@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="1_bm3bj"]
-[ext_resource type="Script" path="res://scripts/set_viewport.gd" id="2_w3tso"]
-[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/Switch_scene.tscn" id="3_r0cl4"]
+[ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_w3tso"]
+[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/2D Components/Switch_scene.tscn" id="3_r0cl4"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://vsduygbm7fn3"]
 
-[ext_resource type="Script" path="res://scripts/tv.gd" id="1_8ftey"]
+[ext_resource type="Script" path="res://scripts/2D Scripts/tv.gd" id="1_8ftey"]
 [ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="1_e0pv6"]
 [ext_resource type="Shader" path="res://shaders/retro_tv.gdshader" id="2_xu4pq"]
 

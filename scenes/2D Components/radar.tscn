@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="1_akmpj"]
 [ext_resource type="Shader" path="res://shaders/radar.gdshader" id="1_lflqd"]
-[ext_resource type="Script" path="res://scripts/radar.gd" id="1_s83m1"]
+[ext_resource type="Script" path="res://scripts/2D Scripts/radar.gd" id="1_s83m1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ank6x"]
 shader = ExtResource("1_lflqd")

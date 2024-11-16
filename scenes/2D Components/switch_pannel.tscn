@@ -1,20 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2arprabh5fwy"]
 
-[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/Switch_scene.tscn" id="1_crtk4"]
-[ext_resource type="Script" path="res://scripts/switch_pannel_controller.gd" id="1_jf66n"]
+[ext_resource type="Script" path="res://scripts/2D Scripts/switch_pannel_controller.gd" id="1_iae6g"]
+[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/2D Components/Switch_scene.tscn" id="2_la8nn"]
 
 [node name="SwitchPannel" type="Node2D"]
-script = ExtResource("1_jf66n")
+script = ExtResource("1_iae6g")
 
-[node name="SwitchScene1" parent="." instance=ExtResource("1_crtk4")]
+[node name="SwitchScene1" parent="." instance=ExtResource("2_la8nn")]
 unique_name_in_owner = true
 position = Vector2(-470, -576)
 
-[node name="SwitchScene2" parent="." instance=ExtResource("1_crtk4")]
+[node name="SwitchScene2" parent="." instance=ExtResource("2_la8nn")]
 unique_name_in_owner = true
 position = Vector2(-351, -573)
 
-[node name="SwitchScene3" parent="." instance=ExtResource("1_crtk4")]
+[node name="SwitchScene3" parent="." instance=ExtResource("2_la8nn")]
 unique_name_in_owner = true
 position = Vector2(-233, -575)
 

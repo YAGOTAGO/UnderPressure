@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkqq5qu2xf4dr"]
 
 [ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="1_ica5c"]
-[ext_resource type="Script" path="res://scripts/pressure_gadge_script.gd" id="1_tjc84"]
+[ext_resource type="Script" path="res://scripts/2D Scripts/pressure_gadge_script.gd" id="1_tjc84"]
 
 [node name="PressureGadge" type="Node2D"]
 script = ExtResource("1_tjc84")
