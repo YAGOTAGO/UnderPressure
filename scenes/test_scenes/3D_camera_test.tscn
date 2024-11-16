@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtso81cirwh5e"]
+[gd_scene load_steps=5 format=3 uid="uid://dtso81cirwh5e"]
 
 [ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="1_84byp"]
-[ext_resource type="Script" path="res://scenes/test_scenes/camera_3d.gd" id="2_3lb8y"]
+[ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_3lb8y"]
+[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="2_lq78o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u7ga3"]
 
 [node name="3dCameraTest" type="Node3D"]
 
@@ -9,8 +12,21 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
 mesh = ExtResource("1_84byp")
 
+[node name="Area3D" type="Area3D" parent="Tv"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
+monitoring = false
+monitorable = false
+script = ExtResource("2_lq78o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tv/Area3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.144046, 1, -0.3)
+shape = SubResource("SphereShape3D_u7ga3")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767714, 4.16184)
 script = ExtResource("2_3lb8y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[connection signal="mouse_entered" from="Tv/Area3D" to="Tv/Area3D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tv/Area3D" to="Tv/Area3D" method="_on_mouse_exited"]

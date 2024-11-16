@@ -16,9 +16,7 @@ var smooth_factor: float = 0.1
 var initial_position: Vector3 = Vector3()
 
 func _ready() -> void:
-	# Optional: Set initial camera position or constraints on start
 	initial_position = global_transform.origin
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Captures the mouse for smooth movement
 
 func _process(delta: float) -> void:
 	var mouse_delta: Vector2 = Input.get_last_mouse_velocity()  # Get mouse movement since the last frame

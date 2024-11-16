@@ -4,7 +4,7 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_imu7g"]
 
-[node name="3dMouseCollider" type="Node2D"]
+[node name="3dMouseCollider" type="Node3D"]
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("1_lk3kj")
@@ -15,6 +15,7 @@ shape = SubResource("SphereShape3D_imu7g")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+current = true
 
 [connection signal="mouse_entered" from="Area3D" to="Area3D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="Area3D" method="_on_mouse_exited"]
