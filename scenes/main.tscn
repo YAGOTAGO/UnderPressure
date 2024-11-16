@@ -5,11 +5,11 @@
 
 [node name="Main" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416314, 0.812405, 4.42434)
 script = ExtResource("1_473u7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 
 [node name="Tv" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
