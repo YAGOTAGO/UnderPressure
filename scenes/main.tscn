@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=12 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
@@ -10,7 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="8_j4k27"]
 [ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://background_objects/steeringwheel.obj" id="9_0jv3u"]
 
+[sub_resource type="Environment" id="Environment_h7fa3"]
+glow_enabled = true
+glow_intensity = 5.84
+glow_strength = 1.27
+glow_blend_mode = 0
+glow_hdr_luminance_cap = 17.17
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_e2nei"]
+
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h7fa3")
+camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xhrch")

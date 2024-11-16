@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var switch: Node3D = %SwitchContainer
+@onready var light: MeshInstance3D = %IndicatorLight
 @onready var audio: AudioStreamPlayer3D =%AudioStreamPlayer3D
 
 signal switch_toggled
@@ -15,6 +16,9 @@ func activate() -> void:
 	is_up = !is_up
 	if(is_up):
 		switch.rotate_x(-1.5)
+		var mat = light.get_surface_override_material(0)
+		mat.emission = Color(0.0, 0.0, 0.0)
+		light.set_surface_override_material(0, mat)
 	else:
 		switch.rotate_x(1.5)
 	

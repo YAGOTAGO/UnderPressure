@@ -35,9 +35,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08082, 0.386656, 0.0832354)
 [node name="Switch3D5" parent="." instance=ExtResource("2_ra467")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63784, 0.386186, 0.0837494)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.990119, 0.140227, 0, -0.140227, 0.990119, 1.12335, 1.23733, 4.49399)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.99245)

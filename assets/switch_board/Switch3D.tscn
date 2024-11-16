@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4e2em28cqkd4"]
+[gd_scene load_steps=7 format=3 uid="uid://b4e2em28cqkd4"]
 
 [ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://assets/switch_board/switch_lever.obj" id="1_i80v6"]
 [ext_resource type="AudioStream" uid="uid://c08ad60d68xsh" path="res://Sounds/buttom click 1.wav" id="2_1getl"]
@@ -9,6 +9,13 @@ radius = 0.247978
 height = 0.811551
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j522v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxdoh"]
+albedo_color = Color(1.6, 1.2, 1.2, 1)
+metallic = 1.0
+metallic_specular = 1.0
+emission_enabled = true
+emission = Color(0.839314, 0, 0.14337, 1)
 
 [node name="Switch3D" type="Node3D"]
 script = ExtResource("2_inkt2")
@@ -33,9 +40,11 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 0.989576, -0.144011, 0, 0.144011, 0.989576, 0, 0.0375847, -0.0721699)
 shape = SubResource("CapsuleShape3D_kg4xh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="IndicatorLight" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(-0.000282656, -0.18037, 0, 0.142063, -0.000358873, 0, 0, 0, 0.170582, 0, 0.458461, 0.0155168)
 mesh = SubResource("CapsuleMesh_j522v")
+surface_material_override/0 = SubResource("StandardMaterial3D_oxdoh")
 
 [connection signal="mouse_entered" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_exited"]
