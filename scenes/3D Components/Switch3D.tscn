@@ -3,8 +3,9 @@
 [ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://objects/switch_lever.obj" id="1_i80v6"]
 [ext_resource type="Script" path="res://scripts/3D Scripts/Switch3D.gd" id="2_inkt2"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_v8mey"]
-radius = 0.2
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kg4xh"]
+radius = 0.247978
+height = 0.811551
 
 [node name="Switch3D" type="Node3D"]
 script = ExtResource("2_inkt2")
@@ -21,8 +22,8 @@ skeleton = NodePath("../..")
 [node name="Area3D" type="Area3D" parent="SwitchContainer"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchContainer/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0200812, 0.089609)
-shape = SubResource("SphereShape3D_v8mey")
+transform = Transform3D(1, 0, 0, 0, 0.989576, -0.144011, 0, 0.144011, 0.989576, 0, 0.0375847, -0.0721699)
+shape = SubResource("CapsuleShape3D_kg4xh")
 
 [connection signal="mouse_entered" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_exited"]

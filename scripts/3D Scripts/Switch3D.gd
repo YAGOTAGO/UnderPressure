@@ -13,9 +13,9 @@ func activate() -> void:
 	
 	is_up = !is_up
 	if(is_up):
-		switch.rotate_x(-0.5)
+		switch.rotate_x(-0.7)
 	else:
-		switch.rotate_x(0.5)
+		switch.rotate_x(0.7)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

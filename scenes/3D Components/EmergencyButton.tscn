@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdn3cfnnhonki"]
+
+[ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="1_tqlbd"]
+[ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://objects/emergencybuttoncase.obj" id="2_djnkh"]
+
+[node name="EmergencyButton" type="Node3D"]
+
+[node name="Emergencybuttonbase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -3, -1)
+mesh = ExtResource("1_tqlbd")
+
+[node name="Emergencybuttoncase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -3, -1)
+mesh = ExtResource("2_djnkh")

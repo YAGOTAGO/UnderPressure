@@ -1,31 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=7 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="ArrayMesh" uid="uid://bo838mjm4o54m" path="res://objects/radio.obj" id="3_3caqr"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
+[ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
 
 [node name="Main" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 4.40576)
+transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.552679, 4.26659, 6.87079)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0363044, 2.55786, 5.05646)
 script = ExtResource("1_473u7")
 
 [node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75638, -0.459413, -4.0254)
+transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.459413, -3.46993)
 
 [node name="Radio" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.306366, 0.536499, -4.67659)
+transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 0.920902, 0.536499, -5.88676)
 mesh = ExtResource("3_3caqr")
 
 [node name="WallRing" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0260868, 2.90524, -5.26834)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240955, 2.90524, -5.26834)
 mesh = ExtResource("4_ewsh0")
 
 [node name="Table" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790592, 0.577285, -5.87979)
 mesh = ExtResource("5_bm264")
+
+[node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
+transform = Transform3D(0.705619, -0.0669873, 0.705418, 0.0446118, 0.997746, 0.0501227, -0.707185, -0.00389761, 0.707017, -5.40072, 0.406168, 0.759855)
