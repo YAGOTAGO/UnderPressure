@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=8 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="ArrayMesh" uid="uid://bo838mjm4o54m" path="res://objects/radio.obj" id="3_3caqr"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
-[ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
+[ext_resource type="PackedScene" uid="uid://fqlo362lxj51" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
+[ext_resource type="PackedScene" uid="uid://c1d0lrm70vvma" path="res://scenes/3D Components/radar3D.tscn" id="7_svoui"]
 
 [node name="Main" type="Node3D"]
 
@@ -33,3 +34,6 @@ mesh = ExtResource("5_bm264")
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
 transform = Transform3D(0.705619, -0.0669873, 0.705418, 0.0446118, 0.997746, 0.0501227, -0.707185, -0.00389761, 0.707017, -5.40072, 0.406168, 0.759855)
+
+[node name="Radar" parent="." instance=ExtResource("7_svoui")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.48778, 0.683517, -1.50472)

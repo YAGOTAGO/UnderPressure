@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdn3cfnnhonki"]
+[gd_scene load_steps=3 format=3 uid="uid://b8uf2fb4h2i2n"]
 
 [ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="1_tqlbd"]
 [ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://objects/emergencybuttoncase.obj" id="2_djnkh"]
