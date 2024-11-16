@@ -43,7 +43,7 @@ script = ExtResource("1_473u7")
 transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.562336, 0.149986)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(-4.37114e-08, 0.113203, 0.993572, 0, 0.993572, -0.113203, -0.999999, -4.94827e-09, -4.34304e-08, -7.71464, 1.68826, 5.88715)
+transform = Transform3D(-4.37114e-08, 0.113203, 0.993572, 0, 0.993572, -0.113203, -0.999999, -4.94827e-09, -4.34304e-08, -7.66989, 1.68826, 5.88715)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -5.77363, 0.339705, 2.7816)
