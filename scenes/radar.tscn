@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cudtk63rr1jxy"]
+[gd_scene load_steps=8 format=3 uid="uid://1am2aay0iwcb"]
 
 [ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="1_akmpj"]
 [ext_resource type="Shader" path="res://shaders/radar.gdshader" id="1_lflqd"]
@@ -23,6 +23,21 @@ shader_parameter/blip_softness = 0.4
 shader_parameter/blip_presistence = 2.0
 shader_parameter/blip_position = Vector2(0.5, 0.5)
 
+[sub_resource type="Animation" id="Animation_mnx5q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG:material:shader_parameter/beam_angle")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
 [sub_resource type="Animation" id="Animation_f3nfx"]
 resource_name = "radar_cycle"
 length = 3.0
@@ -38,21 +53,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.25, 0.5, 0.75, 1.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_mnx5q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BG:material:shader_parameter/beam_angle")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.25]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x6rot"]
