@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://di5m7q1dn3fnr"]
+[gd_scene load_steps=13 format=3 uid="uid://di5m7q1dn3fnr"]
 
 [ext_resource type="Script" path="res://assets/emergency_button/emergency_button.gd" id="1_prbu4"]
 [ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://Sounds/buttom click.mp3" id="2_83xw7"]
 [ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://assets/emergency_button/emergencybuttoncase.obj" id="3_60p6m"]
 [ext_resource type="PackedScene" uid="uid://cdfalwkpt37m3" path="res://assets/emergency_button/emergencybase.fbx" id="3_80gs7"]
+[ext_resource type="AudioStream" uid="uid://ckuw4lict0n35" path="res://Sounds/emergency_click.mp3" id="3_okofc"]
 [ext_resource type="PackedScene" uid="uid://bpmh2smx16ovc" path="res://assets/emergency_button/emergencybutton.fbx" id="5_imm85"]
 
 [sub_resource type="Animation" id="Animation_6om63"]
@@ -19,30 +20,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node3D/emergencybutton:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(2.16221, -1.1106, -1.0868)]
 }
 
 [sub_resource type="Animation" id="Animation_spnc7"]
@@ -63,7 +40,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/path = NodePath("CoverSound:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -75,7 +52,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_ivveo"]
 resource_name = "push_btn"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -83,10 +60,24 @@ tracks/0/path = NodePath("Node3D/emergencybutton:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.4),
+"times": PackedFloat32Array(0.0333333, 0.3, 0.5),
 "transitions": PackedFloat32Array(1, 1, 0.0103086),
 "update": 0,
 "values": [Vector3(2.16221, -1.1106, -1.0868), Vector3(2.16221, -1.1106, -1.31098), Vector3(2.16221, -1.1106, -1.0868)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BtnSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ovpy3"]
@@ -106,10 +97,15 @@ radius = 0.134553
 [node name="EmergencyButton" type="Node3D"]
 script = ExtResource("1_prbu4")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="CoverSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422524, 0.507298, 1.19468)
 stream = ExtResource("2_83xw7")
 volume_db = 2.078
+
+[node name="BtnSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_okofc")
+volume_db = 8.675
+pitch_scale = 0.69
 
 [node name="DropCover" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
