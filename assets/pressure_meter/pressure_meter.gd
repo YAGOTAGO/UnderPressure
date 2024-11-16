@@ -3,7 +3,6 @@ extends Node3D
 @onready var timer: Timer = %Timer
 @onready var countdown: Timer = %PressureCountdown
 @onready var needle: Node3D = %MeterNeedle
-@onready var animations: AnimationPlayer = %AnimationPlayer
 
 var angle:float = 0.0	# The current angle of the needle
 var MIN_ANGLE:int = 0
