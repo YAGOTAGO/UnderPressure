@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=18 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://4ig533l63s52" path="res://assets/static/wiredecoration variation2.fbx" id="11_2og37"]
 [ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/shel&table.fbx" id="11_v3bio"]
 [ext_resource type="PackedScene" uid="uid://c5feks1b71nmw" path="res://assets/static/wiredecoration.fbx" id="12_esay2"]
+[ext_resource type="PackedScene" uid="uid://dnoj2me3x0o86" path="res://assets/radio/radio.tscn" id="13_ix7dp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -58,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, 
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 9.56876)
+transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
 script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
@@ -91,5 +92,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 
 [node name="wiredecoration" parent="." instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
+
+[node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
+transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
