@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=14 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
+[ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
@@ -9,7 +10,24 @@
 [ext_resource type="PackedScene" uid="uid://34brr0liwy6h" path="res://assets/pressure_meter/PressureMeter.tscn" id="10_c6tiw"]
 [ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/shel&table.fbx" id="11_v3bio"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
+shader = ExtResource("1_qur6l")
+shader_parameter/sky_color = Color(0.03, 0.05, 0.11, 1)
+shader_parameter/star_base_color = Color(0.8, 1, 0.3, 1)
+shader_parameter/star_hue_offset = 0.6
+shader_parameter/star_intensity = 0.08
+shader_parameter/star_twinkle_speed = 0.8
+shader_parameter/star_twinkle_intensity = 0.2
+shader_parameter/layer_scale = 20.0
+shader_parameter/layer_scale_step = 10.0
+shader_parameter/layers_count = 3
+
+[sub_resource type="Sky" id="Sky_7hub4"]
+sky_material = SubResource("ShaderMaterial_ujg4p")
+
 [sub_resource type="Environment" id="Environment_h7fa3"]
+background_mode = 2
+sky = SubResource("Sky_7hub4")
 glow_enabled = true
 glow_intensity = 5.84
 glow_strength = 1.27
@@ -31,7 +49,10 @@ script = ExtResource("1_xhrch")
 wait_time = 5.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
+transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 9.72885)
