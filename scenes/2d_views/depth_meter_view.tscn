@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cosv8wnuuc2x"]
+
+[ext_resource type="Shader" path="res://shaders/progress_shader.gdshader" id="1_7px80"]
+
+[sub_resource type="Gradient" id="Gradient_vrdgk"]
+offsets = PackedFloat32Array(0, 0.644022, 1)
+colors = PackedColorArray(0.0567505, 0.050725, 0.674996, 1, 0.16507, 0.181846, 0.72744, 1, 0.689474, 0.816637, 0.981334, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rjo37"]
+gradient = SubResource("Gradient_vrdgk")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lwccr"]
+shader = ExtResource("1_7px80")
+shader_parameter/progress = 0.476
+shader_parameter/background_color = Color(0, 0, 0, 1)
+shader_parameter/wave_amplitude = 0.02
+shader_parameter/wave_frequency = 3.0
+shader_parameter/wave_speed = 1.5
+shader_parameter/particle_speed = 0.05
+shader_parameter/particle_lifetime = 3.0
+shader_parameter/particle_softness = 0.01
+shader_parameter/particle_spacing = 0.1
+shader_parameter/particle_offset = Vector2(0, 0)
+shader_parameter/particle_start_scale = Vector2(0.02, 0.02)
+shader_parameter/particle_end_scale = Vector2(0.01, 0.01)
+shader_parameter/particle_scale_randomness = 0.5
+shader_parameter/particle_amount = 20
+shader_parameter/color_gradient = SubResource("GradientTexture2D_rjo37")
+
+[node name="DepthMeterView" type="Node2D"]
+
+[node name="ProgressBar" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_lwccr")
+offset_left = 74.0
+offset_top = 1041.0
+offset_right = 1066.0
+offset_bottom = 1302.0
+rotation = -1.5708
+
+[node name="Label" type="Label" parent="."]
+offset_left = 431.0
+offset_top = 153.0
+offset_right = 1711.0
+offset_bottom = 889.0
+theme_override_font_sizes/font_size = 200
+text = "#####"
+vertical_alignment = 1
