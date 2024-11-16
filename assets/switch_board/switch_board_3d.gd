@@ -7,14 +7,19 @@ extends Node3D
 
 
 
-func randomize_switches() -> void:
+func activate() -> void:
 	for switch in switchArray:
 		if(randi_range(0,1) == 0):
-			switch.activate()
+			switch.break_switch()
+		else:
+			switch.set_correct()
+			
+			
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	randomize_switches()
+	activate()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
