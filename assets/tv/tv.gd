@@ -27,6 +27,7 @@ func update_rotation(value: float)-> void:
 	print(rotation)
 	antenna.rotation_degrees.z = value
 	
+	
 func update_tv_noise() -> void:
 	var distance: float = abs(slider.value - target_value)
 	var proximity: float = distance / slider.max_value
