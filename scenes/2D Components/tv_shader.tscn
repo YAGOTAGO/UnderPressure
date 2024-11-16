@@ -1,6 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw2duxafvebni"]
+[gd_scene load_steps=4 format=3 uid="uid://cw2duxafvebni"]
 
 [ext_resource type="Shader" path="res://shaders/retro_tv.gdshader" id="1_cnc8s"]
+
+[sub_resource type="GDScript" id="GDScript_yqbbs"]
+script/source = "extends Node2D
+
+@onready var tv_shader_material: ShaderMaterial = %ColorRect.material as ShaderMaterial
+
+func get_shader_material() -> ShaderMaterial:
+	return tv_shader_material
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w7jj4"]
 shader = ExtResource("1_cnc8s")
@@ -17,7 +26,7 @@ shader_parameter/roll_variation = 1.8
 shader_parameter/distort_intensity = 0.05
 shader_parameter/noise_opacity = 0.4
 shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.06
+shader_parameter/static_noise_intensity = 1.0
 shader_parameter/aberration = 0.03
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
@@ -27,8 +36,10 @@ shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
 [node name="TvShader" type="Node2D"]
+script = SubResource("GDScript_yqbbs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_w7jj4")
 offset_top = -5.0
 offset_right = 1920.0

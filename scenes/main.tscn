@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=9 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
-[ext_resource type="ArrayMesh" uid="uid://bo838mjm4o54m" path="res://objects/radio.obj" id="3_3caqr"]
 [ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
@@ -21,10 +20,6 @@ script = ExtResource("1_473u7")
 
 [node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
 transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.0539719, -3.46993)
-
-[node name="Radio" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 0.920902, 0.94194, -5.88676)
-mesh = ExtResource("3_3caqr")
 
 [node name="WallRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240955, 2.90524, -5.26834)
