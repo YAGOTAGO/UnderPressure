@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://dlypsuxn3noka"]
 
-[ext_resource type="Script" path="res://scripts/3D Scripts/camera_3d.gd" id="1_473u7"]
+[ext_resource type="Script" path="res://scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
-[ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://objects/wall_ring.obj" id="4_ewsh0"]
-[ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
+[ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://background_objects/wall_ring.obj" id="4_ewsh0"]
+[ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://background_objects/newtable.obj" id="5_bm264"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://scenes/3D Components/radar3D.tscn" id="7_svoui"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://scenes/3D Components/EmergencyButton.tscn" id="8_j4k27"]
-[ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://objects/steeringwheel.obj" id="9_0jv3u"]
+[ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://background_objects/steeringwheel.obj" id="9_0jv3u"]
 
 [node name="Main" type="Node3D"]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4e2em28cqkd4"]
 
-[ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://objects/switch_lever.obj" id="1_i80v6"]
+[ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://assets/switch_board/switch_lever.obj" id="1_i80v6"]
 [ext_resource type="AudioStream" uid="uid://c08ad60d68xsh" path="res://Sounds/buttom click 1.wav" id="2_1getl"]
-[ext_resource type="Script" path="res://scripts/3D Scripts/Switch3D.gd" id="2_inkt2"]
+[ext_resource type="Script" path="res://assets/switch_board/Switch3D.gd" id="2_inkt2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kg4xh"]
 radius = 0.247978

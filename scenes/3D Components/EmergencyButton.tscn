@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://di5m7q1dn3fnr"]
 
-[ext_resource type="Script" path="res://scripts/3D Scripts/emergency_button.gd" id="1_prbu4"]
+[ext_resource type="Script" path="res://assets/emergency_button/emergency_button.gd" id="1_prbu4"]
 [ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://Sounds/buttom click.mp3" id="2_83xw7"]
-[ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="2_qtjl3"]
-[ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://objects/emergencybuttoncase.obj" id="3_60p6m"]
-[ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://objects/waterdrop.obj" id="4_qw556"]
+[ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://assets/emergency_button/emergencybuttonbase.obj" id="2_qtjl3"]
+[ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://assets/emergency_button/emergencybuttoncase.obj" id="3_60p6m"]
+[ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://background_objects/waterdrop.obj" id="4_qw556"]
 
 [sub_resource type="Animation" id="Animation_6om63"]
 length = 0.001

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfhi068dmsvbq"]
 
-[ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://objects/waterdrop.obj" id="1_hisan"]
+[ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://background_objects/waterdrop.obj" id="1_hisan"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5v13p"]
 

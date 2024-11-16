@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c22n6icpny0xs"]
 
-[ext_resource type="Script" path="res://scripts/3D Scripts/switch_board_3d.gd" id="1_fqq0t"]
-[ext_resource type="ArrayMesh" uid="uid://cr5sm1234ys14" path="res://objects/switch_base.obj" id="1_kuhkl"]
+[ext_resource type="Script" path="res://assets/switch_board/switch_board_3d.gd" id="1_fqq0t"]
+[ext_resource type="ArrayMesh" uid="uid://cr5sm1234ys14" path="res://assets/switch_board/switch_base.obj" id="1_kuhkl"]
 [ext_resource type="PackedScene" uid="uid://b4e2em28cqkd4" path="res://scenes/3D Components/Switch3D.tscn" id="2_ra467"]
 
 [node name="SwitchBoard3d" type="Node3D"]

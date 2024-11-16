@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p65s81uo5s2n"
+path="res://.godot/imported/steeringwheel.obj-bb0f5437642ed6fd3c5607cff0ec831d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/steeringwheel.obj-bb0f5437642ed6fd3c5607cff0ec831d.mesh"]
+
+source_file="res://background_objects/steeringwheel.obj"
+dest_files=["res://.godot/imported/steeringwheel.obj-bb0f5437642ed6fd3c5607cff0ec831d.mesh", "res://.godot/imported/steeringwheel.obj-bb0f5437642ed6fd3c5607cff0ec831d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

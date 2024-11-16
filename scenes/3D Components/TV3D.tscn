@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://mng8q3q44jxx"]
 
-[ext_resource type="Script" path="res://scripts/2D Scripts/tv.gd" id="1_d5fup"]
-[ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://objects/tv.obj" id="1_qpyk8"]
-[ext_resource type="Script" path="res://scripts/3D Scripts/viewport_input.gd" id="2_w3tso"]
-[ext_resource type="Script" path="res://scripts/3D Scripts/viewport_basic.gd" id="2_xrqc6"]
+[ext_resource type="Script" path="res://assets/tv/tv.gd" id="1_d5fup"]
+[ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://assets/tv/tv.obj" id="1_qpyk8"]
+[ext_resource type="Script" path="res://scripts/viewport_input.gd" id="2_w3tso"]
+[ext_resource type="Script" path="res://scripts/viewport_basic.gd" id="2_xrqc6"]
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
-[ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://objects/switch_lever.obj" id="5_d15qs"]
+[ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://assets/switch_board/switch_lever.obj" id="5_d15qs"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
 

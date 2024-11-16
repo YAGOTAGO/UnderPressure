@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8mwutpc18fyp"
+path="res://.godot/imported/wall_ring.obj-0ad6c78c20797c8d86a0428379eef809.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_ring.obj-0ad6c78c20797c8d86a0428379eef809.mesh"]
+
+source_file="res://background_objects/wall_ring.obj"
+dest_files=["res://.godot/imported/wall_ring.obj-0ad6c78c20797c8d86a0428379eef809.mesh", "res://.godot/imported/wall_ring.obj-0ad6c78c20797c8d86a0428379eef809.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
