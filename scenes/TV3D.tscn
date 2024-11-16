@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://br08h6hca402w"]
+
+[ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="1_bm3bj"]
+[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/tv_shader.tscn" id="2_j1d1f"]
+[ext_resource type="Script" path="res://scripts/set_viewport.gd" id="2_w3tso"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_8n71x"]
+
+[node name="Tv3d" type="Node3D"]
+
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
+mesh = ExtResource("1_bm3bj")
+
+[node name="ViewPortQuad" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
+transform = Transform3D(2.10341, 0, 0, 0, 1.48111, 0, 0, 0, 1.48111, 0.460633, 1.88655, 2.66827)
+material_override = SubResource("ORMMaterial3D_65ebg")
+mesh = SubResource("QuadMesh_8n71x")
+script = ExtResource("2_w3tso")
+viewport = NodePath("../SubViewport")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+render_target_update_mode = 4
+
+[node name="TvShader" parent="SubViewport" instance=ExtResource("2_j1d1f")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 6)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
