@@ -18,8 +18,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var mouse_delta: Vector2 = Input.get_last_mouse_velocity()  # Get mouse movement since the last frame
 	
-	print(mouse_delta.length())
-	
 	# Ignore small movements to reduce jitter
 	if mouse_delta.length() < mouse_threshold:
 		return
