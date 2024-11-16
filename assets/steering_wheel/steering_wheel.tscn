@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7nsa5i18irpp"]
+
+[ext_resource type="ArrayMesh" uid="uid://bg6k5tur6o65i" path="res://assets/steering_wheel/steeringwheelbase.obj" id="1_loufu"]
+[ext_resource type="ArrayMesh" uid="uid://bov8oyrkytld8" path="res://assets/steering_wheel/steeringwheelwheel.obj" id="2_7ehun"]
+[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="3_13bni"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sljcs"]
+size = Vector3(1.48877, 2.56171, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lly20"]
+size = Vector3(1.42688, 2.62598, 1)
+
+[node name="SteeringWheel" type="Node3D"]
+
+[node name="WheelBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0167415, 1, 0.63164)
+mesh = ExtResource("1_loufu")
+
+[node name="Wheel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0188596, 2.54115, 0.637033)
+
+[node name="Steeringwheelwheel" type="MeshInstance3D" parent="Wheel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104611, -1.54514, -0.014008)
+mesh = ExtResource("2_7ehun")
+skeleton = NodePath("../..")
+
+[node name="LeftArea" type="Area3D" parent="."]
+monitoring = false
+monitorable = false
+script = ExtResource("3_13bni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.786286, 2.27836, 0.246078)
+shape = SubResource("BoxShape3D_sljcs")
+
+[node name="RightArea" type="Area3D" parent="."]
+script = ExtResource("3_13bni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74419, 2.33037, 0.24776)
+shape = SubResource("BoxShape3D_lly20")

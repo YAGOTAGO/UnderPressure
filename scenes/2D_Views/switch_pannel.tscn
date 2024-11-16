@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2arprabh5fwy"]
 
 [ext_resource type="Script" path="res://assets/switch_board/switch_pannel_controller.gd" id="1_iae6g"]
-[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/2D Components/Switch_scene.tscn" id="2_la8nn"]
+[ext_resource type="PackedScene" uid="uid://cl5u05vudb8cs" path="res://scenes/2D_Views/Switch_scene.tscn" id="2_la8nn"]
 
 [node name="SwitchPannel" type="Node2D"]
 script = ExtResource("1_iae6g")
