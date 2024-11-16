@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjkkm0kgs3tkm"]
+
+[ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="1_sp4uy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_imu7g"]
+
+[node name="3dMouseCollider" type="Node2D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_sp4uy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 0)
+shape = SubResource("SphereShape3D_imu7g")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[connection signal="mouse_entered" from="Area3D" to="Area3D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="Area3D" method="_on_mouse_exited"]

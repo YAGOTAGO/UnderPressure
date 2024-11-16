@@ -17,7 +17,6 @@ func activate() -> void:
 	
 	switch_clicked.emit()
 
-
 func _process(delta: float) -> void:
 	if mouse_inside and Input.is_action_just_pressed("click"):
 		activate()
