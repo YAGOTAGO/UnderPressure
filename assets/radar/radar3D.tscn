@@ -16,6 +16,7 @@ size = Vector3(0.675155, 0.290092, 0.228142)
 
 [sub_resource type="Animation" id="Animation_wjn54"]
 resource_name = "button_click"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,7 +24,7 @@ tracks/0/path = NodePath("radar_square/radar_button:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.0174629, 0, 0.0730047), Vector3(-0.017, 0, -0.14), Vector3(-0.017, 0, 0.073)]
@@ -85,6 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.439314, 1.41936, 1.43025)
 shape = SubResource("BoxShape3D_2161e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_bk7gi")
 }
