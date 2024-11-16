@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cotnxrn8eoecs"]
+
+[ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="1_ovevt"]
+[ext_resource type="PackedScene" uid="uid://bx2nao4clspqn" path="res://scenes/2d_views/main_menu_view.tscn" id="1_u3adp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eiqv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_et7tw"]
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
+transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_0eiqv")
+mesh = SubResource("QuadMesh_et7tw")
+script = ExtResource("1_ovevt")
+viewport = NodePath("SubViewport")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D"]
+size = Vector2i(1920, 1080)
+
+[node name="MainMenu" parent="MeshInstance3D/SubViewport" instance=ExtResource("1_u3adp")]
