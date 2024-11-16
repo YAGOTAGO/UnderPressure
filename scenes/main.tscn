@@ -51,9 +51,11 @@ wait_time = 5.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
+visible = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 8.54705)
