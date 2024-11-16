@@ -5,3 +5,4 @@
 [node name="TestScene1" type="Node2D"]
 
 [node name="CoveredButton" parent="." instance=ExtResource("1_w6btr")]
+script = null
