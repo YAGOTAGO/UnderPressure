@@ -24,7 +24,6 @@ func _ready() -> void:
 #function that rotates antenna
 func update_rotation(value: float)-> void:
 	var rotation: int  = MIN_ROTATION + (value / slider.max_value) * (MAX_ROTATION - MIN_ROTATION)
-	print(rotation)
 	antenna.rotation_degrees.z = rotation
 	
 	
