@@ -7,7 +7,7 @@ func start_game() -> void:
 	pass
 
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	_activate_components()
 
 func _activate_components()->void:
 	#get non broken components
