@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://7h2uca4lj1vy"]
+
+[ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://objects/steeringwheel.obj" id="1_rj4v2"]
+
+[node name="SteeringWheel" type="Node3D"]
+
+[node name="Steeringwheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14686, 0, -0.413396)
+mesh = ExtResource("1_rj4v2")

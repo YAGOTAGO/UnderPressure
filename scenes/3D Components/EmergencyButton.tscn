@@ -1,9 +1,37 @@
-[gd_scene load_steps=10 format=3 uid="uid://di5m7q1dn3fnr"]
+[gd_scene load_steps=11 format=3 uid="uid://di5m7q1dn3fnr"]
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/emergency_button.gd" id="1_prbu4"]
+[ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://Sounds/buttom click.mp3" id="2_83xw7"]
 [ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://objects/emergencybuttonbase.obj" id="2_qtjl3"]
 [ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://objects/emergencybuttoncase.obj" id="3_60p6m"]
 [ext_resource type="ArrayMesh" uid="uid://6boxsmokkpeq" path="res://objects/waterdrop.obj" id="4_qw556"]
+
+[sub_resource type="Animation" id="Animation_6om63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Case:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_spnc7"]
 resource_name = "open_cover"
@@ -20,20 +48,17 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(1.90415, 0, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_6om63"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Case:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ovpy3"]
@@ -52,11 +77,10 @@ radius = 0.134553
 [node name="EmergencyButton" type="Node3D"]
 script = ExtResource("1_prbu4")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.931304, 0.364243, 0, -0.364243, 0.931304, 0, 1.70465, 5.10697)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.655206, 2.07681)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422524, 0.507298, 1.19468)
+stream = ExtResource("2_83xw7")
+volume_db = 2.078
 
 [node name="DropCover" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

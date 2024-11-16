@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=10 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/3D Scripts/camera_3d.gd" id="1_473u7"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://scenes/3D Components/TV3D.tscn" id="2_pv8vt"]
@@ -7,6 +7,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://objects/newtable.obj" id="5_bm264"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://scenes/3D Components/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://scenes/3D Components/radar3D.tscn" id="7_svoui"]
+[ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://scenes/3D Components/EmergencyButton.tscn" id="8_j4k27"]
+[ext_resource type="ArrayMesh" uid="uid://p65s81uo5s2n" path="res://objects/steeringwheel.obj" id="9_0jv3u"]
 
 [node name="Main" type="Node3D"]
 
@@ -14,7 +16,7 @@
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0363044, 2.55786, 5.05646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 5.05646)
 script = ExtResource("1_473u7")
 
 [node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
@@ -36,4 +38,14 @@ mesh = ExtResource("5_bm264")
 transform = Transform3D(0.705619, -0.0669873, 0.705418, 0.0446118, 0.997746, 0.0501227, -0.707185, -0.00389761, 0.707017, -5.40072, 0.406168, 0.759855)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.48778, 0.683517, -1.50472)
+transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.04241, 0.683517, -1.50472)
+
+[node name="EmergencyButton" parent="." instance=ExtResource("8_j4k27")]
+transform = Transform3D(-0.999704, -0.0243274, 0, 0.0218748, -0.898918, -0.437571, 0.010645, -0.437441, 0.899184, 0.477417, 9.0443, -4.83532)
+
+[node name="Steeringwheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11748, -0.340779, -6.22436)
+mesh = ExtResource("9_0jv3u")
+
+[node name="EmergencyButton2" parent="." instance=ExtResource("8_j4k27")]
+transform = Transform3D(-0.930468, -0.0660841, -0.360364, 0.237282, -0.858137, -0.4553, -0.279153, -0.50915, 0.81415, 4.20095, 8.52166, -4.42425)

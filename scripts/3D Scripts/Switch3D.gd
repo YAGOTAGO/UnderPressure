@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var switch: Node3D = %SwitchContainer
+@onready var audio: AudioStreamPlayer3D =%AudioStreamPlayer3D
 
 signal switch_toggled
 var mouse_inside: bool = false
@@ -10,12 +11,12 @@ var is_up: bool = true
 
 func activate() -> void:
 	switch_toggled.emit()
-	
+	audio.play(0)
 	is_up = !is_up
 	if(is_up):
-		switch.rotate_x(-0.7)
+		switch.rotate_x(-1.5)
 	else:
-		switch.rotate_x(0.7)
+		switch.rotate_x(1.5)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

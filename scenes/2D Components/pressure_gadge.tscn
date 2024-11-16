@@ -21,10 +21,10 @@ offset = Vector2(-0.305542, -64.3627)
 
 [node name="HSlider" type="HSlider" parent="."]
 unique_name_in_owner = true
-offset_left = 1.0
-offset_top = 261.0
-offset_right = 180.0
-offset_bottom = 277.0
+offset_left = 9.0
+offset_top = 259.0
+offset_right = 188.0
+offset_bottom = 275.0
 max_value = 1.0
 step = 0.05
 

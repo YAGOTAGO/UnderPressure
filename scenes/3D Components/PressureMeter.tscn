@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://34brr0liwy6h"]
+
+[ext_resource type="ArrayMesh" uid="uid://dc4cky82efbg5" path="res://objects/meter.obj" id="1_k2e3w"]
+[ext_resource type="ArrayMesh" uid="uid://drsaiet7pqofl" path="res://objects/meter_needle.obj" id="2_gdmlw"]
+
+[node name="PressureMeter" type="Node3D"]
+
+[node name="MeterBase" type="Node3D" parent="."]
+
+[node name="MeterMesh" type="MeshInstance3D" parent="MeterBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58667, 0.250894, -1.56388)
+mesh = ExtResource("1_k2e3w")
+skeleton = NodePath("../..")
+
+[node name="MeterNeedle" type="Node3D" parent="."]
+transform = Transform3D(0.919135, -0.393942, 0, 0.393942, 0.919135, 0, 0, 0, 1, 1.48256, 0.262842, -0.235404)
+
+[node name="MeterNeedleMesh" type="MeshInstance3D" parent="MeterNeedle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13462, 0.0213776, -1.26123)
+mesh = ExtResource("2_gdmlw")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.767718, 2.09704, 0.863191)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83225, 0.773259, 2.79463)

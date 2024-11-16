@@ -20,7 +20,7 @@ size = Vector2i(137, 132)
 [node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]
 
 [node name="Mesh Viewport" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+transform = Transform3D(0.988454, 0.0847243, -0.125618, -0.00513467, 0.847311, 0.531072, 0.151433, -0.524296, 0.837963, 0.247669, 0.790551, 0.270836)
 material_override = SubResource("ORMMaterial3D_x6cf8")
 mesh = SubResource("QuadMesh_qdtky")
 script = ExtResource("2_cr1cp")
