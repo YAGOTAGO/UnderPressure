@@ -68,6 +68,7 @@ custom_minimum_size = Vector2(300, 50)
 offset_top = -15.0
 offset_right = 300.0
 offset_bottom = 35.0
+max_value = 200.0
 
 [node name="SwitchContainer" type="Node3D" parent="."]
 unique_name_in_owner = true
