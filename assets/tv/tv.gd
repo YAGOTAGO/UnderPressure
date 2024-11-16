@@ -29,7 +29,7 @@ func update_tv_noise() -> void:
 	var distance: float = abs(slider.value - target_value)
 	var proximity: float = distance / slider.max_value
 	
-	tv_shader_material.set_shader_parameter("static_noise_intensity", lerp(0.006, 1.0, proximity))
+	tv_shader_material.set_shader_parameter("static_noise_intensity", lerp(0.06, 1.0, proximity))
 	print(tv_shader_material.get_shader_parameter("static_noise_intensity"))
 	
 	

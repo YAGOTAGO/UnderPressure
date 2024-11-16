@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=11 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="Script" path="res://assets/tv/tv.gd" id="1_d5fup"]
 [ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://assets/tv/tv.obj" id="1_qpyk8"]
 [ext_resource type="Script" path="res://scripts/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport_basic.gd" id="2_xrqc6"]
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
-[ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://assets/switch_board/switch_lever.obj" id="5_d15qs"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
 
@@ -18,14 +17,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_cgp7v"]
 size = Vector3(1, 1, 0.0761108)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cc3lc"]
-radius = 0.247978
-height = 0.811551
-
-[node name="Tv3d" type="Node3D"]
+[node name="TV" type="Node3D"]
 script = ExtResource("1_d5fup")
 
-[node name="Tv" type="MeshInstance3D" parent="."]
+[node name="TV Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
 mesh = ExtResource("1_qpyk8")
 
@@ -69,18 +64,3 @@ offset_top = -15.0
 offset_right = 300.0
 offset_bottom = 35.0
 max_value = 200.0
-
-[node name="SwitchContainer" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.454136, 2.97028, 2.53636)
-
-[node name="SwitchLever" type="MeshInstance3D" parent="SwitchContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.44893, -1.06804, -1.22959)
-mesh = ExtResource("5_d15qs")
-skeleton = NodePath("../..")
-
-[node name="Area3D" type="Area3D" parent="SwitchContainer"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchContainer/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 0.989576, -0.144011, 0, 0.144011, 0.989576, 0, 0.0375847, -0.0721699)
-shape = SubResource("CapsuleShape3D_cc3lc")
