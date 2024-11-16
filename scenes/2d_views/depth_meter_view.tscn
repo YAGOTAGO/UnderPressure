@@ -13,7 +13,7 @@ gradient = SubResource("Gradient_vrdgk")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lwccr"]
 shader = ExtResource("1_7px80")
-shader_parameter/progress = 0.476
+shader_parameter/progress = 1.0
 shader_parameter/background_color = Color(0, 0, 0, 1)
 shader_parameter/wave_amplitude = 0.02
 shader_parameter/wave_frequency = 3.0
@@ -31,6 +31,10 @@ shader_parameter/color_gradient = SubResource("GradientTexture2D_rjo37")
 
 [node name="DepthMeterView" type="Node2D"]
 script = ExtResource("1_ecana")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
 
 [node name="ProgressBar" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -61,3 +65,5 @@ theme_override_fonts/font = ExtResource("3_ni8rc")
 theme_override_font_sizes/font_size = 200
 text = "#####"
 vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
