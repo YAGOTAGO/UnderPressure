@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b41kfcvyxm41"]
+[gd_scene load_steps=14 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_8rlvd"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_83o4l"]
 [ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2d_views/radar_view.tscn" id="2_i3uii"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="4_8y24s"]
 [ext_resource type="PackedScene" uid="uid://5o77qkvkgho6" path="res://assets/radar/radar_square.fbx" id="7_aahc0"]
+[ext_resource type="AudioStream" uid="uid://d3fdupswas2n" path="res://sounds/old-radio-button-click-97549.mp3" id="7_mra7p"]
 [ext_resource type="PackedScene" uid="uid://bouvp13jckg65" path="res://assets/radar/radar_button.fbx" id="8_unb5l"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_x6cf8"]
@@ -43,6 +44,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.0174629, 0, 0.0730047), Vector3(-0.017, 0, -0.14), Vector3(-0.017, 0, 0.073)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bk7gi"]
@@ -90,3 +105,7 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_bk7gi")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_mra7p")
+volume_db = 3.0

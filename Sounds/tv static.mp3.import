@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://degg6rd4mwfnd"
-path="res://.godot/imported/tv static.mp3-4ea7cd18c862f80cfaad062d281bdc5d.mp3str"
+path="res://.godot/imported/tv static.mp3-cc23a48750890c193755c5168a7d00dc.mp3str"
 
 [deps]
 
-source_file="res://Sounds/tv static.mp3"
-dest_files=["res://.godot/imported/tv static.mp3-4ea7cd18c862f80cfaad062d281bdc5d.mp3str"]
+source_file="res://sounds/tv static.mp3"
+dest_files=["res://.godot/imported/tv static.mp3-cc23a48750890c193755c5168a7d00dc.mp3str"]
 
 [params]
 
