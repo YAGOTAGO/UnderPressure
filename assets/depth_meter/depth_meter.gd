@@ -4,7 +4,7 @@ signal surface_reached
 
 const MAX_AMOUNT = 10
 const MIN_AMOUNT = 1
-const START_DEPTH = 10000
+const START_DEPTH = 1000
 
 @onready var progress_shader_material: ShaderMaterial = %ProgressBar.material as ShaderMaterial
 @onready var label: Label = %Label
@@ -26,7 +26,7 @@ func _on_timer_timeout() -> void:
 	
 func _update_display():
 	label.text = str(depth_num)
-	var percentage: float = 1 - (depth_num as float / START_DEPTH as float)
-	progress_shader_material.set_shader_parameter("progress", percentage)
+	var percentage: float = 1.0 - (depth_num as float/ START_DEPTH as float) * 2.0
+	progress_shader_material.set_shader_parameter("fill_value", percentage)
 
 	

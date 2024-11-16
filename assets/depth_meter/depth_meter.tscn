@@ -16,6 +16,6 @@ script = ExtResource("1_vo01l")
 viewport = NodePath("../SubViewport")
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(1125, 1080)
+size = Vector2i(1275, 475)
 
 [node name="DepthMeterView" parent="SubViewport" instance=ExtResource("1_mdsik")]

@@ -1,33 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cosv8wnuuc2x"]
+[gd_scene load_steps=5 format=3 uid="uid://cosv8wnuuc2x"]
 
-[ext_resource type="Shader" path="res://shaders/progress_shader.gdshader" id="1_7px80"]
 [ext_resource type="Script" path="res://assets/depth_meter/depth_meter.gd" id="1_ecana"]
+[ext_resource type="Shader" path="res://shaders/liquid.gdshader" id="2_831l8"]
 [ext_resource type="FontFile" uid="uid://bl1omhgi6y3fu" path="res://assets/fonts/RobotoSerif-Regular.ttf" id="3_ni8rc"]
 
-[sub_resource type="Gradient" id="Gradient_vrdgk"]
-offsets = PackedFloat32Array(0, 0.644022, 1)
-colors = PackedColorArray(0.0567505, 0.050725, 0.674996, 1, 0.16507, 0.181846, 0.72744, 1, 0.689474, 0.816637, 0.981334, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_rjo37"]
-gradient = SubResource("Gradient_vrdgk")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lwccr"]
-shader = ExtResource("1_7px80")
-shader_parameter/progress = 1.0
-shader_parameter/background_color = Color(0, 0, 0, 1)
-shader_parameter/wave_amplitude = 0.02
-shader_parameter/wave_frequency = 3.0
-shader_parameter/wave_speed = 1.5
-shader_parameter/particle_speed = 0.05
-shader_parameter/particle_lifetime = 3.0
-shader_parameter/particle_softness = 0.01
-shader_parameter/particle_spacing = 0.1
-shader_parameter/particle_offset = Vector2(0, 0)
-shader_parameter/particle_start_scale = Vector2(0.02, 0.02)
-shader_parameter/particle_end_scale = Vector2(0.01, 0.01)
-shader_parameter/particle_scale_randomness = 0.5
-shader_parameter/particle_amount = 20
-shader_parameter/color_gradient = SubResource("GradientTexture2D_rjo37")
+shader = ExtResource("2_831l8")
+shader_parameter/backFillColour = Color(0.62, 1, 1, 1)
+shader_parameter/frontFillInnerColour = Color(0.35, 1, 1, 1)
+shader_parameter/frontFillOuterColour = Color(0, 0.35, 1, 1)
+shader_parameter/ringColour = Color(0, 0.16, 0.13, 1)
+shader_parameter/fresnelColour = Color(0, 0.88, 1, 1)
+shader_parameter/innerRingGlowColour = Color(0, 1, 1, 1)
+shader_parameter/fillcolour = Color(1, 1, 1, 1)
+shader_parameter/ringWidth = 0.15
+shader_parameter/innerCircleRadiusOffset = 0.0
+shader_parameter/fill_value = -1.0
 
 [node name="DepthMeterView" type="Node2D"]
 script = ExtResource("1_ecana")
@@ -39,17 +27,13 @@ autostart = true
 [node name="ProgressBar" type="ColorRect" parent="."]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_lwccr")
-offset_left = 74.0
-offset_top = 1041.0
-offset_right = 1066.0
-offset_bottom = 1302.0
-rotation = -1.5708
+offset_right = 458.0
+offset_bottom = 458.0
 
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 384.0
-offset_top = 128.0
-offset_right = 1367.0
-offset_bottom = 515.0
+offset_left = 448.0
+offset_right = 1248.0
+offset_bottom = 235.0
 theme_override_fonts/font = ExtResource("3_ni8rc")
 theme_override_font_sizes/font_size = 200
 text = "DEPTH:"
@@ -57,10 +41,10 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 424.0
-offset_top = 424.0
-offset_right = 1144.0
-offset_bottom = 811.0
+offset_left = 488.0
+offset_top = 216.0
+offset_right = 1208.0
+offset_bottom = 451.0
 theme_override_fonts/font = ExtResource("3_ni8rc")
 theme_override_font_sizes/font_size = 200
 text = "#####"
