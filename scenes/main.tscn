@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 5.05646)
 script = ExtResource("1_473u7")
 
 [node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
-transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.0539719, -3.46993)
+transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, 0.0161742, -3.46993)
 
 [node name="WallRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240955, 2.90524, -5.26834)
