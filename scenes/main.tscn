@@ -1,15 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=11 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
-[ext_resource type="ArrayMesh" uid="uid://b8mwutpc18fyp" path="res://background_objects/wall_ring.obj" id="4_ewsh0"]
-[ext_resource type="ArrayMesh" uid="uid://dtl53qhniaxs7" path="res://background_objects/newtable.obj" id="5_bm264"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://assets/radar/radar3D.tscn" id="7_svoui"]
-[ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="8_j4k27"]
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
 [ext_resource type="PackedScene" uid="uid://34brr0liwy6h" path="res://assets/pressure_meter/PressureMeter.tscn" id="10_c6tiw"]
+[ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/shel&table.fbx" id="11_v3bio"]
 
 [sub_resource type="Environment" id="Environment_h7fa3"]
 glow_enabled = true
@@ -36,36 +34,28 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -2.08482, 8.13339, 6.59334)
 
 [node name="Camera3D" type="Camera3D" parent="."]
+<<<<<<< Updated upstream
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 3.056, 5.05646)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0657407, 2.55786, 10.3585)
+>>>>>>> Stashed changes
 script = ExtResource("1_473u7")
 
-[node name="Tv3d" parent="." instance=ExtResource("2_pv8vt")]
-transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, 0.0161742, -3.46993)
+[node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
 
-[node name="WallRing" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240955, 2.90524, -5.26834)
-mesh = ExtResource("4_ewsh0")
-
-[node name="Table" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790592, 0.577285, -5.87979)
-mesh = ExtResource("5_bm264")
+[node name="TV" parent="." instance=ExtResource("2_pv8vt")]
+transform = Transform3D(0.892074, 0, -0.45189, 0, 1, 0, 0.45189, 0, 0.892074, 4.25091, -0.562336, 0.149986)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(0.705619, -0.0669873, 0.705418, 0.0446118, 0.997746, 0.0501227, -0.707185, -0.00389761, 0.707017, -5.40072, 0.406168, 0.759855)
+transform = Transform3D(-4.37114e-08, 0.113203, 0.993572, 0, 0.993572, -0.113203, -0.999999, -4.94827e-09, -4.34304e-08, -7.71464, 1.68826, 5.88715)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
-transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.04241, 0.683517, -1.50472)
-
-[node name="EmergencyButton" parent="." instance=ExtResource("8_j4k27")]
-transform = Transform3D(-0.999704, -0.0243274, 0, 0.0218748, -0.898918, -0.437571, 0.010645, -0.437441, 0.899184, 0.477417, 9.0443, -4.83532)
-
-[node name="EmergencyButton2" parent="." instance=ExtResource("8_j4k27")]
-transform = Transform3D(-0.930468, -0.0660841, -0.360364, 0.237282, -0.858137, -0.4553, -0.279153, -0.50915, 0.81415, 4.20095, 8.52166, -4.42425)
+transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -5.77363, 0.339705, 2.7816)
 
 [node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0221002, 0.896692, -4.11376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0221002, 0.415648, 1.41689)
 
 [node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -6, 5, -4)
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -4.26105, 5, 2.42444)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
