@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=3 format=3 uid="uid://dlypsuxn3noka"]
 
-[sub_resource type="Environment" id="Environment_0ons5"]
-background_mode = 3
-glow_enabled = true
+[ext_resource type="Script" path="res://scripts/camera_3d.gd" id="1_473u7"]
+[ext_resource type="ArrayMesh" uid="uid://ma7j7tcbnhfy" path="res://objects/tv.obj" id="2_lyffd"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_0ons5")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416314, 0.812405, 4.42434)
+script = ExtResource("1_473u7")
+
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+mesh = ExtResource("2_lyffd")
