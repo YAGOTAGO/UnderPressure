@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="ArrayMesh" uid="uid://65ecgbvgigv6" path="res://assets/radar/radar.obj" id="1_wykoq"]
-[ext_resource type="Script" path="res://viewport_basic.gd" id="2_gnqyk"]
+[ext_resource type="Script" path="res://scripts/viewport_basic.gd" id="2_83o4l"]
 [ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2D Components/radar.tscn" id="2_i3uii"]
 [ext_resource type="Script" path="res://scripts/3D_mouse_detection.gd" id="4_8y24s"]
 [ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://assets/emergency_button/emergencybuttonbase.obj" id="4_vnub0"]
@@ -23,7 +23,7 @@ mesh = ExtResource("1_wykoq")
 transform = Transform3D(0.988454, 0.0847243, -0.125618, -0.00513467, 0.847311, 0.531072, 0.151433, -0.524296, 0.837963, 0.247669, 0.790551, 0.270836)
 material_override = SubResource("ORMMaterial3D_x6cf8")
 mesh = SubResource("QuadMesh_qdtky")
-script = ExtResource("2_gnqyk")
+script = ExtResource("2_83o4l")
 viewport = NodePath("../SubViewport")
 
 [node name="SubViewport" type="SubViewport" parent="."]
