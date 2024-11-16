@@ -82,6 +82,9 @@ transform = Transform3D(0.282908, 0.514769, 1.9118, 2.27298e-08, 1.93122, -0.519
 [node name="EmergencyButton" parent="." instance=ExtResource("10_4wdnr")]
 transform = Transform3D(0.332801, 0.00895159, -0.942955, -0.127864, 0.991148, -0.0357185, 0.934288, 0.132457, 0.331, 7.67608, 0.42833, 4.14857)
 
+[node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
+transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
+
 [node name="Decoration" type="Node" parent="."]
 
 [node name="wire deco left" parent="Decoration" instance=ExtResource("11_2og37")]
@@ -90,10 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
 [node name="wire deco right" parent="Decoration" instance=ExtResource("12_esay2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 
-[node name="wiredecoration" parent="." instance=ExtResource("12_esay2")]
+[node name="wiredecoration" parent="Decoration" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
-
-[node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
-transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
