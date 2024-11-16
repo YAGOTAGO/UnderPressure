@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cosv8wnuuc2x"]
+[gd_scene load_steps=7 format=3 uid="uid://cosv8wnuuc2x"]
 
 [ext_resource type="Shader" path="res://shaders/progress_shader.gdshader" id="1_7px80"]
+[ext_resource type="Script" path="res://assets/depth_meter/depth_meter.gd" id="1_ecana"]
+[ext_resource type="FontFile" uid="uid://bl1omhgi6y3fu" path="res://assets/fonts/RobotoSerif-Regular.ttf" id="3_ni8rc"]
 
 [sub_resource type="Gradient" id="Gradient_vrdgk"]
 offsets = PackedFloat32Array(0, 0.644022, 1)
@@ -28,8 +30,10 @@ shader_parameter/particle_amount = 20
 shader_parameter/color_gradient = SubResource("GradientTexture2D_rjo37")
 
 [node name="DepthMeterView" type="Node2D"]
+script = ExtResource("1_ecana")
 
 [node name="ProgressBar" type="ColorRect" parent="."]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_lwccr")
 offset_left = 74.0
 offset_top = 1041.0
@@ -37,11 +41,23 @@ offset_right = 1066.0
 offset_bottom = 1302.0
 rotation = -1.5708
 
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 1367.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("3_ni8rc")
+theme_override_font_sizes/font_size = 200
+text = "DEPTH:"
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="."]
-offset_left = 431.0
-offset_top = 153.0
-offset_right = 1711.0
-offset_bottom = 889.0
+unique_name_in_owner = true
+offset_left = 424.0
+offset_top = 424.0
+offset_right = 1144.0
+offset_bottom = 811.0
+theme_override_fonts/font = ExtResource("3_ni8rc")
 theme_override_font_sizes/font_size = 200
 text = "#####"
 vertical_alignment = 1
