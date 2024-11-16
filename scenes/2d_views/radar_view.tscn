@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://1am2aay0iwcb"]
 
-[ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="1_akmpj"]
-[ext_resource type="Shader" path="res://shaders/radar.gdshader" id="1_lflqd"]
-[ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_s83m1"]
+[ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_xy721"]
+[ext_resource type="Shader" path="res://shaders/radar.gdshader" id="2_kalq3"]
+[ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="3_6aud8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ank6x"]
-shader = ExtResource("1_lflqd")
+shader = ExtResource("2_kalq3")
 shader_parameter/line_color = Color(0, 0.4, 0, 1)
 shader_parameter/beam_color = Color(0.5, 1, 0.5, 1)
 shader_parameter/trail_color = Color(0, 0.5, 0, 1)
@@ -62,13 +62,13 @@ _data = {
 }
 
 [node name="Radar" type="Node2D"]
-script = ExtResource("1_s83m1")
+script = ExtResource("1_xy721")
 
 [node name="BG" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_ank6x")
 scale = Vector2(8.39844, 8.39844)
-texture = ExtResource("1_akmpj")
+texture = ExtResource("3_6aud8")
 offset = Vector2(64, 64)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

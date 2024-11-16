@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://65ecgbvgigv6" path="res://assets/radar/radar.obj" id="1_wykoq"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_83o4l"]
-[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2d_views/radar.tscn" id="2_i3uii"]
+[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2d_views/radar_view.tscn" id="2_i3uii"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="4_8y24s"]
 [ext_resource type="ArrayMesh" uid="uid://bimr16p6fhs7g" path="res://assets/emergency_button/emergencybuttonbase.obj" id="4_vnub0"]
 
