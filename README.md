@@ -7,7 +7,7 @@
 3D artist: </br>**Caroline Li** </br></br>
 2D artist: </br>**Rae Zhang** </br></br>
 Programmers: </br>
-**Michael Reidy**: </br>
+**Michael Reidy** </br>
 **Tiago Davies**
 
 ## Shaders:
