@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw2duxafvebni"]
+[gd_scene load_steps=4 format=3 uid="uid://8t01j1g6ru0c"]
 
 [ext_resource type="Shader" path="res://shaders/retro_tv.gdshader" id="1_fkkhg"]
 
@@ -30,10 +30,10 @@ shader_parameter/static_noise_intensity = 1.0
 shader_parameter/aberration = 0.03
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 1.0
-shader_parameter/clip_warp = true
+shader_parameter/warp_amount = 0.005
+shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
+shader_parameter/vignette_opacity = 0.647
 
 [node name="TvShader" type="Node2D"]
 script = SubResource("GDScript_yqbbs")

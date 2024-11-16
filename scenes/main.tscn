@@ -77,6 +77,6 @@ transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.
 transform = Transform3D(0.341101, 0, 0.940026, 0, 1, 0, -0.940026, 0, 0.341101, -7.61308, 1.34276, 6.82788)
 
 [node name="EmergencyButton" parent="." instance=ExtResource("10_4wdnr")]
-transform = Transform3D(0.0774219, -0.211122, -0.974389, -0.00767104, -0.97742, 0.211169, -0.996969, -0.00887452, -0.0772932, 7.32378, 2.88927, 6.91515)
+transform = Transform3D(0.332801, 0.00895159, -0.942955, -0.127864, 0.991148, -0.0357185, 0.934288, 0.132457, 0.331, 7.67608, 0.42833, 4.14857)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
