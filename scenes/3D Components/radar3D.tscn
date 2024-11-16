@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="ArrayMesh" uid="uid://65ecgbvgigv6" path="res://objects/radar.obj" id="1_wykoq"]
-[ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_cr1cp"]
+[ext_resource type="Script" path="res://scripts/3D Scripts/viewport_basic.gd" id="2_gnqyk"]
 [ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2D Components/radar.tscn" id="2_i3uii"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_x6cf8"]
@@ -14,14 +14,14 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 mesh = ExtResource("1_wykoq")
 
-[node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(137, 132)
-
-[node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]
-
 [node name="Mesh Viewport" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
 transform = Transform3D(0.988454, 0.0847243, -0.125618, -0.00513467, 0.847311, 0.531072, 0.151433, -0.524296, 0.837963, 0.247669, 0.790551, 0.270836)
 material_override = SubResource("ORMMaterial3D_x6cf8")
 mesh = SubResource("QuadMesh_qdtky")
-script = ExtResource("2_cr1cp")
+script = ExtResource("2_gnqyk")
 viewport = NodePath("../SubViewport")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(137, 132)
+
+[node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]

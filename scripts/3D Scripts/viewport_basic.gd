@@ -4,4 +4,3 @@ extends MeshInstance3D
 
 func _ready()-> void:
 	material_override.albedo_texture = viewport.get_texture()
-	

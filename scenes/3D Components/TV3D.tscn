@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=10 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjxvlpe16ja6p" path="res://objects/tv.obj" id="1_qpyk8"]
-[ext_resource type="Script" path="res://scripts/3D Scripts/set_viewport.gd" id="2_w3tso"]
+[ext_resource type="Script" path="res://scripts/3D Scripts/viewport_input.gd" id="2_w3tso"]
+[ext_resource type="Script" path="res://scripts/3D Scripts/viewport_basic.gd" id="2_xrqc6"]
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D Components/tv_shader.tscn" id="3_w5btw"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
@@ -12,6 +13,9 @@
 
 [sub_resource type="QuadMesh" id="QuadMesh_xcafy"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cgp7v"]
+size = Vector3(1, 1, 0.0761108)
+
 [node name="Tv3d" type="Node3D"]
 
 [node name="Tv" type="MeshInstance3D" parent="."]
@@ -19,22 +23,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
 mesh = ExtResource("1_qpyk8")
 
 [node name="ViewPort Screen" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
-transform = Transform3D(2.10341, 0, 0, 0, 1.48092, 0.0239363, 0, -0.0239363, 1.48092, 0.460633, 1.88655, 2.55434)
+transform = Transform3D(2.10341, 0, 0, 0, 1.48092, 0.0239363, 0, -0.0239363, 1.48092, 0.460633, 1.90882, 2.55434)
 material_override = SubResource("ORMMaterial3D_65ebg")
 mesh = SubResource("QuadMesh_buwwn")
-script = ExtResource("2_w3tso")
+script = ExtResource("2_xrqc6")
 viewport = NodePath("../SubViewport Screen")
 
-[node name="ViewPort Slider" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
-transform = Transform3D(2.8, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.594013, 0.802465, 2.87013)
+[node name="ViewPort Slider" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
+transform = Transform3D(2.8, 0, 0, 0, 0.375181, 0, 0, 0, 1, 0.594013, 1.06405, 2.78617)
 material_override = SubResource("ORMMaterial3D_gxd3j")
 mesh = SubResource("QuadMesh_xcafy")
 script = ExtResource("2_w3tso")
 viewport = NodePath("../SubViewport Slider")
+node_area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="ViewPort Slider"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ViewPort Slider/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00879312)
+shape = SubResource("BoxShape3D_cgp7v")
 
 [node name="SubViewport Screen" type="SubViewport" parent="."]
 physics_object_picking = true
-size = Vector2i(500, 500)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="TvShader" parent="SubViewport Screen" instance=ExtResource("3_w5btw")]
