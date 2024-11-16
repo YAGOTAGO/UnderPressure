@@ -14,6 +14,21 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_2161e"]
 size = Vector3(0.675155, 0.290092, 0.228142)
 
+[sub_resource type="Animation" id="Animation_cf322"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("radar_square/radar_button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0174629, 0, 0.0730047)]
+}
+
 [sub_resource type="Animation" id="Animation_wjn54"]
 resource_name = "button_click"
 length = 0.7
@@ -28,21 +43,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.0174629, 0, 0.0730047), Vector3(-0.017, 0, -0.14), Vector3(-0.017, 0, 0.073)]
-}
-
-[sub_resource type="Animation" id="Animation_cf322"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("radar_square/radar_button:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.0174629, 0, 0.0730047)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bk7gi"]

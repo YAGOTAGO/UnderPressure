@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=17 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="10_4wdnr"]
 [ext_resource type="PackedScene" uid="uid://34brr0liwy6h" path="res://assets/pressure_meter/PressureMeter.tscn" id="10_c6tiw"]
+[ext_resource type="PackedScene" uid="uid://4ig533l63s52" path="res://assets/static/wiredecoration variation2.fbx" id="11_2og37"]
 [ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/shel&table.fbx" id="11_v3bio"]
+[ext_resource type="PackedScene" uid="uid://c5feks1b71nmw" path="res://assets/static/wiredecoration.fbx" id="12_esay2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -56,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, 
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5471)
+transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 9.56876)
 script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
@@ -74,9 +76,17 @@ transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.2
 transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)
 
 [node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
-transform = Transform3D(0.341101, 0, 0.940026, 0, 1, 0, -0.940026, 0, 0.341101, -7.61308, 1.34276, 6.82788)
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -7.65809, 0.688184, 10.0283)
 
 [node name="EmergencyButton" parent="." instance=ExtResource("10_4wdnr")]
 transform = Transform3D(0.332801, 0.00895159, -0.942955, -0.127864, 0.991148, -0.0357185, 0.934288, 0.132457, 0.331, 7.67608, 0.42833, 4.14857)
+
+[node name="Decoration" type="Node" parent="."]
+
+[node name="wire deco left" parent="Decoration" instance=ExtResource("11_2og37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
+
+[node name="wire deco right" parent="Decoration" instance=ExtResource("12_esay2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
