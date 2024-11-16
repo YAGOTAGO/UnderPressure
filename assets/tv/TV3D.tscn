@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_xrqc6"]
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2d_views/tv_shader_view.tscn" id="3_w5btw"]
-[ext_resource type="ArrayMesh" uid="uid://pi6vjd1nsefc" path="res://assets/tv/tvslidingbase.obj" id="6_fi7mm"]
 [ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/tv/antennabase.obj" id="7_hty1k"]
 [ext_resource type="PackedScene" uid="uid://cy2embp31kt4f" path="res://assets/tv/tvantenna.fbx" id="8_r2qxi"]
 [ext_resource type="AudioStream" uid="uid://degg6rd4mwfnd" path="res://sounds/tv static.mp3" id="9_8560w"]
+[ext_resource type="PackedScene" uid="uid://be7gtc03bx41y" path="res://assets/tv/tvslider.fbx" id="10_5tfmx"]
 [ext_resource type="PackedScene" uid="uid://besi1pys8wfwn" path="res://assets/tv/tv.fbx" id="10_cuonk"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
@@ -39,37 +39,6 @@ render_target_update_mode = 4
 [node name="TvShader" parent="ViewPort Screen/SubViewport Screen" instance=ExtResource("3_w5btw")]
 unique_name_in_owner = true
 
-[node name="TV Slider Mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.587194, -1)
-mesh = ExtResource("6_fi7mm")
-
-[node name="ViewPort Slider" type="MeshInstance3D" parent="TV Slider Mesh" node_paths=PackedStringArray("viewport", "node_area")]
-transform = Transform3D(3.03551, 0, 0, 0, 0.375181, 0, 0, 0, 1, 4.73199, 0.0548773, 3.89533)
-material_override = SubResource("ORMMaterial3D_gxd3j")
-mesh = SubResource("QuadMesh_xcafy")
-skeleton = NodePath("../..")
-script = ExtResource("2_w3tso")
-viewport = NodePath("SubViewport Slider")
-node_area = NodePath("Area3D")
-
-[node name="Area3D" type="Area3D" parent="TV Slider Mesh/ViewPort Slider"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TV Slider Mesh/ViewPort Slider/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00879312)
-shape = SubResource("BoxShape3D_cgp7v")
-
-[node name="SubViewport Slider" type="SubViewport" parent="TV Slider Mesh/ViewPort Slider"]
-physics_object_picking = true
-size = Vector2i(300, 20)
-
-[node name="HSlider" type="HSlider" parent="TV Slider Mesh/ViewPort Slider/SubViewport Slider"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
-offset_top = -15.0
-offset_right = 300.0
-offset_bottom = 35.0
-max_value = 200.0
-
 [node name="Antennabase" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31698, 0.499737, -1.25676)
 mesh = ExtResource("7_hty1k")
@@ -89,3 +58,33 @@ autoplay = true
 
 [node name="tv" parent="." instance=ExtResource("10_cuonk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95024, 0.655011, -0.917014)
+
+[node name="tvslider" parent="." instance=ExtResource("10_5tfmx")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -4.85224, 0.584718, -1.60106)
+
+[node name="ViewPort Slider" type="MeshInstance3D" parent="tvslider" node_paths=PackedStringArray("viewport", "node_area")]
+transform = Transform3D(2.98939, 0, -0.173648, 0, 0.375181, 0, 0.527111, 0, 0.984808, 4.45911, 0.0428596, 3.92261)
+material_override = SubResource("ORMMaterial3D_gxd3j")
+mesh = SubResource("QuadMesh_xcafy")
+skeleton = NodePath("../..")
+script = ExtResource("2_w3tso")
+viewport = NodePath("SubViewport Slider")
+node_area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="tvslider/ViewPort Slider"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tvslider/ViewPort Slider/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00879312)
+shape = SubResource("BoxShape3D_cgp7v")
+
+[node name="SubViewport Slider" type="SubViewport" parent="tvslider/ViewPort Slider"]
+physics_object_picking = true
+size = Vector2i(300, 20)
+
+[node name="HSlider" type="HSlider" parent="tvslider/ViewPort Slider/SubViewport Slider"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+offset_top = -15.0
+offset_right = 300.0
+offset_bottom = 35.0
+max_value = 200.0
