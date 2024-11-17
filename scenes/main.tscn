@@ -1,7 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
-[ext_resource type="Script" path="res://assets/fish/yellow/yellow_fish_scene.gd" id="1_ltneh"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
@@ -30,6 +29,23 @@
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 [ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
+
+[sub_resource type="GDScript" id="GDScript_rq1lr"]
+script/source = "extends Node3D
+
+@onready var animations:AnimationPlayer = %AnimationPlayer
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	#animations.play(\"swim\")
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -82,7 +98,7 @@ depth = 0.0
 width = 40.0
 
 [node name="Main" type="Node3D"]
-script = ExtResource("1_ltneh")
+script = SubResource("GDScript_rq1lr")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h7fa3")
@@ -93,8 +109,9 @@ script = ExtResource("20_rgvsj")
 cursor = ExtResource("21_5jwbr")
 cursor_down = ExtResource("22_cxslk")
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
+list_components = [NodePath("../TV"), NodePath("../SwitchBoard3d"), NodePath("../Radar"), NodePath("../SteeringWheel"), NodePath("../PressureMeter"), NodePath("../Radio")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 unique_name_in_owner = true
@@ -102,7 +119,6 @@ wait_time = 5.0
 
 [node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
-visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -193,6 +209,7 @@ mesh = SubResource("TextMesh_0wdyb")
 
 [node name="YellowFish" parent="Decoration/Fish Container" instance=ExtResource("21_qulxd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0814, -3)
+script = null
 
 [node name="PinkFish" parent="Decoration/Fish Container" instance=ExtResource("27_lpl25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.744475, -6)
@@ -210,4 +227,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
+[connection signal="steering_wheel_break" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_break"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]

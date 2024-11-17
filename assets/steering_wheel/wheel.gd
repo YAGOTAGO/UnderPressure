@@ -8,9 +8,12 @@ const MIN_ROTATION: int = -30
 
 var is_broken: bool = false
 
+signal steering_wheel_break
+
 func activate() -> void:
+	steering_wheel_break.emit()
+	print("Steering wheel broke")
 	
-	pass
 
 func _on_left_area_clicked() -> void:
 	if !animation_player.is_playing():

@@ -9,6 +9,9 @@ const MAX_ROTATION: int = 45
 @onready var antenna : Node3D = %"Antenna Parent"
 @onready var staticSound : AudioStreamPlayer3D = %StaticSound
 
+@onready var tv_image : Node2D = %TvShader
+
+
 var target_value: int = 50 # will be number between 0 and 100
 var is_broken: bool = false
 
@@ -16,6 +19,12 @@ var is_broken: bool = false
 func activate() -> void:
 	target_value = randi_range(slider.min_value, slider.max_value)
 	update_tv_noise()
+	
+	
+func fix() -> void:
+	is_broken = false
+	
+
 
 func _ready() -> void:
 	update_rotation(slider.value)
@@ -40,9 +49,19 @@ func update_tv_noise() -> void:
 	staticSound.volume_db = volume
 	
 	if abs(slider.value - target_value) < 5:
-		is_broken = false
+		fix()
 
 func _on_h_slider_value_changed(value: float) -> void:
 	update_rotation(value)
 	update_tv_noise()
+	
+
+
+func _on_steering_wheel_steering_wheel_break() -> void:
+	
+	if randi_range(0,1) == 1:
+		tv_image.show_right(true)
+		
+	else:
+		tv_image.show_left(true)
 	

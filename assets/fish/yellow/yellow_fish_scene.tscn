@@ -1,8 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyt1e1l4u5a87"]
 
-[ext_resource type="Script" path="res://assets/fish/yellow/yellow_fish_scene.gd" id="1_yww1e"]
 [ext_resource type="PackedScene" uid="uid://d0v3r83da500n" path="res://assets/fish/yellow/yellowfish tail.fbx" id="2_1otfs"]
 [ext_resource type="PackedScene" uid="uid://cu8xxi7xvagbu" path="res://assets/fish/yellow/yellowfish body.fbx" id="3_x4sks"]
+
+[sub_resource type="GDScript" id="GDScript_rq1lr"]
+script/source = "extends Node3D
+
+@onready var animations:AnimationPlayer = %AnimationPlayer
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	#animations.play(\"swim\")
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="Animation" id="Animation_i57fm"]
 length = 0.001
@@ -67,7 +83,7 @@ _data = {
 }
 
 [node name="Fish" type="Node3D"]
-script = ExtResource("1_yww1e")
+script = SubResource("GDScript_rq1lr")
 
 [node name="FishTail" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00354481, 0.0565972, 0)
