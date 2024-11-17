@@ -40,6 +40,9 @@ func _on_emergency_button_emergency_btn_clicked() -> void:
 
 
 # Listen for failed components
+func on_component_fail()->void:
+	if num_failed_components % 3:
+		$"../Window".next_break()
 
 func _on_pressure_meter_component_failed() -> void:
 	num_failed_components += 1
