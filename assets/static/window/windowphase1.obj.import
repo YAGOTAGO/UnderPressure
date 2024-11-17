@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmdeeydoamqod"
+path="res://.godot/imported/windowphase1.obj-35040da30084169a54512f19274d1656.mesh"
+
+[deps]
+
+files=["res://.godot/imported/windowphase1.obj-35040da30084169a54512f19274d1656.mesh"]
+
+source_file="res://assets/static/window/windowphase1.obj"
+dest_files=["res://.godot/imported/windowphase1.obj-35040da30084169a54512f19274d1656.mesh", "res://.godot/imported/windowphase1.obj-35040da30084169a54512f19274d1656.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

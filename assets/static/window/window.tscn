@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dll7ino3nv61e"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmdeeydoamqod" path="res://assets/static/window/windowphase1.obj" id="1_a2juv"]
+[ext_resource type="Script" path="res://assets/static/window/window.gd" id="1_tctax"]
+[ext_resource type="Shader" path="res://shaders/color_glass.gdshader" id="2_blunt"]
+[ext_resource type="ArrayMesh" uid="uid://c1ba560dwmchh" path="res://assets/static/window/windowphase2.obj" id="2_plrqk"]
+[ext_resource type="ArrayMesh" uid="uid://byb0hl5csctq" path="res://assets/static/window/windowphase3.obj" id="3_g588g"]
+[ext_resource type="ArrayMesh" uid="uid://dulvw0e2txrrv" path="res://assets/static/window/windowphase0.obj" id="6_bcul1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m5v1r"]
+render_priority = 0
+shader = ExtResource("2_blunt")
+shader_parameter/albedo = Color(1, 1, 1, 0)
+shader_parameter/roughness = 0.15
+shader_parameter/refraction = 0.0500008
+shader_parameter/refraction_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/normal_strength = 0.0
+shader_parameter/edge_color = Color(0, 0, 0, 1)
+shader_parameter/surface_contribution = 0.2
+shader_parameter/specular_contribution = 0.2
+shader_parameter/refraction_contribution = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[node name="Window" type="Node3D"]
+script = ExtResource("1_tctax")
+
+[node name="Windowphase0" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.135)
+mesh = ExtResource("6_bcul1")
+surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
+
+[node name="Windowphase1" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.565)
+mesh = ExtResource("1_a2juv")
+surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
+
+[node name="Windowphase2" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.39)
+mesh = ExtResource("2_plrqk")
+surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
+
+[node name="Windowphase3" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = ExtResource("3_g588g")
+surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
