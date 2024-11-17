@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://s0fshlrxfend"
 path.s3tc="res://.godot/imported/greenfish tail_0.png-8d5d8c187f91b4e5646b3ad3d3f06eee.s3tc.ctex"
+path.etc2="res://.godot/imported/greenfish tail_0.png-8d5d8c187f91b4e5646b3ad3d3f06eee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/fish/green/greenfish tail_0.png"
-dest_files=["res://.godot/imported/greenfish tail_0.png-8d5d8c187f91b4e5646b3ad3d3f06eee.s3tc.ctex"]
+dest_files=["res://.godot/imported/greenfish tail_0.png-8d5d8c187f91b4e5646b3ad3d3f06eee.s3tc.ctex", "res://.godot/imported/greenfish tail_0.png-8d5d8c187f91b4e5646b3ad3d3f06eee.etc2.ctex"]
 
 [params]
 

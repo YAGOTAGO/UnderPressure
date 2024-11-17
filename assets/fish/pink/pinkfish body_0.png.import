@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8di2q5kuvxk"
 path.s3tc="res://.godot/imported/pinkfish body_0.png-72669becabf41935869b36f218a72646.s3tc.ctex"
+path.etc2="res://.godot/imported/pinkfish body_0.png-72669becabf41935869b36f218a72646.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/fish/pink/pinkfish body_0.png"
-dest_files=["res://.godot/imported/pinkfish body_0.png-72669becabf41935869b36f218a72646.s3tc.ctex"]
+dest_files=["res://.godot/imported/pinkfish body_0.png-72669becabf41935869b36f218a72646.s3tc.ctex", "res://.godot/imported/pinkfish body_0.png-72669becabf41935869b36f218a72646.etc2.ctex"]
 
 [params]
 
