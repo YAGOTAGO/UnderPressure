@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfcp3tpbjcnh6"]
+
+[ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_jrrlv"]
+[ext_resource type="PackedScene" uid="uid://bousvyifxq3ky" path="res://assets/game_over/game_win.tscn" id="2_0l7vt"]
+
+[sub_resource type="GDScript" id="GDScript_giag8"]
+script/source = "extends Node3D
+
+signal play_clicked
+
+func _on_main_menu_start_clicked() -> void:
+	play_clicked.emit()
+	queue_free()
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eiqv"]
+transparency = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_et7tw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5subg"]
+size = Vector3(1, 1, 0.167908)
+
+[node name="GameWin" type="Node3D"]
+script = SubResource("GDScript_giag8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
+transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_0eiqv")
+mesh = SubResource("QuadMesh_et7tw")
+script = ExtResource("1_jrrlv")
+viewport = NodePath("SubViewport")
+node_area = NodePath("Area3D")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D"]
+transparent_bg = true
+size = Vector2i(1920, 1080)
+
+[node name="GameWin" parent="MeshInstance3D/SubViewport" instance=ExtResource("2_0l7vt")]
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0106506)
+shape = SubResource("BoxShape3D_5subg")

@@ -5,11 +5,14 @@ extends Node
 @onready var timer: Timer = %Timer
 @onready var depth: Node3D = %DepthMeter
 @onready var game_over_node: Node3D = %GameOver
+@onready var game_win_node: Node3D = %GameWin
+
 
 var num_failed_components:int = 0
 
 func _ready() -> void:
 	game_over_node.visible = false
+	game_win_node.visible = false
 
 func start_game() -> void:
 	timer.start(0)
@@ -20,8 +23,8 @@ func game_over()-> void:
 	
 # Game win
 func _on_depth_meter_game_win() -> void:
-	#game_win_node.visable = true
-	pass
+	game_win_node.visible = true
+	
 
 
 
