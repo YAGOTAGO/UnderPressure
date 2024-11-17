@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=52 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -30,9 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp/lamp.tscn" id="22_mta71"]
 [ext_resource type="PackedScene" uid="uid://ckw7iy5cnjoqj" path="res://assets/static/pipes/pipe L long.fbx" id="23_b33d6"]
 [ext_resource type="PackedScene" uid="uid://bbcjpx1xwc0q0" path="res://assets/fish/green/green_fish.tscn" id="23_qqgto"]
+[ext_resource type="PackedScene" uid="uid://jtc43pvqi7d7" path="res://assets/static/pipes/pipe three way connector.fbx" id="24_eyxnf"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://assets/menus/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bo21n0wdmlx3t" path="res://assets/static/pipes/1 round pipe deco.fbx" id="26_1vd2q"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
+[ext_resource type="PackedScene" uid="uid://b6unsdhtlcauh" path="res://assets/static/pipes/pipe L short.fbx" id="29_ctnlb"]
 [ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
 [ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
@@ -143,14 +145,17 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Breaking Components" type="Node" parent="."]
 
@@ -225,20 +230,40 @@ spot_angle = 22.7338
 
 [node name="Pipes" type="Node" parent="Decoration"]
 
+[node name="Large O pipes" type="Node" parent="Decoration/Pipes"]
+
+[node name="large round O" parent="Decoration/Pipes/Large O pipes" instance=ExtResource("26_1vd2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112602, 2.81683)
+
+[node name="large round O2" parent="Decoration/Pipes/Large O pipes" instance=ExtResource("26_1vd2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112602, -5.55339)
+
+[node name="threeway left up" parent="Decoration/Pipes" instance=ExtResource("24_eyxnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.082, -9.978, 2.4)
+
 [node name="pipe L long" parent="Decoration/Pipes" instance=ExtResource("23_b33d6")]
 transform = Transform3D(1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 0, 8.74228e-08, 7.64274e-15, -1, 24.63, 10.196, 10.96)
 
 [node name="HPipe" parent="Decoration/Pipes" instance=ExtResource("15_hgri2")]
 transform = Transform3D(0.211325, 0, -0.977416, 0, 1, 0, 0.977416, 0, 0.211325, 2.419, -14.62, 23.24)
 
-[node name="Pipe1" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
+[node name="left ground" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.17144, -20.9017, -15.0692)
 
-[node name="Pipe2" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
+[node name="left up U" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
 transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0.224951, 1, 7.75899e-08, -4.25911e-08, -12.988, 21.957, 30.702)
 
-[node name="1 round pipe deco" parent="Decoration/Pipes" instance=ExtResource("26_1vd2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112602, 2.81683)
+[node name="front up u" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
+transform = Transform3D(-0.7, 6.11959e-08, 0, -6.11959e-08, -0.7, 0, 0, 0, 0.7, -15.843, 19.682, 3.902)
+
+[node name="pipe L short" parent="Decoration/Pipes" instance=ExtResource("29_ctnlb")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 13.48, 29.12, 2.36)
+
+[node name="pressure wires" parent="Decoration/Pipes" instance=ExtResource("11_2og37")]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -6.08, -0.985, 9.073)
+
+[node name="h near siren" parent="Decoration/Pipes" instance=ExtResource("15_hgri2")]
+transform = Transform3D(0.4, 0, 0, 0, -1.74846e-08, 0.4, 0, -0.4, -1.74846e-08, 9.649, 5.498, 9.358)
 
 [node name="Paper" type="Node" parent="Decoration"]
 
