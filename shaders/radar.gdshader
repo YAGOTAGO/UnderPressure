@@ -34,31 +34,31 @@ void fragment() {
 //	COLOR = texture(TEXTURE,UV);
 
 //	If you do not want to render the range and sector lines remove the following line of code.
-//	If you want to only render the range lines replace the following line of code with:		
+//	If you want to only render the range lines replace the following line of code with:
 //	COLOR.rgb = mix(COLOR.rgb, line_color.rgb, line_color.a * greater_than(mod(l, 1.0 / range_lines) * range_lines, 1.0 - line_width * range_lines));
 //	If you only want to render the sector lines replace the following line of code with:
 //	COLOR.rgb = mix(COLOR.rgb, line_color.rgb, line_color.a * greater_than(abs(mod(a, 1.0 / sector_lines) * sector_lines * 2.0 - 1.0), 1.0 - (line_width / 6.283185312 / l) * sector_lines));
 	COLOR.rgb = mix(COLOR.rgb, line_color.rgb, line_color.a * max(greater_than(mod(l, 1.0 / range_lines) * range_lines, 1.0 - line_width * range_lines), greater_than(abs(mod(a, 1.0 / sector_lines) * sector_lines * 2.0 - 1.0), 1.0 - (line_width / 6.283185312 / l) * sector_lines)));
 
 	a = a - 1.0 * greater_than(a, beam_angle);
-	
+
 //	If you do not want to render the trail remove the following line of code.
 	COLOR.rgb = mix(COLOR.rgb, trail_color.rgb, trail_color.a * max(0.0, (1.0 - (beam_angle - a) / trail_width)));
 
-//	If you do not want to render the beam remove the following line of code.	
+//	If you do not want to render the beam remove the following line of code.
 	COLOR.rgb = mix(COLOR.rgb, beam_color.rgb, beam_color.a * greater_than(a, beam_angle - beam_width));
 
 //	If you do not want to render the blip remove the following code block.
 //	The blip's x and y coordinates should be within the range -1.0 to 1.0.
 //	The blip will not be displayed if it is exactly in the centre at 0.0, 0.0.
-	
+
 	if(show_blip){
 		float bl = length(blip_position - uv);
 		float blip_angle = (atan(blip_position.y, blip_position.x) + 3.141592656) / 6.283185312;
 		blip_angle = blip_angle - 1.0 * greater_than(blip_angle, beam_angle);
 		COLOR.rgb = mix(COLOR.rgb, blip_color.rgb, blip_color.a * max(0.0, pow((blip_size - bl) / blip_size, blip_softness) - min(1.0, (beam_angle - blip_angle) * blip_presistence)));
 	}
-	
+
 //	If you do not want the edges to be transparent remove the following line of code.
 //	If you always want the edges to be transparent replace the following line of code with:
 //	COLOR.a *= greater_than(1.0, l);
