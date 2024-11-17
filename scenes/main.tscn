@@ -226,7 +226,6 @@ mesh = SubResource("TextMesh_0wdyb")
 
 [node name="YellowFish" parent="Decoration/Fish Container" instance=ExtResource("21_qulxd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0814, -3)
-script = null
 
 [node name="PinkFish" parent="Decoration/Fish Container" instance=ExtResource("27_lpl25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.744475, -6)
