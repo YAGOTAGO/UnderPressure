@@ -32,21 +32,6 @@
 [ext_resource type="PackedScene" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
-script/source = "extends Node3D
-
-@onready var animations:AnimationPlayer = %AnimationPlayer
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	
-	#animations.play(\"swim\")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
