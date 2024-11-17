@@ -17,7 +17,7 @@ func activate() -> void:
 	is_broken = true
 	scale_factor = 5
 
-func fix();
+func fix():
 	pass
 
 # Called when the node enters the scene tree for the first time.
