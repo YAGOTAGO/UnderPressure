@@ -11,7 +11,6 @@ func _on_timer_timeout() -> void:
 
 func _activate_components()->void:
 	#get non broken components
-	print(list_components[1].is_broken)
 	
 	var non_broken_components = list_components.filter(func(c): return not c.is_broken)
 	

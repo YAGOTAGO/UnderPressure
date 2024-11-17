@@ -4,6 +4,8 @@ extends Node3D
 @onready var countdown: Timer = %PressureCountdown
 @onready var needle: Node3D = %MeterNeedle
 @onready var boiling: AudioStreamPlayer3D = %PlayBoil
+@onready var fail_sound: AudioStreamPlayer3D = %PlayFail
+
 
 
 
@@ -69,4 +71,5 @@ func _on_pressure_countdown_timeout() -> void:
 	angle = 0
 	scale_factor = 0
 	boiling.stop()
+	fail_sound.play()
 	

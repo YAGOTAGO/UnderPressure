@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/switch_board/switch_board_3d.gd" id="1_fqq0t"]
 [ext_resource type="ArrayMesh" uid="uid://cr5sm1234ys14" path="res://assets/switch_board/switch_base.obj" id="1_kuhkl"]
 [ext_resource type="PackedScene" uid="uid://b4e2em28cqkd4" path="res://assets/switch_board/Switch3D.tscn" id="2_ra467"]
-[ext_resource type="AudioStream" uid="uid://1vuuwr0gp5ue" path="res://sounds/clank.wav" id="4_p7vp1"]
+[ext_resource type="AudioStream" uid="uid://1vuuwr0gp5ue" path="res://Sounds/clank.wav" id="4_p7vp1"]
 
 [node name="SwitchBoard3d" type="Node3D" node_paths=PackedStringArray("switchArray")]
 script = ExtResource("1_fqq0t")
