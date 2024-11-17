@@ -100,4 +100,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 [node name="wiredecoration" parent="Decoration" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
 
+[node name="Pipes" type="Node" parent="."]
+
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
