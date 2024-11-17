@@ -12,6 +12,12 @@
 * 3D animated components
 * Programmed in an Open-Source Engine
 
+# Progress Photos
+
+![beta1](beta_images/beta_1.PNG)
+![beta2](beta_images/beta_2.PNG)
+![beta3](beta_images/beta_3.png)
+
 # Credits
 
 ![Team](sprites/splash.png)
