@@ -129,6 +129,7 @@ wait_time = 5.0
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
 
 [node name="GameOver" parent="." instance=ExtResource("6_rg65t")]
+unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
 visible = false
 

@@ -4,16 +4,19 @@ extends Node
 @export var list_components: Array[Node3D]
 @onready var timer: Timer = %Timer
 @onready var depth: Node3D = %DepthMeter
+@onready var game_over_node: Node3D = %GameOver
 
 var num_failed_components:int = 0
+
+func _ready() -> void:
+	game_over_node.visible = false
 
 func start_game() -> void:
 	timer.start(0)
 	depth.start_depth_meter()
 	
-	
-func game_over():
-	pass
+func game_over()-> void:
+	game_over_node.visible = true
 
 func _on_timer_timeout() -> void:
 	_activate_components()
