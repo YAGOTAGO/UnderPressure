@@ -1,7 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cotnxrn8eoecs"]
+[gd_scene load_steps=7 format=3 uid="uid://cotnxrn8eoecs"]
 
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_ru0id"]
 [ext_resource type="PackedScene" uid="uid://bx2nao4clspqn" path="res://scenes/2d_views/main_menu_view.tscn" id="1_u3adp"]
+
+[sub_resource type="GDScript" id="GDScript_giag8"]
+script/source = "extends Node3D
+
+signal play_clicked
+
+func _on_main_menu_start_clicked() -> void:
+	play_clicked.emit()
+	queue_free()
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eiqv"]
 
@@ -11,6 +21,7 @@
 size = Vector3(1, 1, 0.167908)
 
 [node name="MainMenu" type="Node3D"]
+script = SubResource("GDScript_giag8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
 transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
@@ -21,6 +32,7 @@ viewport = NodePath("SubViewport")
 node_area = NodePath("Area3D")
 
 [node name="SubViewport" type="SubViewport" parent="MeshInstance3D"]
+transparent_bg = true
 size = Vector2i(1920, 1080)
 
 [node name="MainMenu" parent="MeshInstance3D/SubViewport" instance=ExtResource("1_u3adp")]
@@ -30,3 +42,5 @@ size = Vector2i(1920, 1080)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0106506)
 shape = SubResource("BoxShape3D_5subg")
+
+[connection signal="start_clicked" from="MeshInstance3D/SubViewport/MainMenu" to="." method="_on_main_menu_start_clicked"]

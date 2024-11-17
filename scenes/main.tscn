@@ -85,7 +85,11 @@ camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 script = ExtResource("1_xhrch")
 
 [node name="Timer" type="Timer" parent="GameManager"]
+unique_name_in_owner = true
 wait_time = 5.0
+
+[node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -176,8 +180,6 @@ script = ExtResource("20_rgvsj")
 cursor = ExtResource("21_5jwbr")
 cursor_down = ExtResource("22_cxslk")
 
-[node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -0.00648785, 2.23844, 5.94065)
-
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
+[connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]

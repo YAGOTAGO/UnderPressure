@@ -1,10 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx2nao4clspqn"]
+[gd_scene load_steps=10 format=3 uid="uid://bx2nao4clspqn"]
 
 [ext_resource type="Texture2D" uid="uid://0040ymqy00n" path="res://sprites/buttons/exit_button.png" id="1_7wx4y"]
 [ext_resource type="Texture2D" uid="uid://cgi6qbvw4pagv" path="res://sprites/menu_logo.png" id="1_w4e3i"]
 [ext_resource type="Texture2D" uid="uid://bw52453gerbbt" path="res://sprites/buttons/start_button.png" id="2_1rbqk"]
 [ext_resource type="Texture2D" uid="uid://gndeavwff3ha" path="res://sprites/buttons/start_hovered.png" id="2_dir81"]
 [ext_resource type="Texture2D" uid="uid://cgtvmu5rkk1ow" path="res://sprites/buttons/start_clicked.png" id="3_b6725"]
+
+[sub_resource type="GDScript" id="GDScript_jvtgl"]
+script/source = "extends Node2D
+
+signal start_clicked
+
+func _on_start_pressed() -> void:
+	start_clicked.emit()
+"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3hry"]
 texture = ExtResource("2_dir81")
@@ -27,6 +36,7 @@ func _on_button_clicked():
 "
 
 [node name="MainMenu" type="Node2D"]
+script = SubResource("GDScript_jvtgl")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -70,3 +80,5 @@ offset_right = 1172.0
 offset_bottom = 1084.0
 icon = ExtResource("1_7wx4y")
 script = SubResource("GDScript_xxva5")
+
+[connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
