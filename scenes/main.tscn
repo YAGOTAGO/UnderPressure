@@ -192,7 +192,7 @@ transform = Transform3D(0.240472, 0.437553, 1.62503, 1.93203e-08, 1.64154, -0.44
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.88344, 2.0251, 5.32589)
 
 [node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
-transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
+transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, -0.186038, 5.73886)
 
 [node name="Window" parent="." instance=ExtResource("16_ja2uo")]
 unique_name_in_owner = true
@@ -260,6 +260,9 @@ transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 
 transform = Transform3D(-0.121869, 0, 0.992546, 0, 1, 0, -0.992546, 0, -0.121869, -9.206, -13.945, -1.023)
 
 [node name="Wire" type="Node" parent="Decoration"]
+
+[node name="wiredecoration variation3" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -2.063, -5.084, 4.389)
 
 [node name="wire deco left" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
