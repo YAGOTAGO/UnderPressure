@@ -4,7 +4,7 @@ signal surface_reached
 
 const MAX_AMOUNT: int = 10 #max amount can climb
 const MIN_AMOUNT: int = 1 #min amount can climb
-const START_DEPTH: int = 1000
+const START_DEPTH: int = 5000
 
 @onready var progress_shader_material: ShaderMaterial = %ProgressBar.material as ShaderMaterial
 @onready var label: Label = %Label
