@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=49 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -93,6 +93,15 @@ material = SubResource("StandardMaterial3D_j32nj")
 text = "Click this button if blip on radar"
 font = ExtResource("17_4vb2h")
 font_size = 8
+autowrap_mode = 2
+depth = 0.0
+width = 50.0
+
+[sub_resource type="TextMesh" id="TextMesh_4c7rb"]
+material = SubResource("StandardMaterial3D_j32nj")
+text = "Reach 0M to SURVIVE!"
+font = ExtResource("17_4vb2h")
+font_size = 12
 autowrap_mode = 2
 depth = 0.0
 width = 50.0
@@ -272,6 +281,13 @@ transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_radar"]
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
 mesh = SubResource("TextMesh_8heuw")
+
+[node name="sticky_note_depth" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
+transform = Transform3D(1.6849, 0, -1.07754, 0, 2, 0, 1.07754, 0, 1.6849, 8.54977, -2.35162, -2.97856)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_depth"]
+transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, 1, -1.05355, 3.27104, 3.97851)
+mesh = SubResource("TextMesh_4c7rb")
 
 [node name="sticky_note_pressure" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.7311, -5.27568, 9.11279)
