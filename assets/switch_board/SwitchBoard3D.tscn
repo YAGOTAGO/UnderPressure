@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c22n6icpny0xs"]
+[gd_scene load_steps=5 format=3 uid="uid://c22n6icpny0xs"]
 
 [ext_resource type="Script" path="res://assets/switch_board/switch_board_3d.gd" id="1_fqq0t"]
 [ext_resource type="ArrayMesh" uid="uid://cr5sm1234ys14" path="res://assets/switch_board/switch_base.obj" id="1_kuhkl"]
 [ext_resource type="PackedScene" uid="uid://b4e2em28cqkd4" path="res://assets/switch_board/Switch3D.tscn" id="2_ra467"]
+[ext_resource type="AudioStream" uid="uid://1vuuwr0gp5ue" path="res://Sounds/clank.wav" id="4_p7vp1"]
 
 [node name="SwitchBoard3d" type="Node3D" node_paths=PackedStringArray("switchArray")]
 script = ExtResource("1_fqq0t")
@@ -35,3 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08082, 0.386656, 0.0832354)
 [node name="Switch3D5" parent="." instance=ExtResource("2_ra467")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63784, 0.386186, 0.0837494)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_p7vp1")
+volume_db = 2.051

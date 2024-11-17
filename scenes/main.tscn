@@ -49,11 +49,13 @@ glow_hdr_luminance_cap = 17.17
 environment = SubResource("Environment_h7fa3")
 camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
+list_components = [NodePath("../TV"), NodePath("../Radar"), NodePath("../SwitchBoard3d"), NodePath("../PressureMeter"), NodePath("../Radio")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 wait_time = 5.0
+autostart = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -71,7 +73,7 @@ script = ExtResource("1_473u7")
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.04072, 7.21966, 0.688002)
+transform = Transform3D(0.393836, -0.175681, -0.902236, 0.0968339, 0.984034, -0.149338, 0.914065, -0.0285522, 0.40456, 6.12232, 3.0429, 2.27454)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)

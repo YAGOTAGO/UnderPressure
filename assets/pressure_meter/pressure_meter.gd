@@ -3,6 +3,10 @@ extends Node3D
 @onready var timer: Timer = %Timer
 @onready var countdown: Timer = %PressureCountdown
 @onready var needle: Node3D = %MeterNeedle
+@onready var boiling: AudioStreamPlayer3D = %PlayBoil
+
+
+
 
 var angle:float = 0.0	# The current angle of the needle
 var MIN_ANGLE:int = 0
@@ -32,6 +36,7 @@ func move_needle() -> void:
 		#print("About to blow")
 		countdown.start()
 		is_compromised = true
+		boiling.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
@@ -58,3 +63,5 @@ func _on_pressure_countdown_timeout() -> void:
 	is_compromised = false
 	angle = 0
 	scale_factor = 0
+	boiling.stop()
+	

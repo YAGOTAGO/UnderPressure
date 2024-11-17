@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://34brr0liwy6h"]
+[gd_scene load_steps=5 format=3 uid="uid://34brr0liwy6h"]
 
 [ext_resource type="Script" path="res://assets/pressure_meter/pressure_meter.gd" id="1_p3fj0"]
 [ext_resource type="PackedScene" uid="uid://cyx4ru0oitqkq" path="res://assets/pressure_meter/pressurebase.fbx" id="2_5k3hs"]
 [ext_resource type="PackedScene" uid="uid://eytbcxjam11n" path="res://assets/pressure_meter/pressureneedle.fbx" id="3_1earo"]
+[ext_resource type="AudioStream" uid="uid://dm2lytvbkkuoh" path="res://Sounds/19841__jace__boiling-bubbles-1.wav" id="4_spo3v"]
 
 [node name="PressureMeter" type="Node3D"]
 script = ExtResource("1_p3fj0")
@@ -25,6 +26,11 @@ wait_time = 0.5
 unique_name_in_owner = true
 wait_time = 5.0
 one_shot = true
+
+[node name="PlayBoil" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_spo3v")
+volume_db = 6.154
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="PressureCountdown" to="." method="_on_pressure_countdown_timeout"]

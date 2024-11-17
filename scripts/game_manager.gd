@@ -11,10 +11,12 @@ func _on_timer_timeout() -> void:
 
 func _activate_components()->void:
 	#get non broken components
+	print(list_components[1].is_broken)
+	
 	var non_broken_components = list_components.filter(func(c): return not c.is_broken)
 	
 	# Check if there are any non-broken components left.
-	if non_broken_components.empty():
+	if non_broken_components.is_empty():
 		print("All components are broken!")
 		return
 	
