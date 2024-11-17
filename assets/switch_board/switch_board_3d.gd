@@ -1,11 +1,12 @@
 extends Node3D
 
+signal component_failed
 @onready var timer:Timer = %Timer
+
 @export var switchArray:Array[Node3D]
 var is_broken: bool = false
 
 
-signal component_failed
 
 
 func activate() -> void:
@@ -32,6 +33,8 @@ func _process(delta: float) -> void:
 			return
 	
 	is_broken = false
+	timer.stop()
+
 
 
 func _on_timer_timeout() -> void:

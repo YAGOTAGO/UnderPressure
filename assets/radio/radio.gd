@@ -3,6 +3,9 @@ extends Node3D
 @onready var audio_player: AudioStreamPlayer3D = %AudioStreamPlayer3D
 @onready var animaitons: AnimationPlayer = %AnimationPlayer
 
+signal component_failed
+@onready var timer:Timer = %Timer
+
 var is_broken: bool = false
 
 
@@ -10,12 +13,17 @@ func activate() -> void:
 	is_broken = true
 	audio_player.play()
 	animaitons.play("play_music")
+	timer.start(0)
 
 func fix() -> void:
 	is_broken = false
 	audio_player.stop()
 	animaitons.stop(false)
+	timer.stop()
 
+
+func break_radio()->void:
+	component_failed.emit()
 
 
 var mouse_right:bool = false
@@ -52,3 +60,7 @@ func _on_right_hitbox_mouse_entered() -> void:
 
 func _on_right_hitbox_mouse_exited() -> void:
 	mouse_right = false
+
+
+func _on_timer_timeout() -> void:
+	break_radio()

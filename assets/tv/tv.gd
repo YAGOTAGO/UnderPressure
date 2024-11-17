@@ -29,6 +29,8 @@ func activate() -> void:
 	
 func fix() -> void:
 	is_broken = false
+	timer.stop()
+
 	
 func break_tv()->void:
 	component_failed.emit()

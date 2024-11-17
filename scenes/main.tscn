@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
+[ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://scenes/game_over.tscn" id="6_rg65t"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://assets/radar/radar3D.tscn" id="7_svoui"]
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="10_4wdnr"]
@@ -26,14 +27,28 @@
 [ext_resource type="PackedScene" uid="uid://cyt1e1l4u5a87" path="res://assets/fish/yellow/yellow_fish_scene.tscn" id="21_qulxd"]
 [ext_resource type="Texture2D" uid="uid://cc84n2usdk8u5" path="res://sprites/cursor/cursor_grab.png" id="22_cxslk"]
 [ext_resource type="PackedScene" uid="uid://bbcjpx1xwc0q0" path="res://assets/fish/green/green_fish.tscn" id="23_qqgto"]
-[ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp/lamp.tscn" id="24_3k78o"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
-[ext_resource type="PackedScene" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
+[ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
 [ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
+script/source = "extends Node3D
+
+@onready var animations:AnimationPlayer = %AnimationPlayer
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	#animations.play(\"swim\")
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -119,15 +134,9 @@ visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
-visible = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
-visible = false
-
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.366501, 0.930418, 0, -0.930418, 0.366501, 0.559212, 13.2773, -13.8072)
-visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -229,8 +238,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
 
 [node name="Light" type="Node" parent="Decoration"]
 
-[node name="Lamp" parent="Decoration/Light" instance=ExtResource("24_3k78o")]
+[node name="Lamp" parent="Decoration/Light"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(0.498488, 0, -0.866897, 0, 1, 0, 0.866897, 0, 0.498488, 2.024, 0, 1.543)
+script = null
 
 [node name="Floor Lights" type="MeshInstance3D" parent="Decoration/Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0983148, 0.395397, -0.914792)
@@ -245,7 +264,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.288
 [connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
 [connection signal="component_failed" from="TV" to="GameManager" method="_on_tv_component_failed"]
 [connection signal="component_failed" from="SwitchBoard3d" to="GameManager" method="_on_switch_board_3d_component_failed"]
+[connection signal="component_failed" from="Radar" to="GameManager" method="_on_radar_component_failed"]
+[connection signal="component_failed" from="SteeringWheel" to="GameManager" method="_on_steering_wheel_component_failed"]
 [connection signal="steering_wheel_break" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_break"]
 [connection signal="steering_wheel_fix" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_fix"]
 [connection signal="component_failed" from="PressureMeter" to="GameManager" method="_on_pressure_meter_component_failed"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]
+[connection signal="component_failed" from="Radio" to="GameManager" method="_on_radio_component_failed"]
