@@ -5,6 +5,10 @@
 [Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
 [Download Here](https://tdavies.itch.io/under-pressure)
 
+# Awards
+* Winner of DandyHacks'24 Entertainment category
+* Voted people's choice out of all submissions
+
 # Features
 * 20+ all hand-made 3D models by Caroline Li
 * 3D real-time lighting
