@@ -218,7 +218,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 transform = Transform3D(-3.34849e-08, 2.80971e-08, 1, 0.642788, 0.766044, 0, -0.766044, 0.642788, -4.37114e-08, -4.869, 15.895, -5.7)
 
 [node name="TopLight2" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.159, 20.584, -0.395)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -2.934, 20.934, -0.395)
 
 [node name="TopLight3" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.636, -12.936, 4.005)
@@ -303,33 +303,40 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.193
 
 [node name="Sticky Note" type="Node" parent="Decoration"]
 
-[node name="sticky_note_radar" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
+[node name="Text Notes" type="Node" parent="Decoration/Sticky Note"]
+
+[node name="sticky_note_radar" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("16_lxjki")]
 transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.68782, -6.784, -8.568)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_radar"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_radar"]
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
 mesh = SubResource("TextMesh_8heuw")
 
-[node name="sticky_note_depth" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
+[node name="sticky_note_depth" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("16_lxjki")]
 transform = Transform3D(1.6849, 0, -1.07754, 0, 2, 0, 1.07754, 0, 1.6849, 8.54977, -2.35162, -2.97856)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_depth"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_depth"]
 transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, 1, -1.05355, 3.27104, 3.97851)
 mesh = SubResource("TextMesh_4c7rb")
 
-[node name="sticky_note_pressure" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
+[node name="sticky_note_pressure" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("17_tvvgt")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.7311, -5.27568, 9.11279)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_pressure"]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
 mesh = SubResource("TextMesh_0wdyb")
 
-[node name="sticky_note_pressure_meter" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
+[node name="sticky_note_pressure_meter" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("17_tvvgt")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -13.827, -4.98, 4.59)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure_meter"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_pressure_meter"]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
 mesh = SubResource("TextMesh_qwoci")
+
+[node name="Blank Notes" type="Node" parent="Decoration/Sticky Note"]
+
+[node name="stickynote yellow" parent="Decoration/Sticky Note/Blank Notes" instance=ExtResource("17_tvvgt")]
+transform = Transform3D(1, 0, 0, 0, 0.492424, 0.870356, 0, -0.870356, 0.492424, 3.865, -4.994, 3.012)
 
 [node name="Fish Container" type="Node" parent="Decoration"]
 
