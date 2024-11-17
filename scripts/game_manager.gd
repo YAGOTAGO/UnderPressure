@@ -6,7 +6,8 @@ extends Node
 @onready var depth: Node3D = %DepthMeter
 @onready var game_over_node: Node3D = %GameOver
 @onready var game_win_node: Node3D = %GameWin
-
+@onready var window: Node3D = %Window
+@onready var pressure: Node3D = %PressureMeter
 
 var num_failed_components:int = 0
 
@@ -52,13 +53,13 @@ func _activate_components()->void:
 
 
 func _on_emergency_button_emergency_btn_clicked() -> void:
-	$"../PressureMeter".btn_pressed()
+	pressure.btn_pressed()
 
 
 # Listen for failed components
 func on_component_fail()->void:
 	if num_failed_components % 3 == 0:
-		$"../Window".next_break()
+		window.next_break()
 		
 	if num_failed_components == 9:
 		game_over()
