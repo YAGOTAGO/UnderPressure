@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=50 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -37,23 +37,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
 [ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 [ext_resource type="PackedScene" uid="uid://ca3dvbag5rne7" path="res://assets/siren/siren.tscn" id="37_omemc"]
-
-[sub_resource type="GDScript" id="GDScript_rq1lr"]
-script/source = "extends Node3D
-
-@onready var animations:AnimationPlayer = %AnimationPlayer
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	
-	#animations.play(\"swim\")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -136,7 +119,6 @@ albedo = Color(0.466181, 0.466181, 0.466181, 1)
 emission = Color(0.5, 0.7, 0.8, 1)
 
 [node name="Main" type="Node3D"]
-script = SubResource("GDScript_rq1lr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
