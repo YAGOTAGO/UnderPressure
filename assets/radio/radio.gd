@@ -23,14 +23,14 @@ var mouse_left:bool = false
 
 func turn_left() ->void:
 	print("left clicked")
-	activate()
-	pass
+	fix()
+
 	
 func turn_right() ->void:
 	print("right clicked")
 	fix()
 	
-	pass
+
 
 func _process(_delta: float) -> void:
 	if mouse_right and Input.is_action_just_pressed("click"):

@@ -109,3 +109,4 @@ libraries = {
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("7_mra7p")
 volume_db = 3.0
+bus = &"Sound Effects"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/radio/radio.gd" id="1_jott1"]
 [ext_resource type="PackedScene" uid="uid://dppcq3gl7x07a" path="res://assets/radio/radio.fbx" id="2_dva6e"]
-[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://sounds/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
+[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://Sounds/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
 [ext_resource type="PackedScene" uid="uid://6awe28j31bqy" path="res://assets/radio/radioknob.fbx" id="3_rtskj"]
 
 [sub_resource type="Animation" id="Animation_r200v"]
@@ -84,6 +84,7 @@ speed_scale = 1.16
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3134, 0.69879, 1.31862)
 stream = ExtResource("2_el87x")
+bus = &"BG Music"
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32948, 0, 0)

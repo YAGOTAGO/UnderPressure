@@ -32,15 +32,16 @@ one_shot = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05339, 0.522039, 0.452045)
 stream = ExtResource("4_spo3v")
-volume_db = 6.154
+bus = &"Sound Effects"
 
 [node name="PlayFail" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.974308, 0.680669, 0.466987)
 stream = ExtResource("5_4843h")
-volume_db = -17.308
+volume_db = -10.308
 max_db = 0.0
 pitch_scale = 0.39
+bus = &"Fail Sounds"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="PressureCountdown" to="." method="_on_pressure_countdown_timeout"]
