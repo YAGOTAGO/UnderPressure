@@ -28,3 +28,7 @@ func _activate_components()->void:
 	selected_component.is_broken = true
 	selected_component.activate();
 	print("Component broken:", selected_component.name)
+
+
+func _on_emergency_button_emergency_btn_clicked() -> void:
+	$"../PressureMeter".fix()

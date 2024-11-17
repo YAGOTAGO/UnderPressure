@@ -144,3 +144,4 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.171
 transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0.224951, 1, 7.75899e-08, -4.25911e-08, -12.988, 21.957, 30.702)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
+[connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]

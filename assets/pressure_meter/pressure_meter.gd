@@ -22,7 +22,12 @@ func activate() -> void:
 	scale_factor = 5
 
 func fix():
-	pass
+	if is_compromised:
+		is_compromised = false
+		angle = 0
+		scale_factor = 0
+		boiling.stop()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -59,7 +64,7 @@ func _on_timer_timeout() -> void:
 
 
 func _on_pressure_countdown_timeout() -> void:
-	print("Component has failed...")
+	print("Meter component has failed...")
 	is_compromised = false
 	angle = 0
 	scale_factor = 0
