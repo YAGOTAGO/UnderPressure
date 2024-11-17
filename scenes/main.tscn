@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=43 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 [ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
-[ext_resource type="PackedScene" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
+[ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
 script/source = "extends Node3D
@@ -127,7 +127,6 @@ wait_time = 5.0
 
 [node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
-visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("6_rg65t")]
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
@@ -135,18 +134,15 @@ visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
-visible = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
-visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
 script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.216289, 0.150991, -0.11317)
 
 [node name="TV" parent="." instance=ExtResource("2_pv8vt")]
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
@@ -196,15 +192,12 @@ transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0
 transform = Transform3D(0.981293, 0, 0.192522, 0, 1, 0, -0.192522, 0, 0.981293, 11.1071, -13.3301, -1.08974)
 
 [node name="paper_tv" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
-transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.7887, 3.482)
-
-[node name="paper_tv3" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
-transform = Transform3D(0.860742, 0, 0.509041, 0, 1, 0, -0.509041, 0, 0.860742, 6.18609, -13.7887, -4.48755)
+transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
 
 [node name="Wire" type="Node" parent="Decoration"]
 
 [node name="wire deco left" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 3.06575)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
 
 [node name="wire deco right" parent="Decoration/Wire" instance=ExtResource("12_esay2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
@@ -251,14 +244,8 @@ mesh = ExtResource("31_ynlvg")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 
-[node name="TopLight2" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
-transform = Transform3D(0.939692, 0.34202, 1.74846e-07, -0.34202, 0.939692, 0, -1.64301e-07, -5.98007e-08, 1, 18.908, -2.638, 0.139)
-
-[node name="TopLight3" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
-transform = Transform3D(-0.939692, -0.34202, -8.74228e-08, -0.34202, 0.939692, 0, 8.21505e-08, 2.99003e-08, -1, -18.908, -2.63792, 9.73129)
-
-[node name="Lamp" parent="Decoration/Light" instance=ExtResource("33_tud1b")]
-transform = Transform3D(-0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, -0.844328, 3.476, 0.132755, 0.610607)
+[node name="TopLight" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.28866, 3.40038, -14.3402)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]

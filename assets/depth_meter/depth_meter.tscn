@@ -14,8 +14,6 @@ func start_depth_meter() -> void:
 "
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_off0d"]
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 0.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_rvfms"]
 
