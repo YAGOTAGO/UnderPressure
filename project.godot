@@ -34,6 +34,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://assets/": "pink",
+"res://beta_images/": "purple",
 "res://scenes/": "teal",
 "res://scripts/": "blue",
 "res://shaders/": "red",
