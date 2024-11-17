@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp.tscn" id="24_3k78o"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
-[ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
+[ext_resource type="PackedScene" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
 script/source = "extends Node3D
@@ -119,6 +119,7 @@ wait_time = 5.0
 
 [node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
