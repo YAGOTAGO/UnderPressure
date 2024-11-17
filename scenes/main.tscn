@@ -113,20 +113,24 @@ transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.08333, 3.27104, 3.98205)
 mesh = SubResource("TextMesh_8heuw")
 
-[node name="wire deco left" parent="Decoration" instance=ExtResource("11_2og37")]
+[node name="Paper" type="Node" parent="Decoration"]
+
+[node name="paper_tv2" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(0.981293, 0, 0.192522, 0, 1, 0, -0.192522, 0, 0.981293, 11.1071, -13.3301, -1.08974)
+
+[node name="paper_tv" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
+
+[node name="Wire" type="Node" parent="Decoration"]
+
+[node name="wire deco left" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
 
-[node name="wire deco right" parent="Decoration" instance=ExtResource("12_esay2")]
+[node name="wire deco right" parent="Decoration/Wire" instance=ExtResource("12_esay2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 
-[node name="wiredecoration" parent="Decoration" instance=ExtResource("12_esay2")]
+[node name="wiredecoration" parent="Decoration/Wire" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
-
-[node name="paper_tv2" parent="Decoration" instance=ExtResource("15_7yk1y")]
-transform = Transform3D(0.981293, 0, 0.192522, 0, 1, 0, -0.192522, 0, 0.981293, 9.85928, -13.945, -1.22286)
-
-[node name="paper_tv" parent="Decoration" instance=ExtResource("15_7yk1y")]
-transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
 
 [node name="Pipes" type="Node" parent="."]
 
