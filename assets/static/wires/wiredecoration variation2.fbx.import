@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://4ig533l63s52"
-path="res://.godot/imported/wiredecoration variation2.fbx-61fbce03d5a88f2ba0274a828c8a3da8.scn"
+path="res://.godot/imported/wiredecoration variation2.fbx-c557672bc4f93be86b9bc4da6bb62206.scn"
 
 [deps]
 
-source_file="res://assets/static/wiredecoration variation2.fbx"
-dest_files=["res://.godot/imported/wiredecoration variation2.fbx-61fbce03d5a88f2ba0274a828c8a3da8.scn"]
+source_file="res://assets/static/wires/wiredecoration variation2.fbx"
+dest_files=["res://.godot/imported/wiredecoration variation2.fbx-c557672bc4f93be86b9bc4da6bb62206.scn"]
 
 [params]
 

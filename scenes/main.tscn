@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="10_4wdnr"]
 [ext_resource type="PackedScene" uid="uid://34brr0liwy6h" path="res://assets/pressure_meter/PressureMeter.tscn" id="10_c6tiw"]
-[ext_resource type="PackedScene" uid="uid://4ig533l63s52" path="res://assets/static/wiredecoration variation2.fbx" id="11_2og37"]
-[ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/shel&table.fbx" id="11_v3bio"]
-[ext_resource type="PackedScene" uid="uid://c5feks1b71nmw" path="res://assets/static/wiredecoration.fbx" id="12_esay2"]
+[ext_resource type="PackedScene" uid="uid://4ig533l63s52" path="res://assets/static/wires/wiredecoration variation2.fbx" id="11_2og37"]
+[ext_resource type="PackedScene" uid="uid://cfixw202boyp3" path="res://assets/static/background/shel&table.fbx" id="11_v3bio"]
+[ext_resource type="PackedScene" uid="uid://c5feks1b71nmw" path="res://assets/static/wires/wiredecoration.fbx" id="12_esay2"]
 [ext_resource type="PackedScene" uid="uid://cssp4amv7nb6k" path="res://assets/depth_meter/depth_meter.tscn" id="13_drp40"]
 [ext_resource type="PackedScene" uid="uid://dnoj2me3x0o86" path="res://assets/radio/radio.tscn" id="13_ix7dp"]
 [ext_resource type="PackedScene" uid="uid://cnpsy8ld4gjym" path="res://assets/static/sticky_notes/paper.fbx" id="15_7yk1y"]
@@ -152,8 +152,6 @@ transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
 
-[node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
-
 [node name="Breaking Components" type="Node" parent="."]
 
 [node name="TV" parent="Breaking Components" instance=ExtResource("2_pv8vt")]
@@ -188,6 +186,8 @@ unique_name_in_owner = true
 transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 1.6242, 1.58847, 1.23494)
 
 [node name="Decoration" type="Node" parent="."]
+
+[node name="Shell & Table" parent="Decoration" instance=ExtResource("11_v3bio")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Decoration"]
 environment = SubResource("Environment_h7fa3")

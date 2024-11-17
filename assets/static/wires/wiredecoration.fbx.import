@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cfixw202boyp3"
-path="res://.godot/imported/shel&table.fbx-c939ec2ae0141e20dce556dc4ac627f8.scn"
+uid="uid://c5feks1b71nmw"
+path="res://.godot/imported/wiredecoration.fbx-86da6db11bda9ad34606d4b4f7a93770.scn"
 
 [deps]
 
-source_file="res://assets/static/shel&table.fbx"
-dest_files=["res://.godot/imported/shel&table.fbx-c939ec2ae0141e20dce556dc4ac627f8.scn"]
+source_file="res://assets/static/wires/wiredecoration.fbx"
+dest_files=["res://.godot/imported/wiredecoration.fbx-86da6db11bda9ad34606d4b4f7a93770.scn"]
 
 [params]
 
