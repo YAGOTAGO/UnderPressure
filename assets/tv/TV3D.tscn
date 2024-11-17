@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/tv/tv.gd" id="1_d5fup"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_xrqc6"]
-[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2d_views/tv_shader_view.tscn" id="3_w5btw"]
+[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D_Views/tv_shader_view.tscn" id="3_w5btw"]
 [ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/tv/antennabase.obj" id="7_hty1k"]
 [ext_resource type="PackedScene" uid="uid://cy2embp31kt4f" path="res://assets/tv/tvantenna.fbx" id="8_r2qxi"]
 [ext_resource type="AudioStream" uid="uid://degg6rd4mwfnd" path="res://sounds/tv static.mp3" id="9_8560w"]
