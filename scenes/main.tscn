@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=45 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dybc3d8bb6a56" path="res://sprites/cursor/cursor.png" id="21_5jwbr"]
 [ext_resource type="PackedScene" uid="uid://cyt1e1l4u5a87" path="res://assets/fish/yellow/yellow_fish_scene.tscn" id="21_qulxd"]
 [ext_resource type="Texture2D" uid="uid://cc84n2usdk8u5" path="res://sprites/cursor/cursor_grab.png" id="22_cxslk"]
+[ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp/lamp.tscn" id="22_mta71"]
 [ext_resource type="PackedScene" uid="uid://bbcjpx1xwc0q0" path="res://assets/fish/green/green_fish.tscn" id="23_qqgto"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
@@ -132,14 +133,17 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -192,7 +196,20 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 transform = Transform3D(-3.34849e-08, 2.80971e-08, 1, 0.642788, 0.766044, 0, -0.766044, 0.642788, -4.37114e-08, -4.869, 15.895, -5.7)
 
 [node name="TopLight2" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.571, 0.25, 4.4)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.159, 20.584, -0.395)
+
+[node name="TopLight3" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.636, -12.936, 4.005)
+
+[node name="Lamp" parent="Decoration/Light" instance=ExtResource("22_mta71")]
+transform = Transform3D(0.414693, 0, -0.909961, 0, 1, 0, 0.909961, 0, 0.414693, 2.02893, 0, 1.60547)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Decoration/Light"]
+transform = Transform3D(0.887011, 0, 0.461749, 0, 1, 0, -0.461749, 0, 0.887011, 2.1757, 2.89152, 13.1619)
+light_color = Color(0.988939, 0.921271, 0.864323, 1)
+light_energy = 16.0
+spot_range = 15.6153
+spot_angle = 11.0673
 
 [node name="Pipes" type="Node" parent="Decoration"]
 
