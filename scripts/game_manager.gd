@@ -27,10 +27,6 @@ func _on_depth_meter_game_win() -> void:
 	game_win_node.visible = true
 	queue_free()
 	
-	
-
-
-
 
 func _on_timer_timeout() -> void:
 	_activate_components()
@@ -57,7 +53,6 @@ func _activate_components()->void:
 
 func _on_emergency_button_emergency_btn_clicked() -> void:
 	$"../PressureMeter".btn_pressed()
-
 
 
 # Listen for failed components
