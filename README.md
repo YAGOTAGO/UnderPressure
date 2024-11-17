@@ -2,11 +2,11 @@
 
 # Gameplay
 
-* Video
+* Video: </br>
 [Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
 
-*Download Here:
-[Download](https://tdavies.itch.io/under-pressure)
+* Download Here: </br>
+* [Download](https://tdavies.itch.io/under-pressure)
 
 # Awards
 * Winner of DandyHacks'24 Entertainment category
