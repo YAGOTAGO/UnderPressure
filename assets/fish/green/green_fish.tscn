@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbcjpx1xwc0q0"]
+
+[ext_resource type="PackedScene" uid="uid://bxp2slol7ykxv" path="res://assets/fish/green/greenfish body.fbx" id="1_td1ci"]
+[ext_resource type="PackedScene" uid="uid://2nhruaxfyner" path="res://assets/fish/green/greenfish tail.fbx" id="2_f18cr"]
+
+[sub_resource type="Animation" id="Animation_327kk"]
+resource_name = "swim"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.460051, 0), Vector3(0, 0, 0), Vector3(0, -0.460767, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tail:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.384985, 0), Vector3(0, 0, 0), Vector3(0, 0.385718, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5qsuu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tail:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5trdt"]
+_data = {
+"RESET": SubResource("Animation_5qsuu"),
+"swim": SubResource("Animation_327kk")
+}
+
+[node name="GreenFish" type="Node3D"]
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="greenfish body" parent="Body" instance=ExtResource("1_td1ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.421, 0, -5.08525)
+
+[node name="Tail" type="Node3D" parent="."]
+
+[node name="greenfish tail" parent="Tail" instance=ExtResource("2_f18cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4474, 0, -5.08681)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5trdt")
+}
+autoplay = "swim"

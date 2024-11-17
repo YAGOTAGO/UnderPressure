@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdw3snttahhae"]
+
+[ext_resource type="PackedScene" uid="uid://bxyyqjkf6mltv" path="res://assets/fish/pink/pinkfish body.fbx" id="1_wnksl"]
+[ext_resource type="PackedScene" uid="uid://cs8r8r4s0sfup" path="res://assets/fish/pink/pinkfish tail.fbx" id="2_bt3jj"]
+
+[sub_resource type="Animation" id="Animation_eyc1t"]
+resource_name = "swim"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.340339, 0), Vector3(0, 0, 0), Vector3(0, 0.340339, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tail:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.375246, 0), Vector3(0, 0, 0), Vector3(0, -0.375246, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bcdtc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tail:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ml70n"]
+_data = {
+"RESET": SubResource("Animation_bcdtc"),
+"swim": SubResource("Animation_eyc1t")
+}
+
+[node name="PinkFish" type="Node3D"]
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="pinkfish body" parent="Body" instance=ExtResource("1_wnksl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6198, -2.16562, -5.60751)
+
+[node name="Tail" type="Node3D" parent="."]
+
+[node name="pinkfish tail" parent="Tail" instance=ExtResource("2_bt3jj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8149, -2.05433, -5.60595)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ml70n")
+}
+autoplay = "swim"
+speed_scale = 2.466

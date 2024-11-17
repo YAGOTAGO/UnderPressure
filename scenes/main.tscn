@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=37 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
+[ext_resource type="Script" path="res://assets/fish/yellow/yellow_fish_scene.gd" id="1_ltneh"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
@@ -22,8 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
 [ext_resource type="Script" path="res://scripts/cursor_manager.gd" id="20_rgvsj"]
 [ext_resource type="Texture2D" uid="uid://dybc3d8bb6a56" path="res://sprites/cursor/cursor.png" id="21_5jwbr"]
+[ext_resource type="PackedScene" uid="uid://cyt1e1l4u5a87" path="res://assets/fish/yellow/yellow_fish_scene.tscn" id="21_qulxd"]
 [ext_resource type="Texture2D" uid="uid://cc84n2usdk8u5" path="res://sprites/cursor/cursor_grab.png" id="22_cxslk"]
+[ext_resource type="PackedScene" uid="uid://bbcjpx1xwc0q0" path="res://assets/fish/green/green_fish.tscn" id="23_qqgto"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
+[ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -31,8 +35,8 @@ shader_parameter/sky_color = Color(0.0148744, 0, 0.315385, 1)
 shader_parameter/star_base_color = Color(1.54018e-06, 0.276968, 0.382507, 1)
 shader_parameter/star_hue_offset = 0.0
 shader_parameter/star_intensity = 0.08
-shader_parameter/star_twinkle_speed = 0.968
-shader_parameter/star_twinkle_intensity = 0.406
+shader_parameter/star_twinkle_speed = 2.0
+shader_parameter/star_twinkle_intensity = 0.84
 shader_parameter/layer_scale = 20.0
 shader_parameter/layer_scale_step = 10.0
 shader_parameter/layers_count = 3
@@ -76,6 +80,7 @@ depth = 0.0
 width = 40.0
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_ltneh")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h7fa3")
@@ -90,6 +95,7 @@ wait_time = 5.0
 
 [node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -164,6 +170,17 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.731
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure"]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
 mesh = SubResource("TextMesh_0wdyb")
+
+[node name="Fish Container" type="Node" parent="Decoration"]
+
+[node name="YellowFish" parent="Decoration/Fish Container" instance=ExtResource("21_qulxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0814, -3)
+
+[node name="PinkFish" parent="Decoration/Fish Container" instance=ExtResource("27_lpl25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.744475, -6)
+
+[node name="GreenFish" parent="Decoration/Fish Container" instance=ExtResource("23_qqgto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57707, 4.44168, -8.16588)
 
 [node name="Pipes" type="Node" parent="."]
 
