@@ -17,6 +17,14 @@ func start_game() -> void:
 	
 func game_over()-> void:
 	game_over_node.visible = true
+	
+# Game win
+func _on_depth_meter_game_win() -> void:
+	#game_win_node.visable = true
+	pass
+
+
+
 
 func _on_timer_timeout() -> void:
 	_activate_components()

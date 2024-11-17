@@ -9,8 +9,14 @@ script/source = "extends Node3D
 
 @onready var depth_node: Node2D = %DepthMeterView
 
+signal game_win
+
 func start_depth_meter() -> void:
 	depth_node.start_timer()
+
+
+func _on_depth_meter_view_surface_reached() -> void:
+	game_win.emit()
 "
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_off0d"]
@@ -34,3 +40,5 @@ size = Vector2i(1405, 475)
 unique_name_in_owner = true
 
 [node name="depth_meter" parent="." instance=ExtResource("3_w0plw")]
+
+[connection signal="surface_reached" from="SubViewport/DepthMeterView" to="." method="_on_depth_meter_view_surface_reached"]

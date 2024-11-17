@@ -259,3 +259,4 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.288
 [connection signal="component_failed" from="PressureMeter" to="GameManager" method="_on_pressure_meter_component_failed"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]
 [connection signal="component_failed" from="Radio" to="GameManager" method="_on_radio_component_failed"]
+[connection signal="game_win" from="DepthMeter" to="GameManager" method="_on_depth_meter_game_win"]
