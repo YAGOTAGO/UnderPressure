@@ -13,7 +13,6 @@
 * Programmed in an Open-Source Engine
 
 # Credits
-## Team:
 
 ![Team](sprites/splash.png)
 
