@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
-[ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://scenes/game_over.tscn" id="6_rg65t"]
+[ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://assets/game_over/game_over.tscn" id="6_rg65t"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://assets/radar/radar3D.tscn" id="7_svoui"]
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
 [ext_resource type="PackedScene" uid="uid://di5m7q1dn3fnr" path="res://assets/emergency_button/EmergencyButton.tscn" id="10_4wdnr"]
