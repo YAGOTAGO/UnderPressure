@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=42 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 [ext_resource type="PackedScene" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
+[ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
 
@@ -83,6 +84,11 @@ autowrap_mode = 2
 depth = 0.0
 width = 40.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ui2s"]
+albedo_color = Color(0.498972, 0, 0.0545336, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
 [node name="Main" type="Node3D"]
 script = SubResource("GDScript_rq1lr")
 
@@ -109,9 +115,11 @@ visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
+visible = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -211,6 +219,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57707, 4.44168, -8.16588)
 
 [node name="Lamp" parent="Decoration/Light" instance=ExtResource("24_3k78o")]
 transform = Transform3D(0.498488, 0, -0.866897, 0, 1, 0, 0.866897, 0, 0.498488, 2.024, 0, 1.543)
+
+[node name="Floor Lights" type="MeshInstance3D" parent="Decoration/Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0983148, 0.395397, -0.914792)
+mesh = ExtResource("31_ynlvg")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 
 [node name="BlueFish" parent="." instance=ExtResource("30_0gewv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
