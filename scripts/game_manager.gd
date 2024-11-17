@@ -5,6 +5,8 @@ extends Node
 @onready var timer: Timer = %Timer
 @onready var depth: Node3D = %DepthMeter
 
+var num_failed_components:int = 0
+
 func start_game() -> void:
 	timer.start(0)
 	depth.start_depth_meter()
@@ -34,3 +36,17 @@ func _activate_components()->void:
 
 func _on_emergency_button_emergency_btn_clicked() -> void:
 	$"../PressureMeter".fix()
+
+
+
+# Listen for failed components
+
+func _on_pressure_meter_component_failed() -> void:
+	num_failed_components += 1
+
+
+func _on_switch_board_3d_component_failed() -> void:
+	num_failed_components += 1
+
+func _on_tv_component_failed() -> void:
+	num_failed_components += 1

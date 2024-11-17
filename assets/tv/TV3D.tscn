@@ -89,3 +89,9 @@ offset_top = -15.0
 offset_right = 300.0
 offset_bottom = 35.0
 max_value = 200.0
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

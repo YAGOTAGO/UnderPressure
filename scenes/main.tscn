@@ -130,6 +130,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065
 
 [node name="GameOver" parent="." instance=ExtResource("6_rg65t")]
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -146,8 +147,9 @@ script = ExtResource("1_473u7")
 [node name="TV" parent="." instance=ExtResource("2_pv8vt")]
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
-[node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
+[node name="SwitchBoard3d" parent="." node_paths=PackedStringArray("switchArray") instance=ExtResource("6_dibri")]
 transform = Transform3D(0.254974, -0.325547, -0.910499, 0.109373, 0.945288, -0.307357, 0.960741, -0.0212163, 0.276631, 6.711, 3.603, 2.774)
+switchArray = []
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
@@ -247,6 +249,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
+[connection signal="component_failed" from="TV" to="GameManager" method="_on_tv_component_failed"]
+[connection signal="component_failed" from="SwitchBoard3d" to="GameManager" method="_on_switch_board_3d_component_failed"]
 [connection signal="steering_wheel_break" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_break"]
 [connection signal="steering_wheel_fix" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_fix"]
+[connection signal="component_failed" from="PressureMeter" to="GameManager" method="_on_pressure_meter_component_failed"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]

@@ -7,7 +7,7 @@ extends Node3D
 @onready var fail_sound: AudioStreamPlayer3D = %PlayFail
 
 
-
+signal component_failed
 
 
 var angle:float = 0.0	# The current angle of the needle
@@ -29,6 +29,16 @@ func fix() -> void:
 		angle = 0
 		scale_factor = 0
 		boiling.stop()
+		
+		
+func break_meter()->void:
+	print("Meter component has failed...")
+	is_compromised = false
+	angle = 0
+	scale_factor = 0
+	boiling.stop()
+	fail_sound.play()
+	component_failed.emit()
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -66,10 +76,5 @@ func _on_timer_timeout() -> void:
 
 
 func _on_pressure_countdown_timeout() -> void:
-	print("Meter component has failed...")
-	is_compromised = false
-	angle = 0
-	scale_factor = 0
-	boiling.stop()
-	fail_sound.play()
+	break_meter()
 	

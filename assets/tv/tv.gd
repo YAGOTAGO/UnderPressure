@@ -4,12 +4,17 @@ extends Node3D
 const MIN_ROTATION: int = -45
 const MAX_ROTATION: int = 45
 
+@onready var timer: Timer = %Timer
+
 @onready var slider: HSlider = %HSlider
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
 @onready var antenna : Node3D = %"Antenna Parent"
 @onready var staticSound : AudioStreamPlayer3D = %StaticSound
 
 @onready var tv_image : Node2D = %TvShader
+
+signal component_failed
+
 
 
 var target_value: int = 50 # will be number between 0 and 100
@@ -19,12 +24,14 @@ var is_broken: bool = false
 func activate() -> void:
 	target_value = randi_range(slider.min_value, slider.max_value)
 	update_tv_noise()
+	timer.start(0)
 	
 	
 func fix() -> void:
 	is_broken = false
 	
-
+func break_tv()->void:
+	component_failed.emit()
 
 func _ready() -> void:
 	update_rotation(slider.value)
@@ -66,3 +73,7 @@ func _on_steering_wheel_steering_wheel_break(direction:bool) -> void:
 
 func _on_steering_wheel_steering_wheel_fix() -> void:
 	tv_image.hide_image()
+
+
+func _on_timer_timeout() -> void:
+	break_tv()
