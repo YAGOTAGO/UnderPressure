@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=38 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Script" path="res://assets/fish/yellow/yellow_fish_scene.gd" id="1_ltneh"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cyt1e1l4u5a87" path="res://assets/fish/yellow/yellow_fish_scene.tscn" id="21_qulxd"]
 [ext_resource type="Texture2D" uid="uid://cc84n2usdk8u5" path="res://sprites/cursor/cursor_grab.png" id="22_cxslk"]
 [ext_resource type="PackedScene" uid="uid://bbcjpx1xwc0q0" path="res://assets/fish/green/green_fish.tscn" id="23_qqgto"]
+[ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp.tscn" id="24_3k78o"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 
@@ -86,6 +87,11 @@ script = ExtResource("1_ltneh")
 environment = SubResource("Environment_h7fa3")
 camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
+[node name="Cursor Manager" type="Node" parent="."]
+script = ExtResource("20_rgvsj")
+cursor = ExtResource("21_5jwbr")
+cursor_down = ExtResource("22_cxslk")
+
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xhrch")
 
@@ -99,9 +105,11 @@ visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
+visible = false
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -135,6 +143,17 @@ unique_name_in_owner = true
 transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 1.6242, 1.58847, 1.23494)
 
 [node name="Decoration" type="Node" parent="."]
+
+[node name="Pipes" type="Node" parent="Decoration"]
+
+[node name="HPipe" parent="Decoration/Pipes" instance=ExtResource("15_hgri2")]
+transform = Transform3D(0.211325, 0, -0.977416, 0, 1, 0, 0.977416, 0, 0.211325, 2.419, -14.62, 23.24)
+
+[node name="Pipe1" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.17144, -20.9017, -15.0692)
+
+[node name="Pipe2" parent="Decoration/Pipes" instance=ExtResource("15_aupjh")]
+transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0.224951, 1, 7.75899e-08, -4.25911e-08, -12.988, 21.957, 30.702)
 
 [node name="Paper" type="Node" parent="Decoration"]
 
@@ -182,21 +201,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.744475, -6)
 [node name="GreenFish" parent="Decoration/Fish Container" instance=ExtResource("23_qqgto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57707, 4.44168, -8.16588)
 
-[node name="Pipes" type="Node" parent="."]
+[node name="Light" type="Node" parent="Decoration"]
 
-[node name="HPipe" parent="Pipes" instance=ExtResource("15_hgri2")]
-transform = Transform3D(0.211325, 0, -0.977416, 0, 1, 0, 0.977416, 0, 0.211325, 2.419, -14.62, 23.24)
-
-[node name="Pipe1" parent="Pipes" instance=ExtResource("15_aupjh")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.17144, -20.9017, -15.0692)
-
-[node name="Pipe2" parent="Pipes" instance=ExtResource("15_aupjh")]
-transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0.224951, 1, 7.75899e-08, -4.25911e-08, -12.988, 21.957, 30.702)
-
-[node name="Cursor Manager" type="Node" parent="."]
-script = ExtResource("20_rgvsj")
-cursor = ExtResource("21_5jwbr")
-cursor_down = ExtResource("22_cxslk")
+[node name="Lamp" parent="Decoration/Light" instance=ExtResource("24_3k78o")]
+transform = Transform3D(0.498488, 0, -0.866897, 0, 1, 0, 0.866897, 0, 0.498488, 2.024, 0, 1.543)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
