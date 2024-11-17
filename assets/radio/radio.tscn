@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/radio/radio.gd" id="1_jott1"]
 [ext_resource type="PackedScene" uid="uid://dppcq3gl7x07a" path="res://assets/radio/radio.fbx" id="2_dva6e"]
-[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://sounds/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
+[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://Sounds/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
 [ext_resource type="PackedScene" uid="uid://6awe28j31bqy" path="res://assets/radio/radioknob.fbx" id="3_rtskj"]
 
 [sub_resource type="Animation" id="Animation_r200v"]
@@ -114,7 +114,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36452, 2.42188, 1.99753)
 transform = Transform3D(1, 0, 0, 0, -0.00895338, 0.99996, 0, -0.99996, -0.00895338, 0.753639, 0.359707, 1.22815)
 shape = SubResource("CylinderShape3D_d1018")
 
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.5
+
 [connection signal="mouse_entered" from="Node3D/leftKnob/left_hitbox" to="." method="_on_left_hitbox_mouse_entered"]
 [connection signal="mouse_exited" from="Node3D/leftKnob/left_hitbox" to="." method="_on_left_hitbox_mouse_exited"]
 [connection signal="mouse_entered" from="Node3D/rightKnob/right_hitbox" to="." method="_on_right_hitbox_mouse_entered"]
 [connection signal="mouse_exited" from="Node3D/rightKnob/right_hitbox" to="." method="_on_right_hitbox_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

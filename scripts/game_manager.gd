@@ -43,10 +43,35 @@ func _on_emergency_button_emergency_btn_clicked() -> void:
 
 func _on_pressure_meter_component_failed() -> void:
 	num_failed_components += 1
-
+	print("meter" + str(num_failed_components))
+	
 
 func _on_switch_board_3d_component_failed() -> void:
 	num_failed_components += 1
+	print("switch" + str(num_failed_components))
+
+	
 
 func _on_tv_component_failed() -> void:
 	num_failed_components += 1
+	print("tv" + str(num_failed_components))
+
+	
+
+func _on_steering_wheel_component_failed() -> void:
+	num_failed_components += 1
+	print("wheel" + str(num_failed_components))
+
+	
+
+func _on_radar_component_failed() -> void:
+	num_failed_components += 1
+	print("radar" + str(num_failed_components))
+
+	
+
+func _on_radio_component_failed() -> void:
+	num_failed_components += 1
+	print("radio" + str(num_failed_components))
+
+	

@@ -102,5 +102,10 @@ libraries = {
 "": SubResource("AnimationLibrary_5f3el")
 }
 
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.5
+
 [connection signal="clicked" from="LeftArea" to="." method="_on_left_area_clicked"]
 [connection signal="clicked" from="RightArea" to="." method="_on_right_area_clicked"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

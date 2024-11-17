@@ -25,10 +25,12 @@ func activate() -> void:
 
 func fix() -> void:
 	if is_compromised:
+		is_broken = false
 		is_compromised = false
 		angle = 0
 		scale_factor = 0
 		boiling.stop()
+		timer.stop()
 		
 		
 func break_meter()->void:
