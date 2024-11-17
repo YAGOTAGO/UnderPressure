@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=28 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cxtomaylbqc2p" path="res://assets/static/pipes/n_pipe.tscn" id="15_aupjh"]
 [ext_resource type="PackedScene" uid="uid://rv0y5e6n24pw" path="res://assets/static/pipes/h_pipe.tscn" id="15_hgri2"]
 [ext_resource type="PackedScene" uid="uid://edsgu6xwdq5w" path="res://assets/static/sticky_notes/stickynote blue.fbx" id="16_lxjki"]
+[ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -56,6 +57,17 @@ autowrap_mode = 2
 depth = 0.0
 width = 50.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wadwn"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_0wdyb"]
+material = SubResource("StandardMaterial3D_wadwn")
+text = "Pressure Relief Button"
+font_size = 11
+autowrap_mode = 2
+depth = 0.0
+width = 40.0
+
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -73,6 +85,9 @@ transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, 
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.284015, 0.873182, -0.396093, 0, -0.413104, -0.910684, -0.95882, 0.258648, -0.117328, 0.766091, 1.03841, 9.36106)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -106,13 +121,6 @@ transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 
 
 [node name="Decoration" type="Node" parent="."]
 
-[node name="sticky_note_radar" parent="Decoration" instance=ExtResource("16_lxjki")]
-transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.769, -6.784, -8.568)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/sticky_note_radar"]
-transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.08333, 3.27104, 3.98205)
-mesh = SubResource("TextMesh_8heuw")
-
 [node name="Paper" type="Node" parent="Decoration"]
 
 [node name="paper_tv2" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
@@ -131,6 +139,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 
 [node name="wiredecoration" parent="Decoration/Wire" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
+
+[node name="Sticky Note" type="Node" parent="Decoration"]
+
+[node name="sticky_note_radar" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
+transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.769, -6.784, -8.568)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_radar"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.08333, 3.27104, 3.98205)
+mesh = SubResource("TextMesh_8heuw")
+
+[node name="sticky_note_pressure" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.7311, -4.84444, 10.2711)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure"]
+transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
+mesh = SubResource("TextMesh_0wdyb")
 
 [node name="Pipes" type="Node" parent="."]
 
