@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=48 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -103,6 +103,15 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="TextMesh" id="TextMesh_0wdyb"]
 material = SubResource("StandardMaterial3D_wadwn")
 text = "Pressure Relief Button"
+font = ExtResource("17_4vb2h")
+font_size = 11
+autowrap_mode = 2
+depth = 0.0
+width = 40.0
+
+[sub_resource type="TextMesh" id="TextMesh_qwoci"]
+material = SubResource("StandardMaterial3D_wadwn")
+text = "Pressure Meter!"
 font = ExtResource("17_4vb2h")
 font_size = 11
 autowrap_mode = 2
@@ -238,6 +247,9 @@ transform = Transform3D(0.981293, 0, 0.192522, 0, 1, 0, -0.192522, 0, 0.981293, 
 [node name="paper_tv" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
 transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
 
+[node name="paper_tv3" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(-0.121869, 0, 0.992546, 0, 1, 0, -0.992546, 0, -0.121869, -9.206, -13.945, -1.023)
+
 [node name="Wire" type="Node" parent="Decoration"]
 
 [node name="wire deco left" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
@@ -262,11 +274,18 @@ transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829
 mesh = SubResource("TextMesh_8heuw")
 
 [node name="sticky_note_pressure" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.7311, -4.84444, 10.2711)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 15.7311, -5.27568, 9.11279)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure"]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
 mesh = SubResource("TextMesh_0wdyb")
+
+[node name="sticky_note_pressure_meter" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -13.827, -4.98, 4.59)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_pressure_meter"]
+transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.65961, 3.24989, 3.92976)
+mesh = SubResource("TextMesh_qwoci")
 
 [node name="Fish Container" type="Node" parent="Decoration"]
 

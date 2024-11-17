@@ -45,10 +45,10 @@ mesh = ExtResource("7_hty1k")
 
 [node name="Antenna Parent" type="Node3D" parent="Antennabase"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10497, 2.47126, 3.72622)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85842, 2.47126, 3.60676)
 
 [node name="tvantenna" parent="Antennabase/Antenna Parent" instance=ExtResource("8_r2qxi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.44628, -2.37839, -3.68766)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.19183, -2.37839, -3.54754)
 
 [node name="StaticSound" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
