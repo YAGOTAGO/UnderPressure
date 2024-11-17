@@ -83,11 +83,6 @@ volumetric_fog_density = 0.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_e2nei"]
 
-[sub_resource type="FogMaterial" id="FogMaterial_j7r6s"]
-density = 0.1502
-albedo = Color(0.466181, 0.466181, 0.466181, 1)
-emission = Color(0.5, 0.7, 0.8, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ui2s"]
 albedo_color = Color(0.498972, 0, 0.0545336, 1)
 emission_enabled = true
@@ -135,12 +130,17 @@ autowrap_mode = 2
 depth = 0.0
 width = 40.0
 
+[sub_resource type="FogMaterial" id="FogMaterial_j7r6s"]
+density = 0.1502
+albedo = Color(0.466181, 0.466181, 0.466181, 1)
+emission = Color(0.5, 0.7, 0.8, 1)
+
 [node name="Main" type="Node3D"]
 script = SubResource("GDScript_rq1lr")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_h7fa3")
-camera_attributes = SubResource("CameraAttributesPractical_e2nei")
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
+script = ExtResource("1_473u7")
 
 [node name="Managers" type="Node" parent="."]
 
@@ -151,7 +151,7 @@ cursor_down = ExtResource("22_cxslk")
 
 [node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
-list_components = [NodePath("../../TV"), NodePath("../../SteeringWheel"), NodePath("../../Radar"), NodePath("../../SwitchBoard3d"), NodePath("../../Radio"), NodePath("../../PressureMeter")]
+list_components = [NodePath("../../Breaking Components/TV"), NodePath("../../Breaking Components/SteeringWheel"), NodePath("../../Breaking Components/Radar"), NodePath("../../Breaking Components/SwitchBoard3d"), NodePath("../../Breaking Components/Radio"), NodePath("../../Breaking Components/PressureMeter")]
 
 [node name="Timer" type="Timer" parent="Managers/GameManager"]
 unique_name_in_owner = true
@@ -170,49 +170,46 @@ transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
-script = ExtResource("1_473u7")
-
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
 
-[node name="TV" parent="." instance=ExtResource("2_pv8vt")]
+[node name="Breaking Components" type="Node" parent="."]
+
+[node name="TV" parent="Breaking Components" instance=ExtResource("2_pv8vt")]
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
-[node name="SwitchBoard3d" parent="." node_paths=PackedStringArray("switchArray") instance=ExtResource("6_dibri")]
+[node name="SwitchBoard3d" parent="Breaking Components" node_paths=PackedStringArray("switchArray") instance=ExtResource("6_dibri")]
 transform = Transform3D(0.254974, -0.325547, -0.910499, 0.109373, 0.945288, -0.307357, 0.960741, -0.0212163, 0.276631, 6.711, 3.603, 2.774)
 switchArray = []
 
-[node name="Radar" parent="." instance=ExtResource("7_svoui")]
+[node name="Radar" parent="Breaking Components" instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.19494, -4.77058)
 
-[node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
+[node name="SteeringWheel" parent="Breaking Components" instance=ExtResource("9_16cqi")]
 transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)
 
-[node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
+[node name="PressureMeter" parent="Breaking Components" instance=ExtResource("10_c6tiw")]
 unique_name_in_owner = true
 transform = Transform3D(0.240472, 0.437553, 1.62503, 1.93203e-08, 1.64154, -0.441998, -1.68291, 0.0625224, 0.232202, -6.76614, 1.84123, 8.62311)
 
-[node name="EmergencyButton" parent="." instance=ExtResource("10_4wdnr")]
+[node name="EmergencyButton" parent="Breaking Components" instance=ExtResource("10_4wdnr")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.88344, 2.0251, 5.32589)
 
-[node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
+[node name="Radio" parent="Breaking Components" instance=ExtResource("13_ix7dp")]
 transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, -0.186038, 5.73886)
 
-[node name="Window" parent="." instance=ExtResource("16_ja2uo")]
+[node name="Window" parent="Breaking Components" instance=ExtResource("16_ja2uo")]
 unique_name_in_owner = true
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 44.303, -8.781, 10.582)
 
-[node name="DepthMeter" parent="." instance=ExtResource("13_drp40")]
+[node name="DepthMeter" parent="Breaking Components" instance=ExtResource("13_drp40")]
 unique_name_in_owner = true
 transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 1.6242, 1.58847, 1.23494)
 
-[node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 5.14325)
-size = Vector3(10.2472, 2, 15.0583)
-material = SubResource("FogMaterial_j7r6s")
-
 [node name="Decoration" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Decoration"]
+environment = SubResource("Environment_h7fa3")
+camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
 [node name="Light" type="Node" parent="Decoration"]
 
@@ -346,15 +343,22 @@ transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.9993
 [node name="BlueFish2" parent="Decoration/Fish Container" instance=ExtResource("30_0gewv")]
 transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.999317, -6.26594, 1.57653, -4.14288)
 
+[node name="Fog" type="Node" parent="Decoration"]
+
+[node name="FogVolume" type="FogVolume" parent="Decoration/Fog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 5.14325)
+size = Vector3(10.2472, 2, 15.0583)
+material = SubResource("FogMaterial_j7r6s")
+
 [connection signal="timeout" from="Managers/GameManager/Timer" to="Managers/GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="Menu/MainMenu" to="Managers/GameManager" method="start_game"]
-[connection signal="component_failed" from="TV" to="Managers/GameManager" method="_on_tv_component_failed"]
-[connection signal="component_failed" from="SwitchBoard3d" to="Managers/GameManager" method="_on_switch_board_3d_component_failed"]
-[connection signal="component_failed" from="Radar" to="Managers/GameManager" method="_on_radar_component_failed"]
-[connection signal="component_failed" from="SteeringWheel" to="Managers/GameManager" method="_on_steering_wheel_component_failed"]
-[connection signal="steering_wheel_break" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_break"]
-[connection signal="steering_wheel_fix" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_fix"]
-[connection signal="component_failed" from="PressureMeter" to="Managers/GameManager" method="_on_pressure_meter_component_failed"]
-[connection signal="emergency_btn_clicked" from="EmergencyButton" to="Managers/GameManager" method="_on_emergency_button_emergency_btn_clicked"]
-[connection signal="component_failed" from="Radio" to="Managers/GameManager" method="_on_radio_component_failed"]
-[connection signal="game_win" from="DepthMeter" to="Managers/GameManager" method="_on_depth_meter_game_win"]
+[connection signal="component_failed" from="Breaking Components/TV" to="Managers/GameManager" method="_on_tv_component_failed"]
+[connection signal="component_failed" from="Breaking Components/SwitchBoard3d" to="Managers/GameManager" method="_on_switch_board_3d_component_failed"]
+[connection signal="component_failed" from="Breaking Components/Radar" to="Managers/GameManager" method="_on_radar_component_failed"]
+[connection signal="component_failed" from="Breaking Components/SteeringWheel" to="Managers/GameManager" method="_on_steering_wheel_component_failed"]
+[connection signal="steering_wheel_break" from="Breaking Components/SteeringWheel" to="Breaking Components/TV" method="_on_steering_wheel_steering_wheel_break"]
+[connection signal="steering_wheel_fix" from="Breaking Components/SteeringWheel" to="Breaking Components/TV" method="_on_steering_wheel_steering_wheel_fix"]
+[connection signal="component_failed" from="Breaking Components/PressureMeter" to="Managers/GameManager" method="_on_pressure_meter_component_failed"]
+[connection signal="emergency_btn_clicked" from="Breaking Components/EmergencyButton" to="Managers/GameManager" method="_on_emergency_button_emergency_btn_clicked"]
+[connection signal="component_failed" from="Breaking Components/Radio" to="Managers/GameManager" method="_on_radio_component_failed"]
+[connection signal="game_win" from="Breaking Components/DepthMeter" to="Managers/GameManager" method="_on_depth_meter_game_win"]
