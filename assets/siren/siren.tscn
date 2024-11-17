@@ -1,8 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ca3dvbag5rne7"]
 
-[ext_resource type="Script" path="res://assets/siren/siren.gd" id="1_lt2hx"]
 [ext_resource type="Script" path="res://scripts/autoplay_animation.gd" id="2_1y87h"]
-[ext_resource type="PackedScene" uid="uid://cwojakfcx24p6" path="res://assets/siren/siren.fbx" id="2_05xw2"]
+[ext_resource type="ArrayMesh" uid="uid://cuvhquoqft65r" path="res://assets/siren/sirenob.obj" id="2_wpqeh"]
 
 [sub_resource type="Animation" id="Animation_2xvdj"]
 length = 0.001
@@ -42,12 +41,16 @@ _data = {
 "light_spin": SubResource("Animation_gdv0p")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o61p4"]
+albedo_color = Color(0.612937, 0.20331, 0.181569, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
 [node name="Siren" type="Node3D"]
-script = ExtResource("1_lt2hx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91183, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.83576, 0.64266)
 light_color = Color(3, 1, 1, 1)
 shadow_enabled = true
 spot_range = 7.62851
@@ -62,6 +65,7 @@ script = ExtResource("2_1y87h")
 animation_player = NodePath(".")
 animation_name = "light_spin"
 
-[node name="Siren Mesh" parent="." instance=ExtResource("2_05xw2")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2994, -4.47744, 4.87063)
+[node name="Sirenob" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.062, 9.77, 5.114)
+mesh = ExtResource("2_wpqeh")
+surface_material_override/0 = SubResource("StandardMaterial3D_o61p4")
