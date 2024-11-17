@@ -3,9 +3,11 @@ extends Node
 
 @export var list_components: Array[Node3D]
 @onready var timer: Timer = %Timer
+@onready var depth: Node3D = %DepthMeter
 
 func start_game() -> void:
 	timer.start(0)
+	depth.start_depth_meter()
 
 func _on_timer_timeout() -> void:
 	_activate_components()

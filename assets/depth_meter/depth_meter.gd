@@ -8,11 +8,15 @@ const START_DEPTH: int = 1000
 
 @onready var progress_shader_material: ShaderMaterial = %ProgressBar.material as ShaderMaterial
 @onready var label: Label = %Label
+@onready var timer: Timer = %Timer
 
 var depth_num: int = START_DEPTH
 
 func _ready() -> void:
 	_update_display()
+	
+func start_timer() -> void:
+	timer.start(0)
 	
 func _on_timer_timeout() -> void:
 	var amount: int = randi_range(MIN_AMOUNT, MAX_AMOUNT)

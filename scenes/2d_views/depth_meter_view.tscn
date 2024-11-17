@@ -21,8 +21,8 @@ shader_parameter/fill_value = -1.0
 script = ExtResource("1_ecana")
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.1
-autostart = true
 
 [node name="ProgressBar" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -48,6 +48,16 @@ offset_bottom = 451.0
 theme_override_fonts/font = ExtResource("3_ni8rc")
 theme_override_font_sizes/font_size = 200
 text = "#####"
+vertical_alignment = 1
+
+[node name="Units Label" type="Label" parent="."]
+offset_left = 1204.0
+offset_top = 216.0
+offset_right = 2101.0
+offset_bottom = 451.0
+theme_override_fonts/font = ExtResource("3_ni8rc")
+theme_override_font_sizes/font_size = 200
+text = "M"
 vertical_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -125,6 +125,7 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.88344,
 transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
 
 [node name="DepthMeter" parent="." instance=ExtResource("13_drp40")]
+unique_name_in_owner = true
 transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 1.6242, 1.58847, 1.23494)
 
 [node name="Decoration" type="Node" parent="."]
