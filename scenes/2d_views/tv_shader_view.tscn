@@ -1,14 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw2duxafvebni"]
+[gd_scene load_steps=6 format=3 uid="uid://cw2duxafvebni"]
 
 [ext_resource type="Shader" path="res://shaders/retro_tv.gdshader" id="1_fkkhg"]
+[ext_resource type="Texture2D" uid="uid://dp64etx1foohf" path="res://sprites/wheel/wheel_right.png" id="1_r8glo"]
+[ext_resource type="Texture2D" uid="uid://ib6148punba7" path="res://sprites/wheel/wheel_left.png" id="2_huivj"]
 
 [sub_resource type="GDScript" id="GDScript_yqbbs"]
 script/source = "extends Node2D
 
 @onready var tv_shader_material: ShaderMaterial = %ColorRect.material as ShaderMaterial
+@onready var left: Sprite2D = %WheelLeft
+@onready var right: Sprite2D = %WheelRight
+
+func _ready() -> void:
+	left.visible = false
+	right.visible =false
 
 func get_shader_material() -> ShaderMaterial:
 	return tv_shader_material
+
+func show_left(visible: bool) -> void:
+	left.visible = visible;
+
+func show_right(visible: bool) -> void:
+	right.visible = visible;
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w7jj4"]
@@ -37,6 +51,16 @@ shader_parameter/vignette_opacity = 0.647
 
 [node name="TvShader" type="Node2D"]
 script = SubResource("GDScript_yqbbs")
+
+[node name="WheelLeft" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(957, 533)
+texture = ExtResource("2_huivj")
+
+[node name="WheelRight" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(953, 529)
+texture = ExtResource("1_r8glo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 unique_name_in_owner = true
