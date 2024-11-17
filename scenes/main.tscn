@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=26 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -45,6 +45,17 @@ glow_hdr_luminance_cap = 17.17
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_e2nei"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j32nj"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_8heuw"]
+material = SubResource("StandardMaterial3D_j32nj")
+text = "Click this button if blip on radar"
+font_size = 10
+autowrap_mode = 2
+depth = 0.0
+width = 50.0
+
 [sub_resource type="TextMesh" id="TextMesh_mnoq2"]
 text = "HELLO"
 
@@ -54,13 +65,11 @@ text = "HELLO"
 environment = SubResource("Environment_h7fa3")
 camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
-[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
+[node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xhrch")
-list_components = [NodePath("../TV"), NodePath("../Radar"), NodePath("../SwitchBoard3d"), NodePath("../PressureMeter"), NodePath("../Radio")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 wait_time = 5.0
-autostart = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -78,7 +87,7 @@ script = ExtResource("1_473u7")
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(0.393836, -0.175681, -0.902236, 0.0968339, 0.984034, -0.149338, 0.914065, -0.0285522, 0.40456, 6.12232, 3.0429, 2.27454)
+transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.04072, 7.21966, 0.688002)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
@@ -101,7 +110,11 @@ transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 
 [node name="Decoration" type="Node" parent="."]
 
 [node name="sticky_note_radar" parent="Decoration" instance=ExtResource("16_lxjki")]
-transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -5.87403, -6.78413, -9.02057)
+transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.769, -6.784, -8.568)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/sticky_note_radar"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.08333, 3.27104, 3.98205)
+mesh = SubResource("TextMesh_8heuw")
 
 [node name="wire deco left" parent="Decoration" instance=ExtResource("11_2og37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
