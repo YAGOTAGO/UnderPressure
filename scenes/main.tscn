@@ -153,14 +153,17 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -176,7 +179,7 @@ transform = Transform3D(0.254974, -0.325547, -0.910499, 0.109373, 0.945288, -0.3
 switchArray = []
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
-transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
+transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.19494, -4.77058)
 
 [node name="SteeringWheel" parent="." instance=ExtResource("9_16cqi")]
 transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)
@@ -222,7 +225,7 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.636,
 transform = Transform3D(0.414693, 0, -0.909961, 0, 1, 0, 0.909961, 0, 0.414693, 2.02893, 0, 1.60547)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Decoration/Light"]
-transform = Transform3D(0.887011, 0, 0.461749, 0, 1, 0, -0.461749, 0, 0.887011, -2.6254, 3.53358, 4.82641)
+transform = Transform3D(0.887011, 0, 0.461749, 0, 1, 0, -0.461749, 0, 0.887011, -2.6254, 3.75882, 4.82641)
 light_color = Color(0.988939, 0.921271, 0.864323, 1)
 light_energy = 16.0
 spot_range = 5.8493
@@ -255,6 +258,9 @@ transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 
 
 [node name="paper_tv3" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
 transform = Transform3D(-0.121869, 0, 0.992546, 0, 1, 0, -0.992546, 0, -0.121869, -9.206, -13.945, -1.023)
+
+[node name="paper_tv4" parent="Decoration/Paper" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(0.374607, 0, -0.927184, 0, 1, 0, 0.927184, 0, 0.374607, -0.357, -13.945, 5.407)
 
 [node name="Wire" type="Node" parent="Decoration"]
 
