@@ -24,7 +24,7 @@ var is_broken: bool = false
 
 #will trigger an anomaly
 func activate() -> void:
-	target_value = randi_range(slider.min_value, slider.max_value)
+	target_value = randi_range(slider.min_value as int, slider.max_value as int)
 	update_tv_noise()
 	timer.start(0)
 	

@@ -35,7 +35,7 @@ func break_switches()->void:
 	component_failed.emit()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !is_broken:
 		return
 		
