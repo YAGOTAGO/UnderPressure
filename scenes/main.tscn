@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 [ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
-[ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
+[ext_resource type="PackedScene" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
 script/source = "extends Node3D
@@ -119,7 +119,7 @@ cursor_down = ExtResource("22_cxslk")
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
-list_components = [NodePath("../TV"), NodePath("../SwitchBoard3d"), NodePath("../Radar"), NodePath("../SteeringWheel"), NodePath("../PressureMeter"), NodePath("../Radio")]
+list_components = [NodePath("../PressureMeter")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 unique_name_in_owner = true
@@ -237,19 +237,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57707, 4.44168, -8.16588)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
 
 [node name="Light" type="Node" parent="Decoration"]
-
-[node name="Lamp" parent="Decoration/Light"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(0.498488, 0, -0.866897, 0, 1, 0, 0.866897, 0, 0.498488, 2.024, 0, 1.543)
-script = null
 
 [node name="Floor Lights" type="MeshInstance3D" parent="Decoration/Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0983148, 0.395397, -0.914792)

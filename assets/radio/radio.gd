@@ -24,6 +24,7 @@ func fix() -> void:
 
 func break_radio()->void:
 	component_failed.emit()
+	#is_broken = false
 
 
 var mouse_right:bool = false

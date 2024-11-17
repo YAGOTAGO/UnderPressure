@@ -30,8 +30,7 @@ func fix() -> void:
 		angle = 0
 		scale_factor = 0
 		boiling.stop()
-		timer.stop()
-		
+		countdown.stop()
 		
 func break_meter()->void:
 	print("Meter component has failed...")
@@ -41,12 +40,16 @@ func break_meter()->void:
 	boiling.stop()
 	fail_sound.play()
 	component_failed.emit()
-	
+	is_broken = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start()	# Start the timer to move the needle
 
+
+func btn_pressed() ->void:
+	if is_compromised:
+		fix()
 
 func move_needle() -> void:
 	needle.rotation_degrees.z = 30 -angle

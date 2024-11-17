@@ -15,7 +15,7 @@ var is_broken: bool = false
 
 func _ready() -> void:
 	area.connect("clicked", fix)
-	activate()
+	#activate()
 
 func activate() -> void:
 	var rand_x: float = randf_range(MIN_VAL, MAX_VAL)
@@ -25,7 +25,7 @@ func activate() -> void:
 	radar_shader_material.set_shader_parameter("show_blip", true)
 	is_broken = true
 	timer.start(0)
-	print("timer started")
+	print("radar timer started")
 
 func fix() -> void:
 	timer.stop()
