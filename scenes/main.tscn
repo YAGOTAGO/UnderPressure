@@ -125,10 +125,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 [node name="wiredecoration" parent="Decoration" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
 
-[node name="paper" parent="Decoration" instance=ExtResource("15_7yk1y")]
-transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 9.18, -13.945, 1.362)
+[node name="paper_tv" parent="Decoration" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/paper"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/paper_tv"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45802, 15.2938, 5.94004)
 mesh = SubResource("TextMesh_mnoq2")
 
