@@ -24,6 +24,7 @@ func show_left(visible: bool) -> void:
 func show_right(visible: bool) -> void:
 	right.visible = visible;
 
+
 func hide_image() -> void:
 	show_left(false)
 	show_right(false)

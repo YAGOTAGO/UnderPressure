@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbcloac5xi3lk"]
+
+[ext_resource type="Texture2D" uid="uid://0040ymqy00n" path="res://sprites/buttons/exit_button.png" id="1_u61qd"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ExitBtn" type="Sprite2D" parent="Control"]
+position = Vector2(1459, 871)
+texture = ExtResource("1_u61qd")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 801.0
+offset_right = 1672.0
+offset_bottom = 941.0
