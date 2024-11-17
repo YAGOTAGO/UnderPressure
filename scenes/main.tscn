@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=50 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -77,8 +77,15 @@ glow_intensity = 5.84
 glow_strength = 1.27
 glow_blend_mode = 0
 glow_hdr_luminance_cap = 17.17
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_e2nei"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_j7r6s"]
+density = 0.1502
+albedo = Color(0.466181, 0.466181, 0.466181, 1)
+emission = Color(0.5, 0.7, 0.8, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ui2s"]
 albedo_color = Color(0.498972, 0, 0.0545336, 1)
@@ -153,14 +160,17 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
@@ -198,6 +208,11 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 44.303, -8.781, 10.582)
 [node name="DepthMeter" parent="." instance=ExtResource("13_drp40")]
 unique_name_in_owner = true
 transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 1.6242, 1.58847, 1.23494)
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 5.14325)
+size = Vector3(10.2472, 2, 15.0583)
+material = SubResource("FogMaterial_j7r6s")
 
 [node name="Decoration" type="Node" parent="."]
 
@@ -279,7 +294,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.193
 [node name="Sticky Note" type="Node" parent="Decoration"]
 
 [node name="sticky_note_radar" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
-transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.769, -6.784, -8.568)
+transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.68782, -6.784, -8.568)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_radar"]
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
