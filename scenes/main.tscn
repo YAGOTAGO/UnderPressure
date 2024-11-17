@@ -238,19 +238,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
 
 [node name="Light" type="Node" parent="Decoration"]
 
-[node name="Lamp" parent="Decoration/Light"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(0.498488, 0, -0.866897, 0, 1, 0, 0.866897, 0, 0.498488, 2.024, 0, 1.543)
-script = null
-
 [node name="Floor Lights" type="MeshInstance3D" parent="Decoration/Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0983148, 0.395397, -0.914792)
 mesh = ExtResource("31_ynlvg")
