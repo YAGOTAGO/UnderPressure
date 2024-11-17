@@ -11,8 +11,14 @@ var MAX_ANGLE:int = 90
 var scale_factor:int = 0;	# How fast the pressure gauge will go off (0 is static)
 var is_compromised:bool = false # If the gauge has hit max pressure
 
+var is_broken:bool = false
+
 func activate() -> void:
+	is_broken = true
 	scale_factor = 5
+
+func fix();
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
