@@ -7,7 +7,7 @@
 
 # Features
 * 20+ all hand-made 3D models by Caroline Li
-* 3D realtime lighting
+* 3D real-time lighting
 * 3D and 2D shaders
 * 3D animated components
 * Programmed in an Open-Source Engine
