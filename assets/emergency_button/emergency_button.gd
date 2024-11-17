@@ -5,7 +5,6 @@ extends Node3D
 
 signal emergency_btn_clicked
 
-
 var is_covered:bool = true
 var mouse_in_cover:bool = false
 var mouse_in_btn:bool = false

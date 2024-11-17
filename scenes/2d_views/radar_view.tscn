@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://1am2aay0iwcb"]
 
+[ext_resource type="Texture2D" uid="uid://cwg2yesbsv2tg" path="res://sprites/radar_background.png" id="2_igupm"]
 [ext_resource type="Shader" path="res://shaders/radar.gdshader" id="2_kalq3"]
-[ext_resource type="Texture2D" uid="uid://qap6crr7x770" path="res://icon.svg" id="3_6aud8"]
 [ext_resource type="AudioStream" uid="uid://nx52va3gyu3j" path="res://sounds/sonar.wav" id="4_b21wm"]
 [ext_resource type="Script" path="res://scripts/autoplay_animation.gd" id="4_loj56"]
 
@@ -94,7 +94,7 @@ material = SubResource("ShaderMaterial_ank6x")
 position = Vector2(539, 533)
 rotation = 1.5708
 scale = Vector2(8.39844, 8.39844)
-texture = ExtResource("3_6aud8")
+texture = ExtResource("2_igupm")
 offset = Vector2(-0.178581, 0.535835)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animation_player")]
