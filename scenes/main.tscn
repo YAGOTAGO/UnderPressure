@@ -89,9 +89,6 @@ transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
 
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.284015, 0.873182, -0.396093, 0, -0.413104, -0.910684, -0.95882, 0.258648, -0.117328, 0.766091, 1.03841, 9.36106)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
 script = ExtResource("1_473u7")
@@ -102,7 +99,7 @@ script = ExtResource("1_473u7")
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.04072, 7.21966, 0.688002)
+transform = Transform3D(0.254974, -0.325547, -0.910499, 0.109373, 0.945288, -0.307357, 0.960741, -0.0212163, 0.276631, 6.711, 3.603, 2.774)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
