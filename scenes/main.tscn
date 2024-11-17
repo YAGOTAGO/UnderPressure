@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=25 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -56,9 +56,6 @@ autowrap_mode = 2
 depth = 0.0
 width = 50.0
 
-[sub_resource type="TextMesh" id="TextMesh_mnoq2"]
-text = "HELLO"
-
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -96,10 +93,10 @@ transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.2
 transform = Transform3D(1, 0, 0, 0, 0.95921, 0.282693, 0, -0.282693, 0.95921, 0.0221002, -3.1864, 4.2839)
 
 [node name="PressureMeter" parent="." instance=ExtResource("10_c6tiw")]
-transform = Transform3D(0.282908, 0.514769, 1.9118, 2.27298e-08, 1.93122, -0.519998, -1.97989, 0.0735559, 0.273179, -7.59288, 1.84123, 7.32584)
+transform = Transform3D(0.240472, 0.437553, 1.62503, 1.93203e-08, 1.64154, -0.441998, -1.68291, 0.0625224, 0.232202, -6.76614, 1.84123, 8.62311)
 
 [node name="EmergencyButton" parent="." instance=ExtResource("10_4wdnr")]
-transform = Transform3D(0.332801, 0.00895159, -0.942955, -0.127864, 0.991148, -0.0357185, 0.934288, 0.132457, 0.331, 7.67608, 0.42833, 4.14857)
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.88344, 2.0251, 5.32589)
 
 [node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
 transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
@@ -125,12 +122,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 [node name="wiredecoration" parent="Decoration" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
 
+[node name="paper_tv2" parent="Decoration" instance=ExtResource("15_7yk1y")]
+transform = Transform3D(0.981293, 0, 0.192522, 0, 1, 0, -0.192522, 0, 0.981293, 9.85928, -13.945, -1.22286)
+
 [node name="paper_tv" parent="Decoration" instance=ExtResource("15_7yk1y")]
 transform = Transform3D(0.899558, 0, -0.436802, 0, 1, 0, 0.436802, 0, 0.899558, 11.085, -13.945, 3.482)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/paper_tv"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45802, 15.2938, 5.94004)
-mesh = SubResource("TextMesh_mnoq2")
 
 [node name="Pipes" type="Node" parent="."]
 

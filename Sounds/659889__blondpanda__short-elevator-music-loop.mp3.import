@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://djkd3kt6dte8u"
-path="res://.godot/imported/659889__blondpanda__short-elevator-music-loop.mp3-72671f84726307a32f12174f8adeb132.mp3str"
+path="res://.godot/imported/659889__blondpanda__short-elevator-music-loop.mp3-63901707540c7e7caf90edccf804aad0.mp3str"
 
 [deps]
 
-source_file="res://Sounds/659889__blondpanda__short-elevator-music-loop.mp3"
-dest_files=["res://.godot/imported/659889__blondpanda__short-elevator-music-loop.mp3-72671f84726307a32f12174f8adeb132.mp3str"]
+source_file="res://sounds/659889__blondpanda__short-elevator-music-loop.mp3"
+dest_files=["res://.godot/imported/659889__blondpanda__short-elevator-music-loop.mp3-63901707540c7e7caf90edccf804aad0.mp3str"]
 
 [params]
 
