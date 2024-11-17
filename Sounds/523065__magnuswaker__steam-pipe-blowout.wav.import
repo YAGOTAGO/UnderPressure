@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://rcmyliux0sa6"
-path="res://.godot/imported/523065__magnuswaker__steam-pipe-blowout.wav-d7e315fe46913cdfd8b16461c859d0fe.sample"
+path="res://.godot/imported/523065__magnuswaker__steam-pipe-blowout.wav-4720ba618b62bb03b86f2c6b072daea0.sample"
 
 [deps]
 
-source_file="res://sounds/523065__magnuswaker__steam-pipe-blowout.wav"
-dest_files=["res://.godot/imported/523065__magnuswaker__steam-pipe-blowout.wav-d7e315fe46913cdfd8b16461c859d0fe.sample"]
+source_file="res://Sounds/523065__magnuswaker__steam-pipe-blowout.wav"
+dest_files=["res://.godot/imported/523065__magnuswaker__steam-pipe-blowout.wav-4720ba618b62bb03b86f2c6b072daea0.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d3fdupswas2n"
-path="res://.godot/imported/old-radio-button-click-97549.mp3-9b3824fa344871d22bb1f4acf1fa2efe.mp3str"
+path="res://.godot/imported/old-radio-button-click-97549.mp3-f98e80f6c027f412407b269dd4a8adaa.mp3str"
 
 [deps]
 
-source_file="res://sounds/old-radio-button-click-97549.mp3"
-dest_files=["res://.godot/imported/old-radio-button-click-97549.mp3-9b3824fa344871d22bb1f4acf1fa2efe.mp3str"]
+source_file="res://Sounds/old-radio-button-click-97549.mp3"
+dest_files=["res://.godot/imported/old-radio-button-click-97549.mp3-f98e80f6c027f412407b269dd4a8adaa.mp3str"]
 
 [params]
 

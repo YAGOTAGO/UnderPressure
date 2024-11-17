@@ -12,7 +12,6 @@ signal steering_wheel_break
 
 func activate() -> void:
 	steering_wheel_break.emit()
-	print("Steering wheel broke")
 	
 
 func _on_left_area_clicked() -> void:
