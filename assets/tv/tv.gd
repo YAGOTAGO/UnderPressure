@@ -57,11 +57,15 @@ func _on_h_slider_value_changed(value: float) -> void:
 	
 
 
-func _on_steering_wheel_steering_wheel_break() -> void:
+func _on_steering_wheel_steering_wheel_break(direction:bool) -> void:
 	
-	if randi_range(0,1) == 1:
+	if direction:
 		tv_image.show_right(true)
 		
 	else:
 		tv_image.show_left(true)
 	
+
+
+func _on_steering_wheel_steering_wheel_fix() -> void:
+	tv_image.hide_image()
