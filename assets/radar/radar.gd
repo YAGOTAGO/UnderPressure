@@ -15,6 +15,7 @@ var is_broken: bool = false
 
 func _ready() -> void:
 	area.connect("clicked", fix)
+	#activate()
 
 func activate() -> void:
 	var rand_x: float = randf_range(MIN_VAL, MAX_VAL)
