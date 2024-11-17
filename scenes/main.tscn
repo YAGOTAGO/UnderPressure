@@ -241,6 +241,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88519, -0.538068, 0.394241)
 [node name="wiredecoration" parent="Decoration/Wire" instance=ExtResource("12_esay2")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 4.18982, -4.74303, 4.77623)
 
+[node name="wiredecoration variation2" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.193, -0.311, 15.717)
+
 [node name="Sticky Note" type="Node" parent="Decoration"]
 
 [node name="sticky_note_radar" parent="Decoration/Sticky Note" instance=ExtResource("16_lxjki")]
