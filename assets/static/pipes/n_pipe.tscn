@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxtomaylbqc2p"]
+
+[ext_resource type="PackedScene" uid="uid://b6unsdhtlcauh" path="res://assets/static/pipes/pipe L short.fbx" id="1_xiiid"]
+[ext_resource type="PackedScene" uid="uid://bjrpx0ja220hp" path="res://assets/static/pipes/pipe long.fbx" id="2_s7x2v"]
+
+[node name="Pipe1" type="Node3D"]
+
+[node name="pipe L short" parent="." instance=ExtResource("1_xiiid")]
+transform = Transform3D(-1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -1, 8.74228e-08, 8.74228e-08, 8.74228e-08, 1, -38.522, 31.822, 0.23)
+
+[node name="pipe L short2" parent="." instance=ExtResource("1_xiiid")]
+transform = Transform3D(1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -41.897, -5.03, 0.235)
+
+[node name="pipe long" parent="." instance=ExtResource("2_s7x2v")]
