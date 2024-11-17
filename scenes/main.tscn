@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=40 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cnpsy8ld4gjym" path="res://assets/static/sticky_notes/paper.fbx" id="15_7yk1y"]
 [ext_resource type="PackedScene" uid="uid://cxtomaylbqc2p" path="res://assets/static/pipes/n_pipe.tscn" id="15_aupjh"]
 [ext_resource type="PackedScene" uid="uid://rv0y5e6n24pw" path="res://assets/static/pipes/h_pipe.tscn" id="15_hgri2"]
+[ext_resource type="PackedScene" uid="uid://dll7ino3nv61e" path="res://assets/static/window/window.tscn" id="16_ja2uo"]
 [ext_resource type="PackedScene" uid="uid://edsgu6xwdq5w" path="res://assets/static/sticky_notes/stickynote blue.fbx" id="16_lxjki"]
 [ext_resource type="FontFile" uid="uid://cyjp3apxuvr2b" path="res://assets/fonts/DMSerifDisplay-Regular.ttf" id="17_4vb2h"]
 [ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
@@ -28,24 +29,9 @@
 [ext_resource type="PackedScene" uid="uid://cy36uowpy61dg" path="res://assets/static/lights/lamp.tscn" id="24_3k78o"]
 [ext_resource type="PackedScene" uid="uid://cotnxrn8eoecs" path="res://scenes/main_menu.tscn" id="24_x7rpw"]
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
-[ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
+[ext_resource type="PackedScene" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
-script/source = "extends Node3D
-
-@onready var animations:AnimationPlayer = %AnimationPlayer
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	
-	#animations.play(\"swim\")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -119,6 +105,7 @@ wait_time = 5.0
 
 [node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -152,6 +139,9 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 7.88344,
 
 [node name="Radio" parent="." instance=ExtResource("13_ix7dp")]
 transform = Transform3D(0.505492, 0, 0.862831, 0, 1, 0, -0.862831, 0, 0.505492, -6.98238, 0, 5.73886)
+
+[node name="Window" parent="." instance=ExtResource("16_ja2uo")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 44.303, -8.781, 10.582)
 
 [node name="DepthMeter" parent="." instance=ExtResource("13_drp40")]
 unique_name_in_owner = true
