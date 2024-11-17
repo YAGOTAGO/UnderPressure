@@ -1,10 +1,14 @@
 extends Node
 
-# Called when the node enters the scene tree for the first time.
+@export var cursor: Texture2D
+@export var cursor_down: Texture2D
+
 func _ready() -> void:
-	pass # Replace with function body.
+	Input.set_custom_mouse_cursor(cursor)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			Input.set_custom_mouse_cursor(cursor_down)
+		else:
+			Input.set_custom_mouse_cursor(cursor)

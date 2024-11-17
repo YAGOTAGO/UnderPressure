@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dm2lytvbkkuoh"
-path="res://.godot/imported/19841__jace__boiling-bubbles-1.wav-c42faef52011a770f8e07ad9c9ffab5c.sample"
+path="res://.godot/imported/19841__jace__boiling-bubbles-1.wav-bb47686bba8435650d17c5b89131d0c5.sample"
 
 [deps]
 
-source_file="res://Sounds/19841__jace__boiling-bubbles-1.wav"
-dest_files=["res://.godot/imported/19841__jace__boiling-bubbles-1.wav-c42faef52011a770f8e07ad9c9ffab5c.sample"]
+source_file="res://sounds/19841__jace__boiling-bubbles-1.wav"
+dest_files=["res://.godot/imported/19841__jace__boiling-bubbles-1.wav-bb47686bba8435650d17c5b89131d0c5.sample"]
 
 [params]
 

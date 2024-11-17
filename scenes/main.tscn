@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=31 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://rv0y5e6n24pw" path="res://assets/static/pipes/h_pipe.tscn" id="15_hgri2"]
 [ext_resource type="PackedScene" uid="uid://edsgu6xwdq5w" path="res://assets/static/sticky_notes/stickynote blue.fbx" id="16_lxjki"]
 [ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
+[ext_resource type="Script" path="res://scripts/cursor_manager.gd" id="20_rgvsj"]
+[ext_resource type="Texture2D" uid="uid://cuaipykunwjem" path="res://sprites/cursor/handcursor.png" id="21_10tpr"]
+[ext_resource type="Texture2D" uid="uid://v57go7ldm5cf" path="res://sprites/cursor/grabcursor.png" id="22_tsn6c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -74,13 +77,11 @@ width = 40.0
 environment = SubResource("Environment_h7fa3")
 camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
-[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
+[node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xhrch")
-list_components = [NodePath("../Radar"), NodePath("../PressureMeter"), NodePath("../Radio"), NodePath("../TV"), NodePath("../SwitchBoard3d")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 wait_time = 5.0
-autostart = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
@@ -101,7 +102,7 @@ script = ExtResource("1_473u7")
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="." instance=ExtResource("6_dibri")]
-transform = Transform3D(0.255176, -0.325582, -0.91043, 0.109712, 0.94527, -0.307291, 0.960649, -0.021472, 0.276931, 6.7109, 3.6028, 2.77376)
+transform = Transform3D(0.999906, -0.00624811, -0.012133, -0.00253557, 0.788509, -0.615018, 0.0134097, 0.614992, 0.78842, -1.04072, 7.21966, 0.688002)
 
 [node name="Radar" parent="." instance=ExtResource("7_svoui")]
 transform = Transform3D(1.71428, 0, 1.03017, 0, 2, 0, -1.03017, 0, 1.71428, -3.29512, -8.45262, -4.77058)
@@ -168,6 +169,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.171
 
 [node name="Pipe2" parent="Pipes" instance=ExtResource("15_aupjh")]
 transform = Transform3D(2.40455e-08, 0.224951, 0.97437, 8.51821e-08, -0.97437, 0.224951, 1, 7.75899e-08, -4.25911e-08, -12.988, 21.957, 30.702)
+
+[node name="Cursor Manager" type="Node" parent="."]
+script = ExtResource("20_rgvsj")
+cursor = ExtResource("21_10tpr")
+cursor_down = ExtResource("22_tsn6c")
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]
