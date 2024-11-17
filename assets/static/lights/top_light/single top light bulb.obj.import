@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwwvluw860g7a"
+path="res://.godot/imported/single top light bulb.obj-97dc95c7dadd05f13c7d5ae36a5b570b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/single top light bulb.obj-97dc95c7dadd05f13c7d5ae36a5b570b.mesh"]
+
+source_file="res://assets/static/lights/top_light/single top light bulb.obj"
+dest_files=["res://.godot/imported/single top light bulb.obj-97dc95c7dadd05f13c7d5ae36a5b570b.mesh", "res://.godot/imported/single top light bulb.obj-97dc95c7dadd05f13c7d5ae36a5b570b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
