@@ -78,7 +78,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_8heuw"]
 material = SubResource("StandardMaterial3D_j32nj")
-text = "Click this button if blip on radar"
+text = "Click green button if blip on radar"
 font = ExtResource("17_4vb2h")
 font_size = 8
 autowrap_mode = 2
