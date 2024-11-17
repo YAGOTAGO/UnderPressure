@@ -34,6 +34,8 @@ func fix()->void:
 func break_wheel()->void:
 	steering_wheel_fix.emit()
 	component_failed.emit()
+	is_broken = false
+	
 
 
 func _on_left_area_clicked() -> void:
