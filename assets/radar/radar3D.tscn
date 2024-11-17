@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_8rlvd"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_83o4l"]
-[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2D_Views/radar_view.tscn" id="2_i3uii"]
+[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2d_views/radar_view.tscn" id="2_i3uii"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="4_8y24s"]
 [ext_resource type="PackedScene" uid="uid://5o77qkvkgho6" path="res://assets/radar/radar_square.fbx" id="7_aahc0"]
 [ext_resource type="AudioStream" uid="uid://d3fdupswas2n" path="res://sounds/old-radio-button-click-97549.mp3" id="7_mra7p"]

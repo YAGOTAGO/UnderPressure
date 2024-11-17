@@ -4,9 +4,8 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1qg01vudolut"
 path.s3tc="res://.godot/imported/bluefish tail_0.png-5a636fbf6eb627db1186edca6eca3a99.s3tc.ctex"
-path.etc2="res://.godot/imported/bluefish tail_0.png-5a636fbf6eb627db1186edca6eca3a99.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/fish/blue/bluefish tail_0.png"
-dest_files=["res://.godot/imported/bluefish tail_0.png-5a636fbf6eb627db1186edca6eca3a99.s3tc.ctex", "res://.godot/imported/bluefish tail_0.png-5a636fbf6eb627db1186edca6eca3a99.etc2.ctex"]
+dest_files=["res://.godot/imported/bluefish tail_0.png-5a636fbf6eb627db1186edca6eca3a99.s3tc.ctex"]
 
 [params]
 

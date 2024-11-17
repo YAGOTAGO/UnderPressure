@@ -4,9 +4,8 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgrwctlwtxpg8"
 path.s3tc="res://.godot/imported/new pressure meter_0.png-5b5a83be169b73c0ec61ec509a9ad59f.s3tc.ctex"
-path.etc2="res://.godot/imported/new pressure meter_0.png-5b5a83be169b73c0ec61ec509a9ad59f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/pressure_meter/new pressure meter_0.png"
-dest_files=["res://.godot/imported/new pressure meter_0.png-5b5a83be169b73c0ec61ec509a9ad59f.s3tc.ctex", "res://.godot/imported/new pressure meter_0.png-5b5a83be169b73c0ec61ec509a9ad59f.etc2.ctex"]
+dest_files=["res://.godot/imported/new pressure meter_0.png-5b5a83be169b73c0ec61ec509a9ad59f.s3tc.ctex"]
 
 [params]
 

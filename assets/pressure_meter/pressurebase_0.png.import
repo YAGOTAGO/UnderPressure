@@ -4,9 +4,8 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b70akqq01igqv"
 path.s3tc="res://.godot/imported/pressurebase_0.png-2e9e744dd26bca1312c0503ecd3ab476.s3tc.ctex"
-path.etc2="res://.godot/imported/pressurebase_0.png-2e9e744dd26bca1312c0503ecd3ab476.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/pressure_meter/pressurebase_0.png"
-dest_files=["res://.godot/imported/pressurebase_0.png-2e9e744dd26bca1312c0503ecd3ab476.s3tc.ctex", "res://.godot/imported/pressurebase_0.png-2e9e744dd26bca1312c0503ecd3ab476.etc2.ctex"]
+dest_files=["res://.godot/imported/pressurebase_0.png-2e9e744dd26bca1312c0503ecd3ab476.s3tc.ctex"]
 
 [params]
 
