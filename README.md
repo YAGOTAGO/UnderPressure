@@ -2,7 +2,7 @@
 
 # Gameplay
 
-[Gameplay Video](https://youtu.be/_j0KocHekKQ) </br>
+[Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
 [Download Here](https://tdavies.itch.io/under-pressure)
 
 # Features
