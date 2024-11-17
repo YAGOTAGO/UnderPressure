@@ -2,9 +2,9 @@ extends Node
 
 signal surface_reached
 
-const MAX_AMOUNT = 10 #max amount can climb
-const MIN_AMOUNT = 1 #min amount can climb
-const START_DEPTH = 1000
+const MAX_AMOUNT: int = 10 #max amount can climb
+const MIN_AMOUNT: int = 1 #min amount can climb
+const START_DEPTH: int = 1000
 
 @onready var progress_shader_material: ShaderMaterial = %ProgressBar.material as ShaderMaterial
 @onready var label: Label = %Label
@@ -24,7 +24,7 @@ func _on_timer_timeout() -> void:
 		
 	_update_display()
 	
-func _update_display():
+func _update_display() -> void:
 	label.text = str(depth_num)
 	var percentage: float = 1.0 - (depth_num as float/ START_DEPTH as float) * 2.0
 	progress_shader_material.set_shader_parameter("fill_value", percentage)

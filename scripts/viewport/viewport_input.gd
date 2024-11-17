@@ -13,7 +13,7 @@ func _ready()-> void:
 	node_area.mouse_exited.connect(_mouse_exited_area)
 	node_area.input_event.connect(_mouse_input_event)
 	
-func _unhandled_input(event):
+func _unhandled_input(event) -> void:
 	# Check if the event is a non-mouse/non-touch event
 	for mouse_event in [InputEventMouseButton, InputEventMouseMotion, InputEventScreenDrag, InputEventScreenTouch]:
 		if is_instance_of(event, mouse_event):

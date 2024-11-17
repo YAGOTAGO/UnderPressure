@@ -6,7 +6,7 @@ extends Node
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(cursor)
 
-func _input(event):
+func _input(event) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
 			Input.set_custom_mouse_cursor(cursor_down)

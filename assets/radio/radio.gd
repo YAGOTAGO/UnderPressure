@@ -3,7 +3,7 @@ extends Node3D
 @onready var audio_player: AudioStreamPlayer3D = %AudioStreamPlayer3D
 @onready var animaitons: AnimationPlayer = %AnimationPlayer
 
-var is_broken = false
+var is_broken: bool = false
 
 
 func activate() -> void:

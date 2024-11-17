@@ -23,7 +23,7 @@ func activate() -> void:
 	is_broken = true
 	scale_factor = 5
 
-func fix():
+func fix() -> void:
 	if is_compromised:
 		is_compromised = false
 		angle = 0
