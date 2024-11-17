@@ -34,6 +34,7 @@ func fix() -> void:
 	
 func break_tv()->void:
 	component_failed.emit()
+	is_broken = true
 
 func _ready() -> void:
 	update_rotation(slider.value)
