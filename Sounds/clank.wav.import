@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://1vuuwr0gp5ue"
-path="res://.godot/imported/clank.wav-317cbbb66505d0075c78d0da9f0c689b.sample"
+path="res://.godot/imported/clank.wav-44ed4a969c22a22bda7a16a4a4ed6055.sample"
 
 [deps]
 
-source_file="res://sounds/clank.wav"
-dest_files=["res://.godot/imported/clank.wav-317cbbb66505d0075c78d0da9f0c689b.sample"]
+source_file="res://Sounds/clank.wav"
+dest_files=["res://.godot/imported/clank.wav-44ed4a969c22a22bda7a16a4a4ed6055.sample"]
 
 [params]
 

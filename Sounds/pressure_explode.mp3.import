@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c1b8jen0hppak"
-path="res://.godot/imported/pressure_explode.mp3-366d4d97051ac2e74241501cbe27028d.mp3str"
+path="res://.godot/imported/pressure_explode.mp3-01a0ca8ab8b4cb7a8ed06b84616a1116.mp3str"
 
 [deps]
 
-source_file="res://sounds/pressure_explode.mp3"
-dest_files=["res://.godot/imported/pressure_explode.mp3-366d4d97051ac2e74241501cbe27028d.mp3str"]
+source_file="res://Sounds/pressure_explode.mp3"
+dest_files=["res://.godot/imported/pressure_explode.mp3-01a0ca8ab8b4cb7a8ed06b84616a1116.mp3str"]
 
 [params]
 
