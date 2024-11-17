@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuaipykunwjem"
-path="res://.godot/imported/handcursor.png-91dff24cc6ab1d57c08ea351e69249b2.ctex"
+uid="uid://cc84n2usdk8u5"
+path="res://.godot/imported/cursor_grab.png-890abf94b3fbee86760cb48c656a2dab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/cursor/handcursor.png"
-dest_files=["res://.godot/imported/handcursor.png-91dff24cc6ab1d57c08ea351e69249b2.ctex"]
+source_file="res://sprites/cursor/cursor_grab.png"
+dest_files=["res://.godot/imported/cursor_grab.png-890abf94b3fbee86760cb48c656a2dab.ctex"]
 
 [params]
 
