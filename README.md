@@ -14,7 +14,7 @@
 
 # Progress Photos
 
-![beta0](beta_images/beta_0.PNG)
+![beta0](beta_images/beta_0.jpg)
 ![beta1](beta_images/beta_1.PNG)
 ![beta2](beta_images/beta_2.PNG)
 ![beta3](beta_images/beta_3.png)
