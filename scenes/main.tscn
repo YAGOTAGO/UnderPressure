@@ -109,43 +109,47 @@ emission = Color(1, 0, 0, 1)
 [node name="Main" type="Node3D"]
 script = SubResource("GDScript_rq1lr")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_h7fa3")
-camera_attributes = SubResource("CameraAttributesPractical_e2nei")
+[node name="Menu" type="Node" parent="."]
 
-[node name="Cursor Manager" type="Node" parent="."]
+[node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+
+[node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
+unique_name_in_owner = true
+transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+
+[node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
+unique_name_in_owner = true
+transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="Cursor Manager" type="Node" parent="Managers"]
 script = ExtResource("20_rgvsj")
 cursor = ExtResource("21_5jwbr")
 cursor_down = ExtResource("22_cxslk")
 
-[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("list_components")]
+[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
-list_components = [NodePath("../TV"), NodePath("../SteeringWheel"), NodePath("../Radar"), NodePath("../SwitchBoard3d"), NodePath("../Radio"), NodePath("../PressureMeter")]
+list_components = [NodePath("../../TV"), NodePath("../../SteeringWheel"), NodePath("../../Radar"), NodePath("../../SwitchBoard3d"), NodePath("../../Radio"), NodePath("../../PressureMeter")]
 
-[node name="Timer" type="Timer" parent="GameManager"]
+[node name="Timer" type="Timer" parent="Managers/GameManager"]
 unique_name_in_owner = true
 wait_time = 5.0
 
-[node name="MainMenu" parent="." instance=ExtResource("24_x7rpw")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h7fa3")
+camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
-[node name="GameOver" parent="." instance=ExtResource("6_rg65t")]
-unique_name_in_owner = true
-transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
-
-[node name="GameWin" parent="." instance=ExtResource("8_v6rgg")]
-unique_name_in_owner = true
-transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
+script = ExtResource("1_473u7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.725134, 0.688608, 0, -0.688608, 0.725134, -0.629082, 5.71043, 15.2104)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.413104, -0.910684, 0, 0.910684, -0.413104, 0.370918, 5.71043, 15.2104)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
-script = ExtResource("1_473u7")
 
 [node name="Shell & Table" parent="." instance=ExtResource("11_v3bio")]
 
@@ -251,15 +255,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 [node name="TopLight" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.28866, 3.40038, -14.3402)
 
-[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
-[connection signal="play_clicked" from="MainMenu" to="GameManager" method="start_game"]
-[connection signal="component_failed" from="TV" to="GameManager" method="_on_tv_component_failed"]
-[connection signal="component_failed" from="SwitchBoard3d" to="GameManager" method="_on_switch_board_3d_component_failed"]
-[connection signal="component_failed" from="Radar" to="GameManager" method="_on_radar_component_failed"]
-[connection signal="component_failed" from="SteeringWheel" to="GameManager" method="_on_steering_wheel_component_failed"]
+[connection signal="play_clicked" from="Menu/MainMenu" to="Managers/GameManager" method="start_game"]
+[connection signal="timeout" from="Managers/GameManager/Timer" to="Managers/GameManager" method="_on_timer_timeout"]
+[connection signal="component_failed" from="TV" to="Managers/GameManager" method="_on_tv_component_failed"]
+[connection signal="component_failed" from="SwitchBoard3d" to="Managers/GameManager" method="_on_switch_board_3d_component_failed"]
+[connection signal="component_failed" from="Radar" to="Managers/GameManager" method="_on_radar_component_failed"]
+[connection signal="component_failed" from="SteeringWheel" to="Managers/GameManager" method="_on_steering_wheel_component_failed"]
 [connection signal="steering_wheel_break" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_break"]
 [connection signal="steering_wheel_fix" from="SteeringWheel" to="TV" method="_on_steering_wheel_steering_wheel_fix"]
-[connection signal="component_failed" from="PressureMeter" to="GameManager" method="_on_pressure_meter_component_failed"]
-[connection signal="emergency_btn_clicked" from="EmergencyButton" to="GameManager" method="_on_emergency_button_emergency_btn_clicked"]
-[connection signal="component_failed" from="Radio" to="GameManager" method="_on_radio_component_failed"]
-[connection signal="game_win" from="DepthMeter" to="GameManager" method="_on_depth_meter_game_win"]
+[connection signal="component_failed" from="PressureMeter" to="Managers/GameManager" method="_on_pressure_meter_component_failed"]
+[connection signal="emergency_btn_clicked" from="EmergencyButton" to="Managers/GameManager" method="_on_emergency_button_emergency_btn_clicked"]
+[connection signal="component_failed" from="Radio" to="Managers/GameManager" method="_on_radio_component_failed"]
+[connection signal="game_win" from="DepthMeter" to="Managers/GameManager" method="_on_depth_meter_game_win"]
