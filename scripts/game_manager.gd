@@ -20,10 +20,13 @@ func start_game() -> void:
 	
 func game_over()-> void:
 	game_over_node.visible = true
+	queue_free()
 	
 # Game win
 func _on_depth_meter_game_win() -> void:
 	game_win_node.visible = true
+	queue_free()
+	
 	
 
 
