@@ -1,7 +1,5 @@
 ![Logo](sprites/menu_logo.png)
 
-# Gameplay
-
 ## Video: </br>
 [Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
 
