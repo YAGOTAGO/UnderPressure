@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://di5m7q1dn3fnr"]
+[gd_scene load_steps=14 format=3 uid="uid://di5m7q1dn3fnr"]
 
 [ext_resource type="Script" path="res://assets/emergency_button/emergency_button.gd" id="1_prbu4"]
 [ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://sounds/buttom click.mp3" id="2_83xw7"]
@@ -87,6 +87,11 @@ _data = {
 "push_btn": SubResource("Animation_ivveo")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h44wb"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.01, 0.01, 0.01, 1)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_auknc"]
 height = 0.432053
 radius = 0.431344
@@ -127,6 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0790348, 0.063053, 0.850589
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13062, -3.30759, -0.926734)
 mesh = ExtResource("3_60p6m")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_h44wb")
 
 [node name="ButtonCase" type="Area3D" parent="Case"]
 unique_name_in_owner = true
