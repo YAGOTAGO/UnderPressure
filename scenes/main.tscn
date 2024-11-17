@@ -229,16 +229,26 @@ mesh = SubResource("TextMesh_0wdyb")
 [node name="Fish Container" type="Node" parent="Decoration"]
 
 [node name="YellowFish" parent="Decoration/Fish Container" instance=ExtResource("21_qulxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0814, -3)
+transform = Transform3D(-0.998278, 0, 0.0586618, 0, 1, 0, -0.0586618, 0, -0.998278, -8.77798, 4.0814, -3)
+
+[node name="YellowFish2" parent="Decoration/Fish Container" instance=ExtResource("21_qulxd")]
+transform = Transform3D(0.964262, 0.258819, -0.0566628, -0.258373, 0.965926, 0.0151828, 0.0586617, 0, 0.998278, 10.222, -1.9186, -1)
 
 [node name="PinkFish" parent="Decoration/Fish Container" instance=ExtResource("27_lpl25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.744475, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.744475, -6)
+
+[node name="PinkFish2" parent="Decoration/Fish Container" instance=ExtResource("27_lpl25")]
+transform = Transform3D(0.968095, 0.228708, -0.1024, -0.227439, 0.973495, 0.0240573, 0.105188, 0, 0.994452, 8.54876, 3.95852, -6)
 
 [node name="GreenFish" parent="Decoration/Fish Container" instance=ExtResource("23_qqgto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57707, 4.44168, -8.16588)
+visible = false
 
 [node name="BlueFish" parent="Decoration/Fish Container" instance=ExtResource("30_0gewv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43738, 0.576533, -2.14288)
+transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.999317, -6.26594, 1.57653, -4.14288)
+
+[node name="BlueFish2" parent="Decoration/Fish Container" instance=ExtResource("30_0gewv")]
+transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.999317, -6.26594, 1.57653, -4.14288)
 
 [node name="Light" type="Node" parent="Decoration"]
 
