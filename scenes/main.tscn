@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bdw3snttahhae" path="res://assets/fish/pink/pink_fish.tscn" id="27_lpl25"]
 [ext_resource type="PackedScene" uid="uid://dgy8add5qjxna" path="res://assets/fish/blue/blue_fish.tscn" id="30_0gewv"]
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
-[ext_resource type="PackedScene" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
+[ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 
 [sub_resource type="GDScript" id="GDScript_rq1lr"]
 script/source = "extends Node3D
