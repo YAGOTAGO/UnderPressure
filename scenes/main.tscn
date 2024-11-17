@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=32 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cxtomaylbqc2p" path="res://assets/static/pipes/n_pipe.tscn" id="15_aupjh"]
 [ext_resource type="PackedScene" uid="uid://rv0y5e6n24pw" path="res://assets/static/pipes/h_pipe.tscn" id="15_hgri2"]
 [ext_resource type="PackedScene" uid="uid://edsgu6xwdq5w" path="res://assets/static/sticky_notes/stickynote blue.fbx" id="16_lxjki"]
+[ext_resource type="FontFile" uid="uid://cyjp3apxuvr2b" path="res://assets/fonts/DMSerifDisplay-Regular.ttf" id="17_4vb2h"]
 [ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
 [ext_resource type="Script" path="res://scripts/cursor_manager.gd" id="20_rgvsj"]
 [ext_resource type="Texture2D" uid="uid://dybc3d8bb6a56" path="res://sprites/cursor/cursor.png" id="21_5jwbr"]
@@ -55,7 +56,8 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="TextMesh" id="TextMesh_8heuw"]
 material = SubResource("StandardMaterial3D_j32nj")
 text = "Click this button if blip on radar"
-font_size = 10
+font = ExtResource("17_4vb2h")
+font_size = 8
 autowrap_mode = 2
 depth = 0.0
 width = 50.0
@@ -66,6 +68,7 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="TextMesh" id="TextMesh_0wdyb"]
 material = SubResource("StandardMaterial3D_wadwn")
 text = "Pressure Relief Button"
+font = ExtResource("17_4vb2h")
 font_size = 11
 autowrap_mode = 2
 depth = 0.0
@@ -146,7 +149,7 @@ transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 
 transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.769, -6.784, -8.568)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/sticky_note_radar"]
-transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.08333, 3.27104, 3.98205)
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
 mesh = SubResource("TextMesh_8heuw")
 
 [node name="sticky_note_pressure" parent="Decoration/Sticky Note" instance=ExtResource("17_tvvgt")]
