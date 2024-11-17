@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca3dvbag5rne7"]
+[gd_scene load_steps=6 format=3 uid="uid://ca3dvbag5rne7"]
 
 [ext_resource type="Script" path="res://assets/siren/siren.gd" id="1_lt2hx"]
+[ext_resource type="PackedScene" uid="uid://cwojakfcx24p6" path="res://assets/siren/siren.fbx" id="2_05xw2"]
 
 [sub_resource type="Animation" id="Animation_2xvdj"]
 length = 0.001
@@ -45,6 +46,7 @@ script = ExtResource("1_lt2hx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91183, 0)
 light_color = Color(3, 1, 1, 1)
 spot_range = 7.62851
 spot_angle = 10.9422
@@ -54,3 +56,7 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_jwnvg")
 }
+
+[node name="Siren Mesh" parent="." instance=ExtResource("2_05xw2")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2994, -4.47744, 4.87063)
