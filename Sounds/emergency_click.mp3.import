@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ckuw4lict0n35"
-path="res://.godot/imported/emergency_click.mp3-bfee11e06c325fbcac96fe0cfde031d0.mp3str"
+path="res://.godot/imported/emergency_click.mp3-2e1f4d5be334f34b6e823971e51111d0.mp3str"
 
 [deps]
 
-source_file="res://sounds/emergency_click.mp3"
-dest_files=["res://.godot/imported/emergency_click.mp3-bfee11e06c325fbcac96fe0cfde031d0.mp3str"]
+source_file="res://Sounds/emergency_click.mp3"
+dest_files=["res://.godot/imported/emergency_click.mp3-2e1f4d5be334f34b6e823971e51111d0.mp3str"]
 
 [params]
 
