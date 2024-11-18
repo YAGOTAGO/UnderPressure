@@ -168,7 +168,7 @@ visible = false
 transform = Transform3D(0.62742, 0, -0.778682, 0, 1, 0, 0.778682, 0, 0.62742, 6.52922, -0.562336, 1.14999)
 
 [node name="SwitchBoard3d" parent="Breaking Components" node_paths=PackedStringArray("switchArray") instance=ExtResource("6_dibri")]
-transform = Transform3D(0.254974, -0.325547, -0.910499, 0.109373, 0.945288, -0.307357, 0.960741, -0.0212163, 0.276631, 6.711, 3.603, 2.774)
+transform = Transform3D(-0.033506, -0.616009, -1.02928, 0, 1.02968, -0.61625, 1.19953, -0.0172067, -0.0287503, 7.56991, 3.92723, 4.16004)
 switchArray = []
 
 [node name="Radar" parent="Breaking Components" instance=ExtResource("7_svoui")]
@@ -309,7 +309,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.193
 [node name="Text Notes" type="Node" parent="Decoration/Sticky Note"]
 
 [node name="sticky_note_radar" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("16_lxjki")]
-transform = Transform3D(2.17589, 0, 1.23106, 0, 2.5, 0, -1.23106, 0, 2.17589, -6.68782, -6.784, -8.568)
+transform = Transform3D(2.17589, -0.053698, 1.22989, 0, 2.49762, 0.109049, -1.23106, -0.0949109, 2.17382, -6.29069, -6.784, -8.3317)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_radar"]
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
