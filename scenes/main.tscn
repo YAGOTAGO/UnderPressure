@@ -362,8 +362,8 @@ transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.9993
 [node name="Fog" type="Node" parent="Decoration"]
 
 [node name="Ground Fog" type="FogVolume" parent="Decoration/Fog"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 5.14325)
-size = Vector3(10.2472, 2, 15.0583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 7.83839)
+size = Vector3(10.2472, 2, 20.4486)
 material = SubResource("FogMaterial_j7r6s")
 
 [node name="Ceiling Fog" type="FogVolume" parent="Decoration/Fog"]
