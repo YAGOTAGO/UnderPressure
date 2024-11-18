@@ -80,7 +80,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_8heuw"]
 material = SubResource("StandardMaterial3D_j32nj")
-text = "Click green button if blip on radar"
+text = "Click torpedo button if blip on radar"
 font = ExtResource("17_4vb2h")
 font_size = 8
 autowrap_mode = 2
@@ -147,14 +147,17 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Breaking Components" type="Node" parent="."]
 
@@ -340,6 +343,9 @@ transform = Transform3D(0.374607, 0, -0.927184, 0, 1, 0, 0.927184, 0, 0.374607, 
 
 [node name="wiredecoration variation3" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -2.063, -5.084, 4.389)
+
+[node name="wire ceiling" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
+transform = Transform3D(-0.536961, 0, 0.267719, 0, 0.6, 0, -0.267719, 0, -0.536961, 0.702, 4.528, 3.862)
 
 [node name="wire deco left" parent="Decoration/Wire" instance=ExtResource("11_2og37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00261, 0.327853, 4.08865)
