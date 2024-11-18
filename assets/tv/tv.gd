@@ -12,12 +12,10 @@ const OFFSET: int = 32
 @onready var tv_shader_material: ShaderMaterial = %TvShader.get_shader_material()
 @onready var antenna : Node3D = %"Antenna Parent"
 @onready var staticSound : AudioStreamPlayer3D = %StaticSound
-
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var tv_image : Node2D = %TvShader
 
 signal component_failed
-
-
 
 var target_value: int = 50 # will be number between 0 and 100
 var is_broken: bool = false
@@ -30,13 +28,14 @@ func activate() -> void:
 	
 	
 func fix() -> void:
+	animation_player.play("green_light")
 	is_broken = false
 	timer.stop()
-
 	
 func break_tv()->void:
 	component_failed.emit()
 	is_broken = true
+	animation_player.play("red_light")
 
 func _ready() -> void:
 	update_rotation(slider.value)

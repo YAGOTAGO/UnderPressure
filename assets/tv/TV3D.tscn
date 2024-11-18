@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=21 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="Script" path="res://assets/tv/tv.gd" id="1_d5fup"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="2_w3tso"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_xrqc6"]
-[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D_Views/tv_shader_view.tscn" id="3_w5btw"]
+[ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2d_views/tv_shader_view.tscn" id="3_w5btw"]
 [ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/tv/antennabase.obj" id="7_hty1k"]
 [ext_resource type="PackedScene" uid="uid://cy2embp31kt4f" path="res://assets/tv/tvantenna.fbx" id="8_r2qxi"]
 [ext_resource type="AudioStream" uid="uid://degg6rd4mwfnd" path="res://sounds/tv static.mp3" id="9_8560w"]
 [ext_resource type="PackedScene" uid="uid://be7gtc03bx41y" path="res://assets/tv/tvslider.fbx" id="10_5tfmx"]
+[ext_resource type="ArrayMesh" uid="uid://cuvhquoqft65r" path="res://assets/siren/sirenob.obj" id="10_36iqp"]
 [ext_resource type="PackedScene" uid="uid://besi1pys8wfwn" path="res://assets/tv/tv.fbx" id="10_cuonk"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65ebg"]
@@ -20,6 +21,100 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cgp7v"]
 size = Vector3(1, 1, 0.0761108)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2aem1"]
+emission_enabled = true
+emission = Color(0.4, 0.8, 0.2, 1)
+
+[sub_resource type="Animation" id="Animation_gjn2y"]
+resource_name = "green_light"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.357589, 0.51805, 0.208459, 1), Color(0.357589, 0.51805, 0.208459, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4, 0.8, 0.2, 1), Color(0.4, 0.8, 0.2, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l0hgr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.4, 0.8, 0.2, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uwj0m"]
+resource_name = "red_light"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.749578, 0.143909, 9.62615e-08, 1), Color(0.749578, 0.143909, 9.62615e-08, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7, 0.1, 0, 1), Color(0.7, 0.1, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojuyq"]
+_data = {
+"RESET": SubResource("Animation_l0hgr"),
+"green_light": SubResource("Animation_gjn2y"),
+"red_light": SubResource("Animation_uwj0m")
+}
 
 [node name="TV" type="Node3D"]
 script = ExtResource("1_d5fup")
@@ -93,5 +188,16 @@ max_value = 200.0
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 5.0
+
+[node name="LightIndicator" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 1.81694, 1.83993, 4.88132)
+mesh = ExtResource("10_36iqp")
+surface_material_override/0 = SubResource("StandardMaterial3D_2aem1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LightIndicator"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_ojuyq")
+}
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
