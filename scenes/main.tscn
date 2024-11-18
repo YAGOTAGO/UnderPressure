@@ -147,17 +147,14 @@ wait_time = 3.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
-visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
-visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
-visible = false
 
 [node name="Breaking Components" type="Node" parent="."]
 
@@ -226,8 +223,11 @@ transform = Transform3D(-3.34849e-08, 2.80971e-08, 1, 0.642788, 0.766044, 0, -0.
 [node name="TopLight2" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -2.934, 20.934, -0.395)
 
-[node name="TopLight3" parent="Decoration/Light" instance=ExtResource("32_lun3d")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.636, -12.936, 4.005)
+[node name="RightLight" type="Node3D" parent="Decoration/Light"]
+transform = Transform3D(0.942641, -0.333807, 0, 0.333807, 0.942641, 0, 0, 0, 1, 5.842, 5.225, 8.36533)
+
+[node name="TopLight3" parent="Decoration/Light/RightLight" instance=ExtResource("32_lun3d")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -4.4388, -16.6885, -4.73466)
 
 [node name="Lamp" parent="Decoration/Light" instance=ExtResource("22_mta71")]
 transform = Transform3D(0.414693, 0, -0.909961, 0, 1, 0, 0.909961, 0, 0.414693, 2.02893, 0, 1.60547)
