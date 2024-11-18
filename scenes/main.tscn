@@ -214,7 +214,7 @@ skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
 
 [node name="Top Lights" type="MeshInstance3D" parent="Decoration/Light"]
-transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, -0.098, 2.52444, 7.67632)
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, -0.098, 2.524, 8.476)
 mesh = ExtResource("31_ynlvg")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_7ui2s")
