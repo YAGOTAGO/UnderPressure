@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=55 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -86,6 +86,15 @@ font_size = 8
 autowrap_mode = 2
 depth = 0.0
 width = 50.0
+
+[sub_resource type="TextMesh" id="TextMesh_xbuo8"]
+material = SubResource("StandardMaterial3D_j32nj")
+text = "Always keep switches on red"
+font = ExtResource("17_4vb2h")
+font_size = 9
+autowrap_mode = 2
+depth = 0.0
+width = 52.385
 
 [sub_resource type="TextMesh" id="TextMesh_4c7rb"]
 material = SubResource("StandardMaterial3D_j32nj")
@@ -369,6 +378,13 @@ transform = Transform3D(2.17589, -0.053698, 1.22989, 0, 2.49762, 0.109049, -1.23
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note_radar"]
 transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -1.06829, 3.27104, 3.95547)
 mesh = SubResource("TextMesh_8heuw")
+
+[node name="sticky_note switches" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("16_lxjki")]
+transform = Transform3D(-1.09279e-07, -1.1929, -2.19705, 0, 2.19704, -1.1929, 2.5, -5.21432e-08, -9.60359e-08, 18.104, 4.19, 8.797)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/Sticky Note/Text Notes/sticky_note switches"]
+transform = Transform3D(1, 0, 7.10543e-15, 1.77636e-15, 0.993572, 0.113203, 3.55271e-15, -0.113203, 0.993572, -1.059, 3.28333, 3.9407)
+mesh = SubResource("TextMesh_xbuo8")
 
 [node name="sticky_note_depth" parent="Decoration/Sticky Note/Text Notes" instance=ExtResource("16_lxjki")]
 transform = Transform3D(1.6849, 0, -1.07754, 0, 2, 0, 1.07754, 0, 1.6849, 8.54977, -2.35162, -2.97856)
