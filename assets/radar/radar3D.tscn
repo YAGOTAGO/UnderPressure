@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://b41kfcvyxm41"]
+[gd_scene load_steps=16 format=3 uid="uid://b41kfcvyxm41"]
 
 [ext_resource type="Script" path="res://assets/radar/radar.gd" id="1_8rlvd"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="2_83o4l"]
-[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2D_Views/radar_view.tscn" id="2_i3uii"]
+[ext_resource type="PackedScene" uid="uid://1am2aay0iwcb" path="res://scenes/2d_views/radar_view.tscn" id="2_i3uii"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="4_8y24s"]
 [ext_resource type="PackedScene" uid="uid://5o77qkvkgho6" path="res://assets/radar/radar_square.fbx" id="7_aahc0"]
 [ext_resource type="AudioStream" uid="uid://d3fdupswas2n" path="res://sounds/old-radio-button-click-97549.mp3" id="7_mra7p"]
@@ -14,6 +14,15 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2161e"]
 size = Vector3(0.675155, 0.290092, 0.228142)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfgto"]
+albedo_color = Color(0.973713, 0.0202672, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_potm3"]
+material = SubResource("StandardMaterial3D_lfgto")
+text = "Torpedo"
+font_size = 13
+depth = 0.0
 
 [sub_resource type="Animation" id="Animation_cf322"]
 length = 0.001
@@ -70,17 +79,17 @@ _data = {
 script = ExtResource("1_8rlvd")
 
 [node name="Mesh Viewport" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport")]
-transform = Transform3D(2.126, 0, 0, 0, 1.001, 0, 0, 0, 1.001, -2.02877, 5.99184, 2.17002)
+transform = Transform3D(2.126, 0, 0, 0, 1.1011, 0, 0, 0, 1.001, -2.02877, 5.98548, 2.17002)
 material_override = SubResource("ORMMaterial3D_x6cf8")
 mesh = SubResource("QuadMesh_qdtky")
 script = ExtResource("2_83o4l")
-viewport = NodePath("../SubViewport")
+viewport = NodePath("SubViewport")
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="Mesh Viewport"]
 transparent_bg = true
 size = Vector2i(1077, 1082)
 
-[node name="Radar" parent="SubViewport" instance=ExtResource("2_i3uii")]
+[node name="Radar" parent="Mesh Viewport/SubViewport" instance=ExtResource("2_i3uii")]
 unique_name_in_owner = true
 
 [node name="radar_square" parent="." instance=ExtResource("7_aahc0")]
@@ -99,6 +108,10 @@ script = ExtResource("4_8y24s")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="radar_square/radar_button/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.439314, 1.41936, 1.43025)
 shape = SubResource("BoxShape3D_2161e")
+
+[node name="Text" type="MeshInstance3D" parent="radar_square/radar_button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67043, 5.18317, 1.18745)
+mesh = SubResource("TextMesh_potm3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
