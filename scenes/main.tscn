@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=54 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -40,6 +40,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bvv2s585mr22e" path="res://assets/static/lights/new floor lights.obj" id="31_ynlvg"]
 [ext_resource type="PackedScene" uid="uid://kirhftibu06p" path="res://assets/static/lights/top_light/top_light.tscn" id="32_lun3d"]
 [ext_resource type="PackedScene" uid="uid://ca3dvbag5rne7" path="res://assets/siren/siren.tscn" id="37_omemc"]
+[ext_resource type="PackedScene" uid="uid://dn6shswewi4nn" path="res://assets/static/lights/desk_light/desk_light.tscn" id="41_n06yh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
@@ -238,6 +239,49 @@ light_energy = 16.0
 spot_range = 5.18307
 spot_angle = 34.8488
 
+[node name="border_light" type="Node" parent="Decoration/Light"]
+
+[node name="left" type="Node" parent="Decoration/Light/border_light"]
+
+[node name="DeskLight" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -4.67944, -2.34919, 6.28215)
+
+[node name="DeskLight2" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -5.39706, -2.34919, 6.28215)
+
+[node name="DeskLight3" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -6.22729, -2.34919, 6.28215)
+
+[node name="DeskLight4" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -7.04197, -2.34919, 6.27851)
+
+[node name="DeskLight5" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -7.91849, -2.34919, 6.27851)
+
+[node name="DeskLight6" parent="Decoration/Light/border_light/left" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -8.72086, -2.34919, 6.27851)
+
+[node name="right" type="Node3D" parent="Decoration/Light/border_light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.645, 0, 0)
+
+[node name="DeskLight" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -4.67944, -2.34919, 6.28215)
+
+[node name="DeskLight2" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -5.39706, -2.34919, 6.28215)
+
+[node name="DeskLight3" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -6.22729, -2.34919, 6.28215)
+
+[node name="DeskLight4" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -7.04197, -2.34919, 6.27851)
+
+[node name="DeskLight5" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -7.91849, -2.34919, 6.27851)
+
+[node name="DeskLight6" parent="Decoration/Light/border_light/right" instance=ExtResource("41_n06yh")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -8.72086, -2.34919, 6.27851)
+
 [node name="Pipes" type="Node" parent="Decoration"]
 
 [node name="Large O pipes" type="Node" parent="Decoration/Pipes"]
@@ -373,8 +417,8 @@ transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.9993
 [node name="Fog" type="Node" parent="Decoration"]
 
 [node name="Ground Fog" type="FogVolume" parent="Decoration/Fog"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.5916, 7.83839)
-size = Vector3(10.2472, 2, 20.4486)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.69658, 7.83839)
+size = Vector3(10.2472, 1.79004, 20.4486)
 material = SubResource("FogMaterial_j7r6s")
 
 [connection signal="timeout" from="Managers/GameManager/Timer" to="Managers/GameManager" method="_on_timer_timeout"]

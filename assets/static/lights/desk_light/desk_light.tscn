@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6shswewi4nn"]
+
+[ext_resource type="PackedScene" uid="uid://dnf3uj1hp75hu" path="res://assets/static/lights/top_light/single top lamp holder.fbx" id="1_ck10y"]
+[ext_resource type="ArrayMesh" uid="uid://dwwvluw860g7a" path="res://assets/static/lights/top_light/single top light bulb.obj" id="2_k1kya"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfm33"]
+albedo_color = Color(0.656749, 0.380704, 0.127247, 1)
+emission_enabled = true
+emission = Color(1, 0.647059, 0, 1)
+emission_energy_multiplier = 1.1
+
+[node name="DeskLight" type="Node3D"]
+
+[node name="single top lamp holder" parent="." instance=ExtResource("1_ck10y")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.275759, 0, 0.964035)
+
+[node name="SingleTopLightBulb" type="MeshInstance3D" parent="single top lamp holder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00724065, 0.065, 0.0359654)
+mesh = ExtResource("2_k1kya")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kfm33")
