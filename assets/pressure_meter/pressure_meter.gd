@@ -45,12 +45,7 @@ func break_meter()->void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start()	# Start the timer to move the needle
-
-
-func btn_pressed() ->void:
-	if is_compromised:
-		fix()
-
+	
 func move_needle() -> void:
 	needle.rotation_degrees.z = 30 -angle
 	
@@ -83,3 +78,7 @@ func _on_timer_timeout() -> void:
 func _on_pressure_countdown_timeout() -> void:
 	break_meter()
 	
+
+func _on_emergency_button_emergency_btn_clicked() -> void:
+	if is_compromised:
+		fix()

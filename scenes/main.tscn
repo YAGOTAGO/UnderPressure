@@ -449,6 +449,6 @@ material = SubResource("FogMaterial_j7r6s")
 [connection signal="steering_wheel_break" from="Breaking Components/SteeringWheel" to="Breaking Components/TV" method="_on_steering_wheel_steering_wheel_break"]
 [connection signal="steering_wheel_fix" from="Breaking Components/SteeringWheel" to="Breaking Components/TV" method="_on_steering_wheel_steering_wheel_fix"]
 [connection signal="component_failed" from="Breaking Components/PressureMeter" to="Managers/GameManager" method="_on_pressure_meter_component_failed"]
-[connection signal="emergency_btn_clicked" from="Breaking Components/EmergencyButton" to="Managers/GameManager" method="_on_emergency_button_emergency_btn_clicked"]
+[connection signal="emergency_btn_clicked" from="Breaking Components/EmergencyButton" to="Breaking Components/PressureMeter" method="_on_emergency_button_emergency_btn_clicked"]
 [connection signal="component_failed" from="Breaking Components/Radio" to="Managers/GameManager" method="_on_radio_component_failed"]
 [connection signal="game_win" from="Breaking Components/DepthMeter" to="Managers/GameManager" method="_on_depth_meter_game_win"]
