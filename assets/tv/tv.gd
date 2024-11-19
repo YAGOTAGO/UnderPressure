@@ -17,7 +17,7 @@ const OFFSET: int = 15
 
 signal component_failed
 
-var target_value: int = 50 # will be number between 0 and 100
+var target_value: int = 0
 var is_broken: bool = false
 
 #will trigger an anomaly
@@ -39,6 +39,7 @@ func break_tv()->void:
 
 func _ready() -> void:
 	update_rotation(slider.value)
+	update_tv_noise()
 	slider.value_changed.connect(_on_h_slider_value_changed)
 
 	
