@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d0lys67unabkj" path="res://sprites/game_over/WIN.png" id="1_0y5xl"]
 [ext_resource type="Texture2D" uid="uid://bs13xjushhykp" path="res://sprites/game_over/BLUE fish.png" id="2_xieoh"]
 [ext_resource type="Texture2D" uid="uid://bpx6xp2gybq0u" path="res://sprites/game_over/pink fish.png" id="3_8w6qa"]
-[ext_resource type="PackedScene" uid="uid://bkvl3062x8qf" path="res://assets/menus/exit_button.tscn" id="4_qvyc0"]
+[ext_resource type="PackedScene" uid="uid://bkvl3062x8qf" path="res://assets/menus/buttons/exit_button.tscn" id="4_qvyc0"]
 
 [node name="GameWin" type="Node2D"]
 

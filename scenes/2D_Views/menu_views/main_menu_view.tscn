@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gndeavwff3ha" path="res://sprites/buttons/start_button/start_hovered.png" id="2_q56i1"]
 [ext_resource type="Texture2D" uid="uid://cgtvmu5rkk1ow" path="res://sprites/buttons/start_button/start_clicked.png" id="3_bwvip"]
 [ext_resource type="Texture2D" uid="uid://bw52453gerbbt" path="res://sprites/buttons/start_button/start_button.png" id="4_hq43r"]
-[ext_resource type="PackedScene" uid="uid://bkvl3062x8qf" path="res://assets/menus/exit_button.tscn" id="5_1u8vg"]
+[ext_resource type="PackedScene" uid="uid://bkvl3062x8qf" path="res://assets/menus/buttons/exit_button.tscn" id="5_1u8vg"]
 
 [sub_resource type="GDScript" id="GDScript_jvtgl"]
 script/source = "extends Node2D
