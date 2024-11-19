@@ -4,7 +4,7 @@ extends Node3D
 const MIN_ROTATION: int = -45
 const MAX_ROTATION: int = 45
 
-const OFFSET: int = 32
+const OFFSET: int = 15
 
 @onready var timer: Timer = %Timer
 
@@ -55,14 +55,17 @@ func update_tv_noise() -> void:
 	
 #	Audio settings for the static
 	var volume:float = proximity * 10
-	#if proximity < 0.06:
-	
+
+	#inside fix zone
 	if abs(slider.value - target_value) < OFFSET:
-		print("TV FIXED")
 		volume = -50.0
 		fix()
+	else:
+		animation_player.play("red_light")
+	
 	
 	staticSound.volume_db = volume
+	
 
 func _on_h_slider_value_changed(value: float) -> void:
 	update_rotation(value)
