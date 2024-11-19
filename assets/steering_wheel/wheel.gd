@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var wheel: Node3D = %Wheel
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var timer: Timer = %Timer
 
