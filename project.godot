@@ -16,7 +16,7 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/image="res://sprites/splash.png"
 config/icon="res://sprites/icon.png"
-boot_splash/minimum_display_time=3000
+config/windows_native_icon="res://icon.ico"
 
 [debug]
 
