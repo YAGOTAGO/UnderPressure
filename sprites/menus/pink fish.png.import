@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs13xjushhykp"
-path="res://.godot/imported/BLUE fish.png-097c74cc0382ebcaf686ff7b2b6db055.ctex"
+uid="uid://bpx6xp2gybq0u"
+path="res://.godot/imported/pink fish.png-98c9acf290df30a616eb1e63346bd26a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game_over/BLUE fish.png"
-dest_files=["res://.godot/imported/BLUE fish.png-097c74cc0382ebcaf686ff7b2b6db055.ctex"]
+source_file="res://sprites/menus/pink fish.png"
+dest_files=["res://.godot/imported/pink fish.png-98c9acf290df30a616eb1e63346bd26a.ctex"]
 
 [params]
 

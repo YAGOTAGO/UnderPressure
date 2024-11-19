@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://db5ysgc5rgjwi"]
 
-[ext_resource type="Texture2D" uid="uid://bs13xjushhykp" path="res://sprites/game_over/BLUE fish.png" id="1_qur0q"]
-[ext_resource type="Texture2D" uid="uid://bll45kjk7et84" path="res://sprites/game_over/LOST.png" id="2_4rgae"]
-[ext_resource type="Texture2D" uid="uid://bpx6xp2gybq0u" path="res://sprites/game_over/pink fish.png" id="3_4ine2"]
+[ext_resource type="Texture2D" uid="uid://bs13xjushhykp" path="res://sprites/menus/BLUE fish.png" id="1_qur0q"]
+[ext_resource type="Texture2D" uid="uid://bll45kjk7et84" path="res://sprites/menus/LOST.png" id="2_4rgae"]
+[ext_resource type="Texture2D" uid="uid://bpx6xp2gybq0u" path="res://sprites/menus/pink fish.png" id="3_4ine2"]
 [ext_resource type="PackedScene" uid="uid://bkvl3062x8qf" path="res://assets/menus/buttons/exit_button.tscn" id="4_k5w85"]
 
 [node name="GameOver" type="Node2D"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bll45kjk7et84"
-path="res://.godot/imported/LOST.png-a71464e2f70eb924458b33961b745807.ctex"
+uid="uid://cgi6qbvw4pagv"
+path="res://.godot/imported/menu_logo.png-695fc7768d7b903284a2127c4d4a2712.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game_over/LOST.png"
-dest_files=["res://.godot/imported/LOST.png-a71464e2f70eb924458b33961b745807.ctex"]
+source_file="res://sprites/menus/menu_logo.png"
+dest_files=["res://.godot/imported/menu_logo.png-695fc7768d7b903284a2127c4d4a2712.ctex"]
 
 [params]
 
