@@ -32,13 +32,8 @@
 2D artist: </br>**Rae Zhang** </br></br>
 Programmers: </br>
 **Michael Reidy** </br>
-**Tiago Davies**
+**Tiago Davies**</br>
+</br>
 
-## Shaders:
-https://godotshaders.com/
+[Detailed Credits](credits.txt)
 
-## Sounds:
-https://freesound.org/
-
-## Engine:
-Made with Godot
