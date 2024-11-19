@@ -1,0 +1,27 @@
+CREDITS
+
+3D art: Caroline Li
+2D art: Rae
+Programming: Tiago Davies
+Programming: Michael Reidy
+
+---------------------------------------------------
+
+Sounds:
+Main window glass crack: Hard Glass Impact by deleted_user_3656686 -- https://freesound.org/s/418194/ -- License: Creative Commons 0
+
+---------------------------------------------------
+
+Shader from Godot Shaders - the free shader library.
+godotshaders.com
+
+Creative Commons Attribution Non-commercial
+liquid fill: https://godotshaders.com/shader/2d-liquid-fill-inside-sphere-v2/
+
+MIT License
+stary sky: https://godotshaders.com/shader/starry-sky/
+radar: https://godotshaders.com/shader/radar-with-trace-blip/
+
+CC0 License
+retro tv: https://godotshaders.com/shader/vhs-and-crt-monitor-effect/
+colored glass: https://godotshaders.com/shader/godot-4-2-colored-glass/
