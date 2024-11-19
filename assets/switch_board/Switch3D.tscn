@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4e2em28cqkd4"]
+[gd_scene load_steps=8 format=3 uid="uid://b4e2em28cqkd4"]
 
 [ext_resource type="ArrayMesh" uid="uid://8ojpotqybhat" path="res://assets/switch_board/switch_lever.obj" id="1_i80v6"]
 [ext_resource type="AudioStream" uid="uid://c08ad60d68xsh" path="res://sounds/buttom click 1.wav" id="2_1getl"]
 [ext_resource type="Script" path="res://assets/switch_board/Switch3D.gd" id="2_inkt2"]
+[ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="4_ggu21"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mvpem"]
 radius = 0.368517
@@ -35,6 +36,9 @@ mesh = ExtResource("1_i80v6")
 skeleton = NodePath("../..")
 
 [node name="Area3D" type="Area3D" parent="SwitchContainer"]
+monitoring = false
+monitorable = false
+script = ExtResource("4_ggu21")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchContainer/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 0.989576, -0.144011, 0, 0.144011, 0.989576, 0, 0.0375847, -0.0721699)
@@ -46,5 +50,4 @@ transform = Transform3D(-0.000282656, -0.18037, 0, 0.142063, -0.000358873, 0, 0,
 mesh = SubResource("CapsuleMesh_j522v")
 surface_material_override/0 = SubResource("StandardMaterial3D_yi5m1")
 
-[connection signal="mouse_entered" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="SwitchContainer/Area3D" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="clicked" from="SwitchContainer/Area3D" to="." method="_on_area_3d_clicked"]

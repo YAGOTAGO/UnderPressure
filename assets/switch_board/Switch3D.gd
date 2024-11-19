@@ -5,7 +5,6 @@ extends Node3D
 @onready var audio: AudioStreamPlayer3D =%AudioStreamPlayer3D
 
 signal switch_toggled
-var mouse_inside: bool = false
 
 var is_up: bool = true
 var is_correct: bool = false
@@ -59,15 +58,6 @@ func activate() -> void:
 		light.set_surface_override_material(0, mat)
 	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if mouse_inside and Input.is_action_just_pressed("click"):
-		activate()
 
-
-func _on_area_3d_mouse_entered() -> void:
-	mouse_inside = true
-
-
-func _on_area_3d_mouse_exited() -> void:
-	mouse_inside = false
+func _on_area_3d_clicked() -> void:
+	activate()
