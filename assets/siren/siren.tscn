@@ -51,10 +51,11 @@ emission = Color(1, 0, 0, 1)
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.83576, 0.64266)
-light_color = Color(2.5, 1, 1, 1)
+light_color = Color(0.752164, 0.0573556, 9.62615e-08, 1)
+light_energy = 5.21
 shadow_enabled = true
-spot_range = 7.62851
-spot_angle = 10.9422
+spot_range = 7.69798
+spot_angle = 14.801
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animation_player")]
 unique_name_in_owner = true
