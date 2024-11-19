@@ -1,7 +1,7 @@
 CREDITS
 
 3D art: Caroline Li
-2D art: Rae
+2D art: Rae Zhang
 Programming: Tiago Davies
 Programming: Michael Reidy
 
