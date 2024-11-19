@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gndeavwff3ha"
-path="res://.godot/imported/start_hovered.png-1fd0c43add11e09b181a61b9dea93817.ctex"
+uid="uid://borpmkyfdu11"
+path="res://.godot/imported/retry_clicked.png-2cfcf561a060f885013ecdd2a49ed522.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/buttons/start_hovered.png"
-dest_files=["res://.godot/imported/start_hovered.png-1fd0c43add11e09b181a61b9dea93817.ctex"]
+source_file="res://sprites/buttons/retry_button/retry_clicked.png"
+dest_files=["res://.godot/imported/retry_clicked.png-2cfcf561a060f885013ecdd2a49ed522.ctex"]
 
 [params]
 

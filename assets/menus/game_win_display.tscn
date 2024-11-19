@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6begrofkk621"]
+[gd_scene load_steps=7 format=3 uid="uid://dfcp3tpbjcnh6"]
 
-[ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_2mh36"]
-[ext_resource type="PackedScene" uid="uid://cbcloac5xi3lk" path="res://assets/menus/game_over_view.tscn" id="2_51aaf"]
+[ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_jrrlv"]
+[ext_resource type="PackedScene" uid="uid://bousvyifxq3ky" path="res://scenes/2D_Views/menu_views/game_win_view.tscn" id="2_0l7vt"]
 
 [sub_resource type="GDScript" id="GDScript_giag8"]
 script/source = "extends Node3D
@@ -21,14 +21,14 @@ transparency = 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_5subg"]
 size = Vector3(1, 1, 0.167908)
 
-[node name="GameOver" type="Node3D"]
+[node name="GameWin" type="Node3D"]
 script = SubResource("GDScript_giag8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
 transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_0eiqv")
 mesh = SubResource("QuadMesh_et7tw")
-script = ExtResource("1_2mh36")
+script = ExtResource("1_jrrlv")
 viewport = NodePath("SubViewport")
 node_area = NodePath("Area3D")
 
@@ -36,7 +36,7 @@ node_area = NodePath("Area3D")
 transparent_bg = true
 size = Vector2i(1920, 1080)
 
-[node name="GameOver" parent="MeshInstance3D/SubViewport" instance=ExtResource("2_51aaf")]
+[node name="GameWin" parent="MeshInstance3D/SubViewport" instance=ExtResource("2_0l7vt")]
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
 

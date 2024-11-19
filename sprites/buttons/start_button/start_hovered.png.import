@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://borpmkyfdu11"
-path="res://.godot/imported/RETR BUBBLE2.png-afc55b1f2699bfee575315708276f792.ctex"
+uid="uid://gndeavwff3ha"
+path="res://.godot/imported/start_hovered.png-8a4cc310ceabb87cd344714d44441ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/buttons/RETR BUBBLE2.png"
-dest_files=["res://.godot/imported/RETR BUBBLE2.png-afc55b1f2699bfee575315708276f792.ctex"]
+source_file="res://sprites/buttons/start_button/start_hovered.png"
+dest_files=["res://.godot/imported/start_hovered.png-8a4cc310ceabb87cd344714d44441ecb.ctex"]
 
 [params]
 
