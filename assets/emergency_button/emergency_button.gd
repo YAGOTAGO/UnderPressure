@@ -15,7 +15,7 @@ var cover_delay:int = 2	# The time it takes for the cover to reset
 func activate() -> void:
 	if !cover_animation.is_playing():
 		emergency_btn_clicked.emit()
-		cover_animation.play_backwards("push_btn")
+		cover_animation.play("push_btn")
 	
 	print("Emergency clicked")
 	
