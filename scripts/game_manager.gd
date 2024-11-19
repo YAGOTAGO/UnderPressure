@@ -77,13 +77,11 @@ func _on_tv_component_failed() -> void:
 	on_component_fail()
 
 	
-
 func _on_steering_wheel_component_failed() -> void:
 	num_failed_components += 1
 	print("wheel" + str(num_failed_components))
 	on_component_fail()
 
-	
 
 func _on_radar_component_failed() -> void:
 	num_failed_components += 1
