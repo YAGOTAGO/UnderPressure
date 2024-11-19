@@ -1,6 +1,7 @@
 extends Node
 
 signal surface_reached
+signal percentage_up(percent: float)
 
 const MAX_AMOUNT: int = 10 #max amount can climb
 const MIN_AMOUNT: int = 1 #min amount can climb
@@ -29,8 +30,15 @@ func _on_timer_timeout() -> void:
 	_update_display()
 	
 func _update_display() -> void:
+	#update the label
 	label.text = str(depth_num)
-	var percentage: float = 1.0 - (depth_num as float/ START_DEPTH as float) * 2.0
-	progress_shader_material.set_shader_parameter("fill_value", percentage)
+	
+	#get and emit percentage
+	var percentage = 1.0 - (depth_num as float/ START_DEPTH as float)
+	percentage_up.emit(percentage)
+	
+	#update the fill value of shader
+	var fill: float = percentage * 2.0
+	progress_shader_material.set_shader_parameter("fill_value", fill)
 
 	

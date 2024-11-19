@@ -10,6 +10,7 @@ script/source = "extends Node3D
 @onready var depth_node: Node2D = %DepthMeterView
 
 signal game_win
+signal percentage_up(percent: float)
 
 func start_depth_meter() -> void:
 	depth_node.start_timer()
@@ -17,6 +18,9 @@ func start_depth_meter() -> void:
 
 func _on_depth_meter_view_surface_reached() -> void:
 	game_win.emit()
+
+func _on_depth_meter_view_percentage_up(percent: float) -> void:
+	percentage_up.emit(percent)
 "
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_off0d"]
@@ -41,4 +45,5 @@ unique_name_in_owner = true
 
 [node name="depth_meter" parent="." instance=ExtResource("3_w0plw")]
 
+[connection signal="percentage_up" from="SubViewport/DepthMeterView" to="." method="_on_depth_meter_view_percentage_up"]
 [connection signal="surface_reached" from="SubViewport/DepthMeterView" to="." method="_on_depth_meter_view_surface_reached"]

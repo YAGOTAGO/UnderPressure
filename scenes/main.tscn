@@ -1,9 +1,10 @@
-[gd_scene load_steps=56 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=57 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
 [ext_resource type="Script" path="res://scripts/managers/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
+[ext_resource type="Script" path="res://scripts/managers/world_environment.gd" id="3_8neit"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://assets/menus/game_over.tscn" id="6_rg65t"]
 [ext_resource type="Script" path="res://scripts/managers/menu_managers.gd" id="7_i1gtr"]
@@ -45,7 +46,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg4p"]
 shader = ExtResource("1_qur6l")
-shader_parameter/sky_color = Color(0.0148744, 0, 0.315385, 1)
+shader_parameter/sky_color = Color(0.015, 0, 0.315, 1)
 shader_parameter/star_base_color = Color(1.54018e-06, 0.276968, 0.382507, 1)
 shader_parameter/star_hue_offset = 0.0
 shader_parameter/star_intensity = 0.08
@@ -141,6 +142,8 @@ script = ExtResource("1_473u7")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h7fa3")
 camera_attributes = SubResource("CameraAttributesPractical_e2nei")
+script = ExtResource("3_8neit")
+sky_shader = SubResource("ShaderMaterial_ujg4p")
 
 [node name="Managers" type="Node" parent="."]
 
@@ -463,3 +466,4 @@ material = SubResource("FogMaterial_j7r6s")
 [connection signal="emergency_btn_clicked" from="Breaking Components/EmergencyButton" to="Breaking Components/PressureMeter" method="_on_emergency_button_emergency_btn_clicked"]
 [connection signal="component_failed" from="Breaking Components/Radio" to="Managers/GameManager" method="_on_radio_component_failed"]
 [connection signal="game_win" from="Breaking Components/DepthMeter" to="Managers/GameManager" method="_on_depth_meter_game_win"]
+[connection signal="percentage_up" from="Breaking Components/DepthMeter" to="WorldEnvironment" method="_on_depth_meter_percentage_up"]
