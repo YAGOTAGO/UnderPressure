@@ -18,11 +18,11 @@ func _ready() -> void:
 func get_shader_material() -> ShaderMaterial:
 	return tv_shader_material
 
-func show_left(visible: bool) -> void:
-	left.visible = visible;
+func show_left(should_show: bool) -> void:
+	left.visible = should_show;
 
-func show_right(visible: bool) -> void:
-	right.visible = visible;
+func show_right(should_show: bool) -> void:
+	right.visible = should_show;
 
 
 func hide_image() -> void:
