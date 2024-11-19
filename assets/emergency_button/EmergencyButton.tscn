@@ -37,18 +37,21 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(1.90415, 0, 0)]
 }
-tracks/1/type = "value"
+tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CoverSound:playing")
+tracks/1/path = NodePath("CoverSound")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_83xw7")
+}],
+"times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_ivveo"]
 resource_name = "push_btn"
@@ -105,7 +108,6 @@ script = ExtResource("1_prbu4")
 
 [node name="CoverSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422524, 0.507298, 1.19468)
-stream = ExtResource("2_83xw7")
 volume_db = 2.078
 
 [node name="BtnSound" type="AudioStreamPlayer3D" parent="."]
