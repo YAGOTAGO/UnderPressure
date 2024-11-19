@@ -61,8 +61,8 @@ sky_material = SubResource("ShaderMaterial_ujg4p")
 background_mode = 2
 sky = SubResource("Sky_7hub4")
 glow_enabled = true
-glow_intensity = 5.84
-glow_strength = 1.27
+glow_intensity = 2.65
+glow_strength = 1.3
 glow_blend_mode = 0
 glow_hdr_luminance_cap = 17.17
 volumetric_fog_enabled = true
@@ -137,6 +137,10 @@ emission = Color(0.5, 0.7, 0.8, 1)
 transform = Transform3D(1, 0, 0, 0, 0.978386, 0.206785, 0, -0.206785, 0.978386, -0.0171624, 2.55786, 10.5688)
 script = ExtResource("1_473u7")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h7fa3")
+camera_attributes = SubResource("CameraAttributesPractical_e2nei")
+
 [node name="Managers" type="Node" parent="."]
 
 [node name="Cursor Manager" type="Node" parent="Managers"]
@@ -201,10 +205,6 @@ transform = Transform3D(0.844328, 0, -0.535827, 0, 1, 0, 0.535827, 0, 0.844328, 
 [node name="Decoration" type="Node" parent="."]
 
 [node name="Shell & Table" parent="Decoration" instance=ExtResource("11_v3bio")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Decoration"]
-environment = SubResource("Environment_h7fa3")
-camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
 [node name="Light" type="Node" parent="Decoration"]
 
