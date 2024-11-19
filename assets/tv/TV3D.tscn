@@ -168,6 +168,8 @@ viewport = NodePath("SubViewport Slider")
 node_area = NodePath("Area3D")
 
 [node name="Area3D" type="Area3D" parent="tvslider/ViewPort Slider"]
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tvslider/ViewPort Slider/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00879312)
