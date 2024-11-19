@@ -3,9 +3,8 @@ extends Node3D
 signal component_failed
 @onready var timer:Timer = %Timer
 @onready var audio:AudioStreamPlayer3D = %AudioStreamPlayer3D
-@export var switchArray:Array[Node3D]
+@export var switchArray:Array[Switch]
 var is_broken: bool = false
-
 
 func _ready():
 	# Automatically populate switchArray with children of the current node
@@ -14,7 +13,6 @@ func _ready():
 			switchArray.append(child)
 
 func activate() -> void:
-	print("activate switchboard")
 	is_broken = true
 	timer.start()
 	audio.play()
