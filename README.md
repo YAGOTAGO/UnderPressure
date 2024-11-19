@@ -28,7 +28,7 @@
 
 ![Team](sprites/splash.png)
 
-[Detailed Credits](credits.txt)
+[Detailed Credits](credits.txt)</br>
 </br>
 3D artist: </br>**Caroline Li** </br>
 </br>
