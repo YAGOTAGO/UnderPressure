@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dlypsuxn3noka"]
+[gd_scene load_steps=56 format=3 uid="uid://dlypsuxn3noka"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://assets/menus/game_over.tscn" id="6_rg65t"]
+[ext_resource type="Script" path="res://scripts/managers/menu_managers.gd" id="7_i1gtr"]
 [ext_resource type="PackedScene" uid="uid://b41kfcvyxm41" path="res://assets/radar/radar3D.tscn" id="7_svoui"]
 [ext_resource type="PackedScene" uid="uid://dfcp3tpbjcnh6" path="res://assets/menus/game_win_scene.tscn" id="8_v6rgg"]
 [ext_resource type="PackedScene" uid="uid://b7nsa5i18irpp" path="res://assets/steering_wheel/steering_wheel.tscn" id="9_16cqi"]
@@ -143,11 +144,6 @@ camera_attributes = SubResource("CameraAttributesPractical_e2nei")
 
 [node name="Managers" type="Node" parent="."]
 
-[node name="Cursor Manager" type="Node" parent="Managers"]
-script = ExtResource("20_rgvsj")
-cursor = ExtResource("21_5jwbr")
-cursor_down = ExtResource("22_cxslk")
-
 [node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("list_components")]
 script = ExtResource("1_xhrch")
 list_components = [NodePath("../../Breaking Components/TV"), NodePath("../../Breaking Components/SteeringWheel"), NodePath("../../Breaking Components/Radar"), NodePath("../../Breaking Components/SwitchBoard3d"), NodePath("../../Breaking Components/Radio"), NodePath("../../Breaking Components/PressureMeter")]
@@ -156,18 +152,33 @@ list_components = [NodePath("../../Breaking Components/TV"), NodePath("../../Bre
 unique_name_in_owner = true
 wait_time = 3.0
 
+[node name="Cursor Manager" type="Node" parent="Managers"]
+script = ExtResource("20_rgvsj")
+cursor = ExtResource("21_5jwbr")
+cursor_down = ExtResource("22_cxslk")
+
+[node name="MenuManager" type="Node" parent="Managers" node_paths=PackedStringArray("main_menu", "lose_menu", "win_menu")]
+unique_name_in_owner = true
+script = ExtResource("7_i1gtr")
+main_menu = NodePath("../../Menu/MainMenu")
+lose_menu = NodePath("../../Menu/GameOver")
+win_menu = NodePath("../../Menu/GameWin")
+
 [node name="Menu" type="Node" parent="."]
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
+unique_name_in_owner = true
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
 transform = Transform3D(2.99303, 0, 0, 0, 2.97003, 0, 0, 0, 1, 0, 2.256, 5.95)
+visible = false
 
 [node name="GameWin" parent="Menu" instance=ExtResource("8_v6rgg")]
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
+visible = false
 
 [node name="Breaking Components" type="Node" parent="."]
 

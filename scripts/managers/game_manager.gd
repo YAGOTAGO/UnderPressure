@@ -4,36 +4,36 @@ extends Node
 @export var list_components: Array[Node3D]
 @onready var timer: Timer = %Timer
 @onready var depth: Node3D = %DepthMeter
-@onready var game_over_node: Node3D = %GameOver
-@onready var game_win_node: Node3D = %GameWin
 @onready var window: Node3D = %Window
+@onready var menu_manager: MenuManager = %MenuManager
 
 var num_failed_components:int = 0
 
 func _ready() -> void:
-	game_over_node.visible = false
-	game_win_node.visible = false
+	menu_manager.display_win(false)
+	menu_manager.display_lose(false)
 
 func start_game() -> void:
 	timer.start(0)
 	depth.start_depth_meter()
-	
+
+#game lose
 func game_over()-> void:
-	game_over_node.visible = true
+	menu_manager.display_lose(true)
 	queue_free()
-	
+
 # Game win
 func _on_depth_meter_game_win() -> void:
-	game_win_node.visible = true
+	menu_manager.display_win(true)
 	queue_free()
 	
 
 func _on_timer_timeout() -> void:
 	_activate_components()
 
+
 func _activate_components()->void:
-	#get non broken components
-	
+	#get non broken components	
 	var non_broken_components = list_components.filter(func(c): return not c.is_broken)
 	
 	# Check if there are any non-broken components left.
@@ -48,7 +48,7 @@ func _activate_components()->void:
 	# Set the selected component to broken.
 	selected_component.is_broken = true
 	selected_component.activate();
-	print("Component broken:", selected_component.name)
+	print("Component broken: ", selected_component.name)
 
 # Listen for failed components
 func on_component_fail()->void:
