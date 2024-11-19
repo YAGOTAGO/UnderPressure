@@ -1,4 +1,4 @@
-![Logo](sprites/menu_logo.png)
+![Logo](sprites/menus/menu_logo.png)
 
 ## Video: </br>
 [Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
