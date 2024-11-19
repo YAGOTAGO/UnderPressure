@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=3 uid="uid://di5m7q1dn3fnr"]
+
+[ext_resource type="Script" path="res://assets/components/emergency_button/emergency_button.gd" id="1_prbu4"]
+[ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://sounds/buttom click.mp3" id="2_83xw7"]
+[ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://assets/components/emergency_button/emergencybuttoncase.obj" id="3_60p6m"]
+[ext_resource type="PackedScene" uid="uid://cdfalwkpt37m3" path="res://assets/components/emergency_button/emergencybase.fbx" id="3_80gs7"]
+[ext_resource type="AudioStream" uid="uid://ckuw4lict0n35" path="res://sounds/emergency_click.mp3" id="3_okofc"]
+[ext_resource type="PackedScene" uid="uid://bpmh2smx16ovc" path="res://assets/components/emergency_button/emergencybutton.fbx" id="5_imm85"]
+
+[sub_resource type="Animation" id="Animation_6om63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Case:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_spnc7"]
+resource_name = "open_cover"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Case:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 0.0358968),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.90415, 0, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CoverSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_83xw7")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ivveo"]
+resource_name = "push_btn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D/emergencybutton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 0.0103086),
+"update": 0,
+"values": [Vector3(2.16221, -1.1106, -1.0868), Vector3(2.16221, -1.1106, -1.31098), Vector3(2.16221, -1.1106, -1.0868)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BtnSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_okofc")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ovpy3"]
+_data = {
+"RESET": SubResource("Animation_6om63"),
+"open_cover": SubResource("Animation_spnc7"),
+"push_btn": SubResource("Animation_ivveo")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h44wb"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.01, 0.01, 0.01, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_auknc"]
+height = 0.432053
+radius = 0.431344
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qse8y"]
+radius = 0.134553
+
+[node name="EmergencyButton" type="Node3D"]
+script = ExtResource("1_prbu4")
+
+[node name="CoverSound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422524, 0.507298, 1.19468)
+volume_db = 2.078
+
+[node name="BtnSound" type="AudioStreamPlayer3D" parent="."]
+volume_db = 8.675
+pitch_scale = 0.69
+
+[node name="DropCover" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_ovpy3")
+}
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="emergencybase" parent="." instance=ExtResource("3_80gs7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05763, -2.57373, -0.282678)
+
+[node name="Case" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0790348, 0.063053, 0.850589)
+
+[node name="Emergencybuttoncase" type="MeshInstance3D" parent="Case"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13062, -3.30759, -0.926734)
+mesh = ExtResource("3_60p6m")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_h44wb")
+
+[node name="ButtonCase" type="Area3D" parent="Case"]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Case/ButtonCase"]
+transform = Transform3D(1, 0, 0, 0, -0.00174539, 0.999998, 0, -0.999998, -0.00174539, 0.40544, 0.460125, 0.206931)
+shape = SubResource("CylinderShape3D_auknc")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(2.50376, 0, 0, 0, 2.51352, 0, 0, 0, 1.018, 0.6396, 0.203089, 0.800002)
+
+[node name="emergencybutton" parent="Node3D" instance=ExtResource("5_imm85")]
+transform = Transform3D(0.399399, 0, 0, 0, 0.397848, 0, 0, 0, 0.982318, 2.16221, -1.1106, -1.0868)
+
+[node name="Button" type="Area3D" parent="Node3D"]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0640516, 0.122691, 0.228637)
+shape = SubResource("SphereShape3D_qse8y")
+
+[connection signal="animation_finished" from="DropCover" to="." method="_on_drop_cover_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="Case/ButtonCase" to="." method="_on_button_case_mouse_entered"]
+[connection signal="mouse_exited" from="Case/ButtonCase" to="." method="_on_button_case_mouse_exited"]
+[connection signal="mouse_entered" from="Node3D/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Node3D/Button" to="." method="_on_button_mouse_exited"]

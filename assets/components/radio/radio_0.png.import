@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd1oonnu8va0h"
-path.s3tc="res://.godot/imported/shel&table_0.png-a9d192f7e857cb00998c2125b508a06e.s3tc.ctex"
-path.etc2="res://.godot/imported/shel&table_0.png-a9d192f7e857cb00998c2125b508a06e.etc2.ctex"
+uid="uid://c5lx4n27ph4fe"
+path.s3tc="res://.godot/imported/radio_0.png-697f6c74656b88a1c1460f8b1bfe8cfb.s3tc.ctex"
+path.etc2="res://.godot/imported/radio_0.png-697f6c74656b88a1c1460f8b1bfe8cfb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f117af69bb63e132896136ac1af6f791"
+"md5": "c52787ae77fa190f9865cad1dce532ad"
 }
 
 [deps]
 
-source_file="res://assets/static/background/shel&table_0.png"
-dest_files=["res://.godot/imported/shel&table_0.png-a9d192f7e857cb00998c2125b508a06e.s3tc.ctex", "res://.godot/imported/shel&table_0.png-a9d192f7e857cb00998c2125b508a06e.etc2.ctex"]
+source_file="res://assets/components/radio/radio_0.png"
+dest_files=["res://.godot/imported/radio_0.png-697f6c74656b88a1c1460f8b1bfe8cfb.s3tc.ctex", "res://.godot/imported/radio_0.png-697f6c74656b88a1c1460f8b1bfe8cfb.etc2.ctex"]
 
 [params]
 

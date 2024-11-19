@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drsaiet7pqofl"
+path="res://.godot/imported/meter_needle.obj-7ff670ac95fdb5bbbf1540b4c66130df.mesh"
+
+[deps]
+
+files=["res://.godot/imported/meter_needle.obj-7ff670ac95fdb5bbbf1540b4c66130df.mesh"]
+
+source_file="res://assets/components/pressure_meter/meter_needle.obj"
+dest_files=["res://.godot/imported/meter_needle.obj-7ff670ac95fdb5bbbf1540b4c66130df.mesh", "res://.godot/imported/meter_needle.obj-7ff670ac95fdb5bbbf1540b4c66130df.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

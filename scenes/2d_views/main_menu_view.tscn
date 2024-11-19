@@ -54,6 +54,7 @@ size_flags_vertical = 4
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+scale = Vector2(1, 0.997866)
 texture = ExtResource("1_w4e3i")
 
 [node name="start" type="Button" parent="Control"]
