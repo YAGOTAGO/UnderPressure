@@ -7,7 +7,6 @@ extends Node
 @onready var game_over_node: Node3D = %GameOver
 @onready var game_win_node: Node3D = %GameWin
 @onready var window: Node3D = %Window
-@onready var pressure: Node3D = %PressureMeter
 
 var num_failed_components:int = 0
 
