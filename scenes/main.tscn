@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_473u7"]
 [ext_resource type="Shader" path="res://shaders/starry_sky.gdshader" id="1_qur6l"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xhrch"]
+[ext_resource type="Script" path="res://scripts/managers/game_manager.gd" id="1_xhrch"]
 [ext_resource type="PackedScene" uid="uid://mng8q3q44jxx" path="res://assets/tv/TV3D.tscn" id="2_pv8vt"]
 [ext_resource type="PackedScene" uid="uid://c22n6icpny0xs" path="res://assets/switch_board/SwitchBoard3D.tscn" id="6_dibri"]
 [ext_resource type="PackedScene" uid="uid://c6begrofkk621" path="res://assets/menus/game_over.tscn" id="6_rg65t"]
@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://edsgu6xwdq5w" path="res://assets/static/sticky_notes/stickynote blue.fbx" id="16_lxjki"]
 [ext_resource type="FontFile" uid="uid://cyjp3apxuvr2b" path="res://assets/fonts/DMSerifDisplay-Regular.ttf" id="17_4vb2h"]
 [ext_resource type="PackedScene" uid="uid://cc3wurphdwbqc" path="res://assets/static/sticky_notes/stickynote yellow.fbx" id="17_tvvgt"]
-[ext_resource type="Script" path="res://scripts/cursor_manager.gd" id="20_rgvsj"]
+[ext_resource type="Script" path="res://scripts/managers/cursor_manager.gd" id="20_rgvsj"]
 [ext_resource type="Texture2D" uid="uid://dybc3d8bb6a56" path="res://sprites/cursor/cursor.png" id="21_5jwbr"]
 [ext_resource type="PackedScene" uid="uid://cyt1e1l4u5a87" path="res://assets/fish/yellow/yellow_fish_scene.tscn" id="21_qulxd"]
 [ext_resource type="PackedScene" uid="uid://bjrpx0ja220hp" path="res://assets/static/pipes/pipe long.fbx" id="21_ut8my"]
