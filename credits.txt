@@ -12,7 +12,15 @@ Engine: Godot
 ---------------------------------------------------
 
 Sounds:
-Main window glass crack: Hard Glass Impact by deleted_user_3656686 -- https://freesound.org/s/418194/ -- License: Creative Commons 0
+Hard Glass Impact by deleted_user_3656686 -- https://freesound.org/s/418194/ -- License: Creative Commons 0
+boiling bubbles 1.wav by Jace -- https://freesound.org/s/19841/ -- License: Attribution 4.0
+Steam Pipe Blowout by magnuswaker -- https://freesound.org/s/523065/ -- License: Creative Commons 0
+Short Elevator Music Loop by BlondPanda -- https://freesound.org/s/659889/ -- License: Creative Commons 0
+Mouse 2 Button Fast Click by aphom000 -- https://freesound.org/s/687107/ -- License: Creative Commons 0
+Tic Toc Click by Breviceps -- https://freesound.org/s/448081/ -- License: Creative Commons 0
+clank 002.wav by yottasounds -- https://freesound.org/s/175180/ -- License: Attribution 3.0
+old radio button click.wav by pooya.work -- https://freesound.org/s/495980/ -- License: Creative Commons 0
+Radar, Something Detected, 01 Sec.wav by MATRIXXX_ -- https://freesound.org/s/445723/ -- License: Creative Commons 0
 
 ---------------------------------------------------
 
