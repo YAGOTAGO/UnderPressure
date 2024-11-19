@@ -42,7 +42,7 @@ func _ready() -> void:
 	update_tv_noise()
 	slider.value_changed.connect(_on_h_slider_value_changed)
 
-	
+
 #function that rotates antenna
 func update_rotation(value: float)-> void:
 	var rotation_degree: int  = MIN_ROTATION + (value / slider.max_value) * (MAX_ROTATION - MIN_ROTATION)

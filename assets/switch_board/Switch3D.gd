@@ -65,7 +65,6 @@ func _process(_delta: float) -> void:
 		activate()
 
 
-
 func _on_area_3d_mouse_entered() -> void:
 	mouse_inside = true
 

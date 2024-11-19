@@ -1,17 +1,12 @@
 extends Node3D
 
-const MAX_ROTATION: int = 30
-const MIN_ROTATION: int = -30
-
 @onready var wheel: Node3D = %Wheel
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var timer: Timer = %Timer
 
 signal component_failed
 
-
-
-var direction:bool
+var direction: bool
 
 var is_broken: bool = false
 
@@ -37,14 +32,13 @@ func break_wheel()->void:
 	is_broken = false
 	
 
-
 func _on_left_area_clicked() -> void:
 	if !animation_player.is_playing():
 		animation_player.play("wheel_left")
 		
 	if !direction:
 		fix()
-	else:
+	elif is_broken:
 		break_wheel()
 		
 	
@@ -55,7 +49,7 @@ func _on_right_area_clicked() -> void:
 		
 	if direction:
 		fix()
-	else:
+	elif is_broken:
 		break_wheel()
 
 
