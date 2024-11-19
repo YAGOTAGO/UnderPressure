@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://mng8q3q44jxx"]
+[gd_scene load_steps=21 format=3 uid="uid://mng8q3q44jxx"]
 
 [ext_resource type="Script" path="res://assets/components/tv/tv.gd" id="1_d5fup"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="2_w3tso"]
@@ -21,6 +21,10 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cgp7v"]
 size = Vector3(1, 1, 0.0761108)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2m1a"]
+emission_enabled = true
+emission = Color(0.4, 0.8, 0.2, 1)
 
 [sub_resource type="Animation" id="Animation_l0hgr"]
 length = 0.001
@@ -190,6 +194,7 @@ wait_time = 5.0
 [node name="LightIndicator" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 1.81694, 1.83993, 4.88132)
 mesh = ExtResource("10_36iqp")
+surface_material_override/0 = SubResource("StandardMaterial3D_q2m1a")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LightIndicator"]
 unique_name_in_owner = true
