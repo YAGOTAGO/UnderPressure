@@ -1,3 +1,4 @@
+class_name Switch
 extends Node3D
 
 @onready var switch: Node3D = %SwitchContainer
@@ -46,7 +47,6 @@ func activate() -> void:
 		
 	else:
 		switch.rotate_x(1.5)
-		
 		
 	if(is_up == is_correct):
 		var mat = light.get_surface_override_material(0)
