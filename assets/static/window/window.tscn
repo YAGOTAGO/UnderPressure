@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dll7ino3nv61e"]
+[gd_scene load_steps=9 format=3 uid="uid://dll7ino3nv61e"]
 
 [ext_resource type="ArrayMesh" uid="uid://bmdeeydoamqod" path="res://assets/static/window/windowphase1.obj" id="1_a2juv"]
 [ext_resource type="Script" path="res://assets/static/window/window.gd" id="1_tctax"]
@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c1ba560dwmchh" path="res://assets/static/window/windowphase2.obj" id="2_plrqk"]
 [ext_resource type="ArrayMesh" uid="uid://byb0hl5csctq" path="res://assets/static/window/windowphase3.obj" id="3_g588g"]
 [ext_resource type="ArrayMesh" uid="uid://dulvw0e2txrrv" path="res://assets/static/window/windowphase0.obj" id="6_bcul1"]
+[ext_resource type="AudioStream" uid="uid://boi57rmcbfflj" path="res://sounds/window_crack.wav" id="7_60pex"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m5v1r"]
 render_priority = 0
@@ -22,8 +23,9 @@ shader_parameter/refraction_contribution = 1.0
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 
-[node name="Window" type="Node3D"]
+[node name="Window" type="Node3D" node_paths=PackedStringArray("audio_crack")]
 script = ExtResource("1_tctax")
+audio_crack = NodePath("GlassCrackPlayer")
 
 [node name="Windowphase0" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
@@ -47,3 +49,8 @@ surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
 unique_name_in_owner = true
 mesh = ExtResource("3_g588g")
 surface_material_override/0 = SubResource("ShaderMaterial_m5v1r")
+
+[node name="GlassCrackPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_60pex")
+volume_db = 14.679
+bus = &"Fail Sounds"

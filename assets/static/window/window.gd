@@ -6,6 +6,7 @@ signal game_over
 @onready var phase1: MeshInstance3D = %Windowphase1
 @onready var phase2: MeshInstance3D = %Windowphase2
 @onready var phase3: MeshInstance3D = %Windowphase3
+@export var audio_crack: AudioStreamPlayer3D
 
 var curr_phase: int = 0
 
@@ -31,3 +32,5 @@ func next_break()-> void:
 			curr_phase+=1
 		_:
 			game_over.emit()
+
+	audio_crack.play()
