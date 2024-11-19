@@ -28,8 +28,6 @@
 
 ![Team](sprites/splash.png)
 
-[Detailed Credits](credits.txt)</br>
-</br>
 3D artist: </br>**Caroline Li** </br>
 </br>
 2D artist: </br>**Rae Zhang** </br>
@@ -38,3 +36,4 @@ Programmers: </br>
 **Michael Reidy** </br>
 **Tiago Davies**</br>
 </br>
+[Detailed Credits](credits.txt)
