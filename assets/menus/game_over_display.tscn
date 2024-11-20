@@ -1,17 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6begrofkk621"]
+[gd_scene load_steps=6 format=3 uid="uid://c6begrofkk621"]
 
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_2mh36"]
 [ext_resource type="PackedScene" uid="uid://db5ysgc5rgjwi" path="res://scenes/2D_Views/menu_views/game_over_view.tscn" id="2_51aaf"]
-
-[sub_resource type="GDScript" id="GDScript_giag8"]
-script/source = "extends Node3D
-
-signal play_clicked
-
-func _on_main_menu_start_clicked() -> void:
-	play_clicked.emit()
-	queue_free()
-"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eiqv"]
 transparency = 1
@@ -22,7 +12,6 @@ transparency = 1
 size = Vector3(1, 1, 0.167908)
 
 [node name="GameOver" type="Node3D"]
-script = SubResource("GDScript_giag8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
 transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
