@@ -33,9 +33,5 @@ func _on_h_slider_value_changed(value: float) -> void:
 # Update the needle every-so often to make it jitter
 func _on_timer_timeout() -> void:
 	needle_value  = randi_range(max(-90 ,needle_value - max_offset), min(0, needle_value + max_offset))
-	print(needle_value)
 	needle.rotation_degrees = needle_value
-
-	
-	print("hello timer")
 	

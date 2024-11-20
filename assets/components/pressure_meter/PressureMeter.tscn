@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://34brr0liwy6h"]
 
 [ext_resource type="Script" path="res://assets/components/pressure_meter/pressure_meter.gd" id="1_p3fj0"]
-[ext_resource type="PackedScene" uid="uid://ct825g31h2w48" path="res://assets/components/pressure_meter/new pressure meter.fbx" id="2_wlb25"]
+[ext_resource type="PackedScene" uid="uid://ct825g31h2w48" path="res://assets/components/pressure_meter/pressure_meter.fbx" id="2_wlb25"]
 [ext_resource type="PackedScene" uid="uid://eytbcxjam11n" path="res://assets/components/pressure_meter/pressureneedle.fbx" id="3_1earo"]
 [ext_resource type="AudioStream" uid="uid://dm2lytvbkkuoh" path="res://sounds/19841__jace__boiling-bubbles-1.wav" id="4_spo3v"]
 [ext_resource type="AudioStream" uid="uid://c1b8jen0hppak" path="res://sounds/pressure_explode.mp3" id="5_4843h"]

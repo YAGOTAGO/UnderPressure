@@ -109,10 +109,12 @@ script = ExtResource("1_prbu4")
 [node name="CoverSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422524, 0.507298, 1.19468)
 volume_db = 2.078
+bus = &"Sound Effects"
 
 [node name="BtnSound" type="AudioStreamPlayer3D" parent="."]
 volume_db = 8.675
 pitch_scale = 0.69
+bus = &"Sound Effects"
 
 [node name="DropCover" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

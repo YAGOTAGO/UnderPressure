@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b70akqq01igqv"
-path.s3tc="res://.godot/imported/pressurebase_0.png-4d698c3050c25f70f1517e7f822f9c69.s3tc.ctex"
-path.etc2="res://.godot/imported/pressurebase_0.png-4d698c3050c25f70f1517e7f822f9c69.etc2.ctex"
+uid="uid://cqh4am4ytmoek"
+path.s3tc="res://.godot/imported/pressure_meter_0.png-ae0419e8fabbec0f6fcb1768db9f3a98.s3tc.ctex"
+path.etc2="res://.godot/imported/pressure_meter_0.png-ae0419e8fabbec0f6fcb1768db9f3a98.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/components/pressure_meter/pressurebase_0.png"
-dest_files=["res://.godot/imported/pressurebase_0.png-4d698c3050c25f70f1517e7f822f9c69.s3tc.ctex", "res://.godot/imported/pressurebase_0.png-4d698c3050c25f70f1517e7f822f9c69.etc2.ctex"]
+source_file="res://assets/components/pressure_meter/pressure_meter_0.png"
+dest_files=["res://.godot/imported/pressure_meter_0.png-ae0419e8fabbec0f6fcb1768db9f3a98.s3tc.ctex", "res://.godot/imported/pressure_meter_0.png-ae0419e8fabbec0f6fcb1768db9f3a98.etc2.ctex"]
 
 [params]
 

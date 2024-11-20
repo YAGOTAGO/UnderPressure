@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyx4ru0oitqkq"
-path="res://.godot/imported/pressurebase.fbx-96abaac8a0550fc1b159797dfef466e6.scn"
+uid="uid://ct825g31h2w48"
+path="res://.godot/imported/pressure_meter.fbx-a08e63b08f32249c75086a11decc3692.scn"
 
 [deps]
 
-source_file="res://assets/components/pressure_meter/pressurebase.fbx"
-dest_files=["res://.godot/imported/pressurebase.fbx-96abaac8a0550fc1b159797dfef466e6.scn"]
+source_file="res://assets/components/pressure_meter/pressure_meter.fbx"
+dest_files=["res://.godot/imported/pressure_meter.fbx-a08e63b08f32249c75086a11decc3692.scn"]
 
 [params]
 
