@@ -20,12 +20,12 @@ func start_game() -> void:
 #game lose
 func game_over()-> void:
 	menu_manager.display_lose(true)
-	queue_free()
+	timer.stop()
 
 # Game win
 func _on_depth_meter_game_win() -> void:
 	menu_manager.display_win(true)
-	queue_free()
+	timer.stop()
 	
 
 func _on_timer_timeout() -> void:
