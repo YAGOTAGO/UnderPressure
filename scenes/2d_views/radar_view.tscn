@@ -111,3 +111,4 @@ stream = ExtResource("4_b21wm")
 volume_db = -10.0
 max_db = 1.5
 pitch_scale = 0.5
+bus = &"Sound Effects"

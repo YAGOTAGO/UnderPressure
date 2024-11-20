@@ -32,13 +32,14 @@ func _on_timer_timeout() -> void:
 func _update_display() -> void:
 	#update the label
 	label.text = str(depth_num)
-	
+		
 	#get and emit percentage
 	var percentage = 1.0 - (depth_num as float/ START_DEPTH as float)
 	percentage_up.emit(percentage)
 	
 	#update the fill value of shader
-	var fill: float = percentage * 2.0
+	var fill: float = (percentage * 2.0) - 1
+	print(fill)
 	progress_shader_material.set_shader_parameter("fill_value", fill)
 
 	
