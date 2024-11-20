@@ -84,7 +84,7 @@ speed_scale = 1.16
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3134, 0.69879, 1.31862)
 stream = ExtResource("2_el87x")
-bus = &"BG Music"
+bus = &"Sound Effects"
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32948, 0, 0)
