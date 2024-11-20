@@ -10,8 +10,7 @@ extends Node
 var num_failed_components:int = 0
 
 func _ready() -> void:
-	menu_manager.display_win(false)
-	menu_manager.display_lose(false)
+	menu_manager.display_only_main()
 
 func start_game() -> void:
 	timer.start(0)
@@ -21,12 +20,13 @@ func start_game() -> void:
 func game_over()-> void:
 	menu_manager.display_lose(true)
 	timer.stop()
+	depth.stop_depth_meter()
 
 # Game win
 func _on_depth_meter_game_win() -> void:
 	menu_manager.display_win(true)
 	timer.stop()
-	
+	depth.stop_depth_meter()
 
 func _on_timer_timeout() -> void:
 	_activate_components()

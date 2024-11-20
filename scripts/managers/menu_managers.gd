@@ -14,3 +14,8 @@ func display_win(display: bool) -> void:
 	
 func display_lose(display: bool) -> void:
 	lose_menu.visible = display
+
+func display_only_main()->void:
+	display_win(false)
+	display_lose(false)
+	display_main(true)
