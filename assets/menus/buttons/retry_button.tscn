@@ -28,8 +28,8 @@ func _send_signal() -> void:
 
 [node name="retry" type="Button"]
 offset_left = 712.0
-offset_top = 912.0
-offset_right = 1172.0
+offset_top = 864.0
+offset_right = 1216.0
 offset_bottom = 1084.0
 theme_override_styles/hover = SubResource("StyleBoxTexture_p43b3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_n4tfe")
