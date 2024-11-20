@@ -18,6 +18,9 @@ func start_depth_meter() -> void:
 func stop_depth_meter() ->void:
 	depth_node.stop()
 
+func reset()->void:
+	depth_node.reset()
+
 func _on_depth_meter_view_surface_reached() -> void:
 	game_win.emit()
 

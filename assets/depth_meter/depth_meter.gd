@@ -22,6 +22,10 @@ func start_timer() -> void:
 func stop()-> void:
 	timer.stop()
 
+func reset()-> void:
+	depth_num = START_DEPTH
+	timer.start(0)
+
 func _on_timer_timeout() -> void:
 	var amount: int = randi_range(MIN_AMOUNT, MAX_AMOUNT)
 	depth_num -= amount

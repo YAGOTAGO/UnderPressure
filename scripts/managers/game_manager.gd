@@ -69,7 +69,6 @@ func _on_switch_board_3d_component_failed() -> void:
 	print("switch" + str(num_failed_components))
 	on_component_fail()
 
-	
 
 func _on_tv_component_failed() -> void:
 	num_failed_components += 1
