@@ -182,7 +182,6 @@ visible = false
 unique_name_in_owner = true
 transform = Transform3D(3.00208, 0, 0, 0, 2.93341, 0, 0, 0, 1, 0, 2.25411, 5.99712)
 visible = false
-script = null
 
 [node name="Breaking Components" type="Node" parent="."]
 
