@@ -16,29 +16,29 @@ func start_game() -> void:
 	timer.start(0)
 	depth.start_depth_meter()
 
-#game lose
-func game_over()-> void:
-	menu_manager.display_lose(true)
-	timer.stop()
-	depth.stop_depth_meter()
-
-# Game win
-func _on_depth_meter_game_win() -> void:
-	menu_manager.display_win(true)
-	timer.stop()
-	depth.stop_depth_meter()
-
-func retry() -> void:
-	menu_manager.display_only_main() #go back to main menu
-	timer.stop() #don't activate components anymore
-	depth.reset() #Reset depth meter
-	window.reset() #window to uncracked
-	num_failed_components = 0 #no failed components
+func _set_game_end_state() -> void:
+	timer.stop() #stop call to break components
+	depth.stop_depth_meter() #stop the depth meter
 	
 	#go through each component fix and stop their timer
 	for component in list_components:
 		component.fix()
+#game lose
+func game_over()-> void:
+	menu_manager.display_lose(true)
+	_set_game_end_state()
 
+# Game win
+func _on_depth_meter_game_win() -> void:
+	menu_manager.display_win(true)
+	_set_game_end_state()
+
+func retry() -> void:
+	menu_manager.display_only_main() #go back to main menu
+	depth.reset() #Reset depth meter
+	window.reset() #window to uncracked
+	num_failed_components = 0 #no failed components
+	
 func _on_timer_timeout() -> void:
 	_activate_components()
 
