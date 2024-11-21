@@ -172,6 +172,7 @@ win_menu = NodePath("../../Menu/GameWin")
 [node name="MainMenu" parent="Menu" instance=ExtResource("24_x7rpw")]
 unique_name_in_owner = true
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00648785, 2.23844, 5.94065)
+visible = false
 
 [node name="GameOver" parent="Menu" instance=ExtResource("6_rg65t")]
 unique_name_in_owner = true
@@ -451,6 +452,11 @@ transform = Transform3D(-0.999317, 0, 0.0369402, 0, 1, 0, -0.0369402, 0, -0.9993
 
 [node name="Ground Fog" type="FogVolume" parent="Decoration/Fog"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, -3.69658, 7.83839)
+size = Vector3(10.2472, 1.79004, 20.4486)
+material = SubResource("FogMaterial_j7r6s")
+
+[node name="Ceiling Fog" type="FogVolume" parent="Decoration/Fog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02104, 7.76715, 7.83839)
 size = Vector3(10.2472, 1.79004, 20.4486)
 material = SubResource("FogMaterial_j7r6s")
 
