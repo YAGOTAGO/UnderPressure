@@ -33,6 +33,7 @@ liquid fill: https://godotshaders.com/shader/2d-liquid-fill-inside-sphere-v2/
 MIT License
 stary sky: https://godotshaders.com/shader/starry-sky/
 radar: https://godotshaders.com/shader/radar-with-trace-blip/
+highlight: https://godotshaders.com/shader/collectable-item-shining-highlight/
 
 CC0 License
 retro tv: https://godotshaders.com/shader/vhs-and-crt-monitor-effect/

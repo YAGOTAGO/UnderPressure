@@ -9,7 +9,7 @@
 [node name="PressureMeter" type="Node3D"]
 script = ExtResource("1_p3fj0")
 
-[node name="new pressure meter" parent="." instance=ExtResource("2_wlb25")]
+[node name="pressure meter" parent="." instance=ExtResource("2_wlb25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59192, 0.250655, -1.56798)
 
 [node name="MeterNeedle" type="Node3D" parent="."]
