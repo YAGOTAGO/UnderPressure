@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2duxafvebni" path="res://scenes/2D_Views/tv_shader_view.tscn" id="3_w5btw"]
 [ext_resource type="ArrayMesh" uid="uid://qec2vrsblpcw" path="res://assets/components/tv/antennabase.obj" id="7_hty1k"]
 [ext_resource type="PackedScene" uid="uid://cy2embp31kt4f" path="res://assets/components/tv/tvantenna.fbx" id="8_r2qxi"]
-[ext_resource type="AudioStream" uid="uid://degg6rd4mwfnd" path="res://sounds/tv static.mp3" id="9_8560w"]
+[ext_resource type="AudioStream" uid="uid://degg6rd4mwfnd" path="res://sound/tv static.mp3" id="9_8560w"]
 [ext_resource type="PackedScene" uid="uid://be7gtc03bx41y" path="res://assets/components/tv/tvslider.fbx" id="10_5tfmx"]
 [ext_resource type="ArrayMesh" uid="uid://cuvhquoqft65r" path="res://assets/static/lights/siren/sirenob.obj" id="10_36iqp"]
 [ext_resource type="PackedScene" uid="uid://besi1pys8wfwn" path="res://assets/components/tv/tv.fbx" id="10_cuonk"]

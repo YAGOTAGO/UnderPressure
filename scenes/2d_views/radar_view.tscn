@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwg2yesbsv2tg" path="res://sprites/radar_background.png" id="2_igupm"]
 [ext_resource type="Shader" path="res://shaders/radar.gdshader" id="2_kalq3"]
-[ext_resource type="AudioStream" uid="uid://nx52va3gyu3j" path="res://sounds/sonar.wav" id="4_b21wm"]
+[ext_resource type="AudioStream" uid="uid://nx52va3gyu3j" path="res://sound/sonar.wav" id="4_b21wm"]
 [ext_resource type="Script" path="res://scripts/autoplay_animation.gd" id="4_loj56"]
 
 [sub_resource type="GDScript" id="GDScript_ij6vs"]

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://drroptxqby6dd"
-path="res://.godot/imported/mouse click.wav-12b7b4d68b5255222b8f5a9e216d5801.sample"
+uid="uid://bupktyrr5fn03"
+path="res://.godot/imported/tv static.wav-fadc4e15afb6e262ad6d6a7dbaa220e2.sample"
 
 [deps]
 
-source_file="res://sounds/mouse click.wav"
-dest_files=["res://.godot/imported/mouse click.wav-12b7b4d68b5255222b8f5a9e216d5801.sample"]
+source_file="res://sound/tv static.wav"
+dest_files=["res://.godot/imported/tv static.wav-fadc4e15afb6e262ad6d6a7dbaa220e2.sample"]
 
 [params]
 

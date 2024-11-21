@@ -6,7 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c1ba560dwmchh" path="res://assets/static/window/windowphase2.obj" id="2_plrqk"]
 [ext_resource type="ArrayMesh" uid="uid://byb0hl5csctq" path="res://assets/static/window/windowphase3.obj" id="3_g588g"]
 [ext_resource type="ArrayMesh" uid="uid://dulvw0e2txrrv" path="res://assets/static/window/windowphase0.obj" id="6_bcul1"]
-[ext_resource type="AudioStream" uid="uid://boi57rmcbfflj" path="res://sounds/window_crack.wav" id="7_60pex"]
+[ext_resource type="AudioStream" uid="uid://boi57rmcbfflj" path="res://sound/window_crack.wav" id="7_60pex"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m5v1r"]
 render_priority = 0

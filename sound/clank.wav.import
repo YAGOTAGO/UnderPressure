@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bupktyrr5fn03"
-path="res://.godot/imported/tv static.wav-4d09d03a6150ebdccccad006c4d3c759.sample"
+uid="uid://1vuuwr0gp5ue"
+path="res://.godot/imported/clank.wav-a9ac9c35158e24ff8b66d01efe32b166.sample"
 
 [deps]
 
-source_file="res://sounds/tv static.wav"
-dest_files=["res://.godot/imported/tv static.wav-4d09d03a6150ebdccccad006c4d3c759.sample"]
+source_file="res://sound/clank.wav"
+dest_files=["res://.godot/imported/clank.wav-a9ac9c35158e24ff8b66d01efe32b166.sample"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://boi57rmcbfflj"
-path="res://.godot/imported/window_crack.wav-a8ca8496e02af5b3a3f76274842d4bc7.sample"
+uid="uid://nx52va3gyu3j"
+path="res://.godot/imported/sonar.wav-2530f0bfb327c111e529693fe27a8270.sample"
 
 [deps]
 
-source_file="res://sounds/window_crack.wav"
-dest_files=["res://.godot/imported/window_crack.wav-a8ca8496e02af5b3a3f76274842d4bc7.sample"]
+source_file="res://sound/sonar.wav"
+dest_files=["res://.godot/imported/sonar.wav-2530f0bfb327c111e529693fe27a8270.sample"]
 
 [params]
 

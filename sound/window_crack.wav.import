@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://1vuuwr0gp5ue"
-path="res://.godot/imported/clank.wav-317cbbb66505d0075c78d0da9f0c689b.sample"
+uid="uid://boi57rmcbfflj"
+path="res://.godot/imported/window_crack.wav-7013162972e3b6aec7b14a27fdf2a994.sample"
 
 [deps]
 
-source_file="res://sounds/clank.wav"
-dest_files=["res://.godot/imported/clank.wav-317cbbb66505d0075c78d0da9f0c689b.sample"]
+source_file="res://sound/window_crack.wav"
+dest_files=["res://.godot/imported/window_crack.wav-7013162972e3b6aec7b14a27fdf2a994.sample"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://di5m7q1dn3fnr"]
 
 [ext_resource type="Script" path="res://assets/components/emergency_button/emergency_button.gd" id="1_prbu4"]
-[ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://sounds/buttom click.mp3" id="2_83xw7"]
+[ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://sound/buttom click.mp3" id="2_83xw7"]
 [ext_resource type="ArrayMesh" uid="uid://bmo1jhxdbnscw" path="res://assets/components/emergency_button/emergencybuttoncase.obj" id="3_60p6m"]
 [ext_resource type="PackedScene" uid="uid://cdfalwkpt37m3" path="res://assets/components/emergency_button/emergencybase.fbx" id="3_80gs7"]
-[ext_resource type="AudioStream" uid="uid://ckuw4lict0n35" path="res://sounds/emergency_click.mp3" id="3_okofc"]
+[ext_resource type="AudioStream" uid="uid://ckuw4lict0n35" path="res://sound/emergency_click.mp3" id="3_okofc"]
 [ext_resource type="PackedScene" uid="uid://bpmh2smx16ovc" path="res://assets/components/emergency_button/emergencybutton.fbx" id="5_imm85"]
 [ext_resource type="Shader" path="res://shaders/highlight.gdshader" id="6_arsvq"]
 

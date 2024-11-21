@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/components/switch_board/switch_board_3d.gd" id="1_fqq0t"]
 [ext_resource type="Shader" path="res://shaders/highlight.gdshader" id="2_bpyaa"]
 [ext_resource type="PackedScene" uid="uid://b4e2em28cqkd4" path="res://assets/components/switch_board/Switch3D.tscn" id="2_ra467"]
-[ext_resource type="AudioStream" uid="uid://1vuuwr0gp5ue" path="res://sounds/clank.wav" id="4_p7vp1"]
+[ext_resource type="AudioStream" uid="uid://1vuuwr0gp5ue" path="res://sound/clank.wav" id="4_p7vp1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a5yau"]
 render_priority = 0

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/components/radio/radio.gd" id="1_jott1"]
 [ext_resource type="PackedScene" uid="uid://dppcq3gl7x07a" path="res://assets/components/radio/radio.fbx" id="2_dva6e"]
-[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://sounds/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
+[ext_resource type="AudioStream" uid="uid://djkd3kt6dte8u" path="res://sound/659889__blondpanda__short-elevator-music-loop.mp3" id="2_el87x"]
 [ext_resource type="PackedScene" uid="uid://6awe28j31bqy" path="res://assets/components/radio/radioknob.fbx" id="3_rtskj"]
 [ext_resource type="Script" path="res://scripts/mouse_detection.gd" id="3_trr26"]
 
