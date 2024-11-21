@@ -456,6 +456,8 @@ material = SubResource("FogMaterial_j7r6s")
 
 [connection signal="timeout" from="Managers/GameManager/Timer" to="Managers/GameManager" method="_on_timer_timeout"]
 [connection signal="play_clicked" from="Menu/MainMenu" to="Managers/GameManager" method="start_game"]
+[connection signal="retry" from="Menu/GameOver" to="Managers/GameManager" method="retry"]
+[connection signal="retry" from="Menu/GameWin" to="Managers/GameManager" method="retry"]
 [connection signal="component_failed" from="Breaking Components/TV" to="Managers/GameManager" method="_on_tv_component_failed"]
 [connection signal="component_failed" from="Breaking Components/SwitchBoard3d" to="Managers/GameManager" method="_on_switch_board_3d_component_failed"]
 [connection signal="component_failed" from="Breaking Components/Radar" to="Managers/GameManager" method="_on_radar_component_failed"]

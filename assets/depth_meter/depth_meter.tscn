@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cssp4amv7nb6k"]
 
-[ext_resource type="PackedScene" uid="uid://cosv8wnuuc2x" path="res://scenes/2d_views/depth_meter_view.tscn" id="1_mdsik"]
+[ext_resource type="PackedScene" uid="uid://cosv8wnuuc2x" path="res://scenes/2D_Views/depth_meter_view.tscn" id="1_mdsik"]
 [ext_resource type="Script" path="res://scripts/viewport/viewport_basic.gd" id="1_vo01l"]
 [ext_resource type="PackedScene" uid="uid://vie73psvwmnk" path="res://assets/depth_meter/depth_meter.fbx" id="3_w0plw"]
 

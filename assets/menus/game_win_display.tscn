@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfcp3tpbjcnh6"]
+[gd_scene load_steps=7 format=3 uid="uid://dfcp3tpbjcnh6"]
 
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_jrrlv"]
-[ext_resource type="PackedScene" uid="uid://bousvyifxq3ky" path="res://scenes/2d_views/menu_views/game_win_view.tscn" id="2_0l7vt"]
+[ext_resource type="Script" path="res://assets/menus/menu_retry_signal.gd" id="1_yy1hn"]
+[ext_resource type="PackedScene" uid="uid://bousvyifxq3ky" path="res://scenes/2D_Views/menu_views/game_win_view.tscn" id="2_0l7vt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eiqv"]
 transparency = 1
@@ -12,6 +13,7 @@ transparency = 1
 size = Vector3(1, 1, 0.167908)
 
 [node name="GameWin" type="Node3D"]
+script = ExtResource("1_yy1hn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." node_paths=PackedStringArray("viewport", "node_area")]
 transform = Transform3D(3.4, 0, 0, 0, 2.55, 0, 0, 0, 1, 0, 0, 0)
@@ -32,3 +34,5 @@ size = Vector2i(1920, 1080)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0106506)
 shape = SubResource("BoxShape3D_5subg")
+
+[connection signal="retry" from="MeshInstance3D/SubViewport/GameWin" to="." method="_on_retry_clicked"]
