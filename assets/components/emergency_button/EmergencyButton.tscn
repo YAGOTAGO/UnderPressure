@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://di5m7q1dn3fnr"]
+[gd_scene load_steps=16 format=3 uid="uid://di5m7q1dn3fnr"]
 
 [ext_resource type="Script" path="res://assets/components/emergency_button/emergency_button.gd" id="1_prbu4"]
 [ext_resource type="AudioStream" uid="uid://c60qouotpjt2e" path="res://sounds/buttom click.mp3" id="2_83xw7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdfalwkpt37m3" path="res://assets/components/emergency_button/emergencybase.fbx" id="3_80gs7"]
 [ext_resource type="AudioStream" uid="uid://ckuw4lict0n35" path="res://sounds/emergency_click.mp3" id="3_okofc"]
 [ext_resource type="PackedScene" uid="uid://bpmh2smx16ovc" path="res://assets/components/emergency_button/emergencybutton.fbx" id="5_imm85"]
+[ext_resource type="Shader" path="res://shaders/highlight.gdshader" id="6_arsvq"]
 
 [sub_resource type="Animation" id="Animation_6om63"]
 length = 0.001
@@ -91,7 +92,17 @@ _data = {
 "push_btn": SubResource("Animation_ivveo")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xn6f2"]
+render_priority = 0
+shader = ExtResource("6_arsvq")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/cycle_interval = 1.0
+shader_parameter/shine_speed = 3.0
+shader_parameter/shine_width = 3.0
+shader_parameter/show = false
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h44wb"]
+next_pass = SubResource("ShaderMaterial_xn6f2")
 albedo_color = Color(0, 0, 0, 1)
 emission_enabled = true
 emission = Color(0.01, 0.01, 0.01, 1)
