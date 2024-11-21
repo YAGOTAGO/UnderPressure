@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cotnxrn8eoecs"]
 
 [ext_resource type="Script" path="res://scripts/viewport/viewport_input.gd" id="1_ru0id"]
-[ext_resource type="PackedScene" uid="uid://bx2nao4clspqn" path="res://scenes/2D_Views/menu_views/main_menu_view.tscn" id="1_u3adp"]
+[ext_resource type="PackedScene" uid="uid://bx2nao4clspqn" path="res://scenes/2d_views/menu_views/main_menu_view.tscn" id="1_u3adp"]
 
 [sub_resource type="GDScript" id="GDScript_giag8"]
 script/source = "extends Node3D
