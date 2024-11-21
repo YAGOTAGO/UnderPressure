@@ -24,16 +24,14 @@ func activate() -> void:
 	scale_factor = 5
 
 func fix() -> void:
-	if is_compromised:
-		is_broken = false
-		is_compromised = false
-		angle = 0
-		scale_factor = 0
-		boiling.stop()
-		countdown.stop()
+	is_broken = false
+	is_compromised = false
+	angle = 0
+	scale_factor = 0
+	boiling.stop()
+	countdown.stop()
 		
 func break_meter()->void:
-	print("Meter component has failed...")
 	is_compromised = false
 	angle = 0
 	scale_factor = 0

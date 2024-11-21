@@ -11,6 +11,10 @@ signal game_over
 var curr_phase: int = 0
 
 func _ready() -> void:
+	reset()
+
+func reset() ->void:
+	curr_phase = 0
 	phase0.visible = true
 	phase1.visible = false
 	phase2.visible = false

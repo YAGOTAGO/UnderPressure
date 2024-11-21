@@ -12,6 +12,10 @@ func _ready():
 		if child is Switch:
 			switchArray.append(child)
 
+func fix()-> void:
+	for switch in switchArray:
+		switch.set_correct()
+
 func activate() -> void:
 	is_broken = true
 	timer.start()

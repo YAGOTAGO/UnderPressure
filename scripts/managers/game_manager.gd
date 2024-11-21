@@ -28,6 +28,17 @@ func _on_depth_meter_game_win() -> void:
 	timer.stop()
 	depth.stop_depth_meter()
 
+func retry() -> void:
+	menu_manager.display_only_main() #go back to main menu
+	timer.stop() #don't activate components anymore
+	depth.reset() #Reset depth meter
+	window.reset() #window to uncracked
+	num_failed_components = 0 #no failed components
+	
+	#go through each component fix and stop their timer
+	for component in list_components:
+		component.fix()
+
 func _on_timer_timeout() -> void:
 	_activate_components()
 

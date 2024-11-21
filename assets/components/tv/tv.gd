@@ -26,7 +26,7 @@ func activate() -> void:
 	update_tv_noise()
 	timer.start(0)
 	
-	
+
 func fix() -> void:
 	animation_player.play("green_light")
 	is_broken = false

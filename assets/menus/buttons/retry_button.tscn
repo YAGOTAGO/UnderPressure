@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c26jtyvuqttje" path="res://sprites/buttons/retry_button/retry_button.png" id="1_ymr3a"]
 [ext_resource type="Texture2D" uid="uid://borpmkyfdu11" path="res://sprites/buttons/retry_button/retry_clicked.png" id="2_1x6wv"]
 [ext_resource type="Texture2D" uid="uid://yhlocd1nts1k" path="res://sprites/buttons/retry_button/retry_hovered.png" id="3_l32yn"]
+[ext_resource type="Script" path="res://assets/menus/buttons/retry_button.gd" id="4_hcswd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p43b3"]
 texture = ExtResource("3_l32yn")
@@ -13,19 +14,6 @@ texture = ExtResource("2_1x6wv")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6bq1"]
 texture = ExtResource("1_ymr3a")
 
-[sub_resource type="GDScript" id="GDScript_411w5"]
-resource_name = "retry_button"
-script/source = "extends Button
-
-signal retry_clicked
-
-func _ready() -> void:
-	pressed.connect(_send_signal)
-
-func _send_signal() -> void:
-	retry_clicked.emit()
-"
-
 [node name="retry" type="Button"]
 offset_left = 712.0
 offset_top = 864.0
@@ -34,4 +22,4 @@ offset_bottom = 1084.0
 theme_override_styles/hover = SubResource("StyleBoxTexture_p43b3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_n4tfe")
 theme_override_styles/normal = SubResource("StyleBoxTexture_f6bq1")
-script = SubResource("GDScript_411w5")
+script = ExtResource("4_hcswd")
