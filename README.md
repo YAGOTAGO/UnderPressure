@@ -1,7 +1,7 @@
 ![Logo](sprites/menus/menu_logo.png)
 
 ## Video: </br>
-[Gameplay Video](https://youtu.be/6BKuC0HZrIs) </br>
+[Gameplay Video](https://youtu.be/Bf4K-OTwks8) </br>
 
 ## Download Here: </br>
 [Download](https://tdavies.itch.io/under-pressure)
