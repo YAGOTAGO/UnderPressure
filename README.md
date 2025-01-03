@@ -26,7 +26,7 @@ You can download or try the game's web build for free [here](https://tdavies.itc
 * Open-source sound effects that signal interactions
 * Real-time 3D lighting
 * 3D and 2D shaders
-* Programmed in an Open-Source Engine
+* Programmed in Godot and modeled using Blender
 
 
 
