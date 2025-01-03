@@ -4,9 +4,12 @@
 <h1>Under Pressure</h1>
 <b>A task-management game about racing to the surface while everything goes wrong.</b>
 
+<br/>
+<br/>
 
 
 [![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)](https://tdavies.itch.io/under-pressure)
+[![Devpost](https://img.shields.io/badge/Devpost-003E54?style=for-the-badge&logo=Devpost&logoColor=white)](https://devpost.com/software/under-pressure-9sgkve)
 </div>
 
 ## Introduction
